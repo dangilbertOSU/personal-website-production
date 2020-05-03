@@ -1,20 +1,16 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This is a repository that represents the latest iteration of igniumdigital.com
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This solution depends on Docker to run the environment locally and in production.  If you've never used docker, your first step is to install the Docker Desktop.  There are versions for Mac, PC and Linux operating systems.  The containers listed here, run in linux containers.  Once you have docker installed, you are ready to let the excitement begin, by using the steps below:
+
+1. In your terminal, shell point it to the current location.  If you are on Visual Studio Code, just open a new terminal, and it will do this for you.
+2. run `docker-compose pull`, this will pull the images in the `docker-compose.yml` file into your local docker instance
+3. run `docker-compose up -d`, this will spin up those images as containers.
+4. You are all set, you should be able to access strapi admin by going to `http://localhost:1337/admin`
+
+
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Coming Soon!
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
