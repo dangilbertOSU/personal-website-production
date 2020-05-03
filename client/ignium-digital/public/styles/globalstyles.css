@@ -1,0 +1,26 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.orange--text {
+    color: #F94322;
+}
+
+.open--sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom--font--34 h2 {
+    font-size: 2.4vw;
+    /* font-size: 2.125rem; */
+}
+
+.custom--font--64 h1 {
+    /* font-size: 4rem; */
+    font-size: 5vw;
+    margin-top: -1rem;
+}

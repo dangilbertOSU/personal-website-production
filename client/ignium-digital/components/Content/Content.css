@@ -1,0 +1,55 @@
+.content {
+    margin: 0;
+    padding: 6rem 15vw;
+}
+
+.jumbotron {
+    width: 100%;
+}
+
+.jumbtron--with--image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.jumbtron--with--image img {
+    display: block;
+    margin: auto;
+}
+
+.jumbtron--with--image:last-child {
+    justify-self: end;
+}
+
+@media only screen and (max-width: 1150px) {
+    .content {
+        padding: 1rem 5vw;
+    }
+
+    .jumbtron--with--image {
+        grid-template-columns: unset;
+        grid-template-rows: auto;
+    }
+
+    .jumbtron--with--image__image {
+        grid-row: 1;
+    }
+
+    .jumbtron--with--image__text {
+        grid-row: 2;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .jumbtron--with--image img {
+        width: 75vw;
+    }
+
+    .jumbtron--with--image__text h1 {
+        font-size: 9vw;
+    }
+
+    .jumbtron--with--image__text h2 {
+        font-size: 5.4vw;
+    }
+} 
