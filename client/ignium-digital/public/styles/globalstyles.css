@@ -27,17 +27,15 @@ h2 {
 }
 
 .custom--font--28 h2 {
-    font-size: 2vw;
-    /* font-size: 2.125rem; */
+    font-size: 1.75rem;
 }
 
 .custom--font--34 h2 {
-    font-size: 2.4vw;
-    /* font-size: 2.125rem; */
+    font-size: 2.125rem;
 }
 
 .custom--font--64 h1 {
-    /* font-size: 4rem; */
-    font-size: 5vw;
+    color: #0e1137;
+    font-size: 4rem;
     margin-top: -1rem;
 }

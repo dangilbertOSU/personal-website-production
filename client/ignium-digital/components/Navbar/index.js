@@ -11,15 +11,16 @@ const Navbar = (props) => {
     const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
     return (
-        <header>
-            <div className={className}>
+        <nav className={className + (mobileNavVisible ? " grow" : "")}>
                 <div className={className + "__brand"}>
                     <NavbarIcon />
                 </div>
-                <button className="navbar__menu__toggle" aria-label="navbar open menu">
-                    <HamburgerMenu onClick={() => setMobileNavVisible(!mobileNavVisible)} />
-                </button>
-                <nav className={className + "__links desktop--links"}>
+                <a className="navbar__menu__toggle" aria-label="navbar open mobile menu" onClick={() => setMobileNavVisible(!mobileNavVisible)}>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </a>
+                <div className={className + "__links desktop--links" + (mobileNavVisible ? " active" : " inactive")}>
                     <ul>
                         <li>
                             <Link href="/whoweare">
@@ -47,9 +48,8 @@ const Navbar = (props) => {
                             </Link>
                         </li>
                     </ul>
-                </nav>
-            </div>
-        </header>
+                </div>
+            </nav>
     );
 };
 

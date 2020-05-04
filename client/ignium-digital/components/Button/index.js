@@ -12,9 +12,8 @@ const Button = (props) => {
   } = props;
 
   const stack = utilities.createClassStack([
-    'button',
-    `button--${variant}`,
-    className
+    className,
+    `${className}--${variant}`,
   ]);
 
   return (
