@@ -1,3 +1,4 @@
+import utilities from '../../utilities/utilities';
 import PropTypes from 'prop-types';
 import './Button.css';
 
@@ -6,13 +7,20 @@ const Button = (props) => {
     ariaLabel,
     className,
     children,
+    variant,
     ...rest
   } = props;
+
+  const stack = utilities.createClassStack([
+    'button',
+    `button--${variant}`,
+    className
+  ]);
 
   return (
     <button
       aria-label={ariaLabel}
-      className={className}
+      className={stack}
       {...rest}
     >
       {children}
@@ -21,13 +29,14 @@ const Button = (props) => {
 };
 
 Button.defaultProps = {
-  className: 'button'
+  className: 'button',
+  variant: 'default'
 };
 
 Button.propTypes = {
-
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  variant: PropTypes.oneOf(['default', 'secondary']),
 };
 
 export default Button;

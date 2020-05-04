@@ -5,6 +5,7 @@ const JumbotronWithImage = (props) => {
         alt,
         className,
         children,
+        tabTitle,
         src,
         ...rest
     } = props;
@@ -14,6 +15,12 @@ const JumbotronWithImage = (props) => {
             className={className}
             {...rest}
         >
+            {
+                tabTitle &&
+                <span className="jumbotron__tab">
+                    <span className="jumbotron__tab__line"></span><p>{tabTitle}</p>
+                </span>
+            }
             <div className="jumbtron--with--image__text">
                 {children}
             </div>

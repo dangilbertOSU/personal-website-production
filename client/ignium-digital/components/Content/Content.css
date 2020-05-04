@@ -1,15 +1,26 @@
 .content {
     margin: 0;
-    padding: 6rem 15vw;
+    padding: 0 15vw;
 }
 
 .jumbotron {
+    margin-bottom: 12rem;
+    margin-top: 12rem;
+    position: relative;
     width: 100%;
+}
+
+.jumbotron h2 {
+    margin-top: 0;
 }
 
 .jumbtron--with--image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.jumbtron--with--image__text {
+    padding-right: 3rem;
 }
 
 .jumbtron--with--image img {
@@ -21,9 +32,43 @@
     justify-self: end;
 }
 
+.jumbotron__tab {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -7rem;
+    text-transform: uppercase;
+    top: 3rem;
+}
+
+.jumbotron__tab__line {
+    background-color: #0E1137;
+    display: block;
+    height: 1.5rem;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -1.5rem;
+    top: 1rem;
+    width: 1px;
+}
+
+/* .jumbtron--with--image__image .image--full-width {
+    width: 100%;
+} */
+
 @media only screen and (max-width: 1150px) {
     .content {
-        padding: 1rem 5vw;
+        padding: 0 5vw;
+    }
+
+    .jumbotron {
+        margin-bottom: 8rem;
+        margin-top: 8rem;
+    }
+
+    .jumbotron__tab__line {
+        display: inline;
+        position: static;
+        transform: rotate(0deg);
     }
 
     .jumbtron--with--image {
@@ -36,11 +81,14 @@
     }
 
     .jumbtron--with--image__text {
+        padding-right: 0;
+        padding-top: 1rem;
         grid-row: 2;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
+
     .jumbtron--with--image img {
         width: 75vw;
     }

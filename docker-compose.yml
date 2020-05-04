@@ -35,6 +35,18 @@ services:
     ports:
       - "27017:27017"
 
+  client:
+    image: client
+    container_name: client-react
+    build:
+      context: ./client/ignium-digital
+      dockerfile: Dockerfile
+    volumes:
+      - './client/ignium-digital:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+
 networks:  
   strapi-network:
     driver: bridge
