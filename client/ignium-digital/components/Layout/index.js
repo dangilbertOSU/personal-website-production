@@ -1,8 +1,9 @@
 import './Layout.css';
 
-import Navbar from '../Navbar';
+import Contact from '../Container/Contact'
 import Content from '../Content';
 import Footer from '../Footer';
+import Navbar from '../Navbar';
 
 const Layout = (props) => {
   const { children } = props;
@@ -12,8 +13,9 @@ const Layout = (props) => {
       <Navbar />
       <Content>
         {children}
+        <Contact/>
       </Content>
-      <Footer />
+      <Footer/>
     </React.Fragment>
   );
 };

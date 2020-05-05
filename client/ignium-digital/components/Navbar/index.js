@@ -5,9 +5,17 @@ import Link from 'next/link'
 import NavbarIcon from '../SVG/NavbarIcon';
 
 const Navbar = (props) => {
-    const { className } = props;
+    const { className, contactRef } = props;
 
     const [mobileNavVisible, setMobileNavVisible] = useState(false);
+
+    const handleClick = () => {
+        console.log('ref:', contactRef)
+        // ref.current.scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'start',
+        //   });
+    }
 
     return (
         <nav className={className + (mobileNavVisible ? " grow" : "")}>
@@ -43,7 +51,7 @@ const Navbar = (props) => {
                     </li>
                     <li>
                         <Link href="/letschat">
-                        <span className="orange--text"><a>Let's Chat</a></span>
+                            <span className="orange--text"><a>Let's Chat</a></span>
                         </Link>
                     </li>
                 </ul>

@@ -6,7 +6,6 @@ import Head from 'next/head';
 
 import Button from '../components/Button';
 import Container from '../components/Container';
-import Contact from '../components/Container/Contact'
 
 /*
  * image imports
@@ -15,6 +14,7 @@ import Contact from '../components/Container/Contact'
 import JumboLogoImage from '../public/images/home_logo_jumbo.png';
 import WhoWeAreImage from '../public/images/home_who_we_are.png';
 import Layout from '../components/Layout';
+import Services from '../components/Container/Services';
 
 const App = (props) => {
 
@@ -50,18 +50,10 @@ const App = (props) => {
             <img alt="Ignium Digital teamwork who we are" src={WhoWeAreImage} />
           </div>
         </Container>
-        <Container tabTitle="Services" variant="two--column" backgroundColor="blue--background">
-          <div style={{ padding: '5rem 0' }}>
-            <h2>We offer a wide range of Sitecore tailored solutions, to help your organization to get the most of your Sitecore investment.</h2>
-          </div>
-          <div>
-            <Button ariaLabel="view all sources" variant="secondary">View All Services</Button>
-          </div>
-        </Container>
+        <Services />
         <Container tabTitle="Insights">
           <h2>Everything you need to know about sitecore technology, customer experience, and beyond</h2>
         </Container>
-        <Contact />
       </Layout>
     </div>
   );
