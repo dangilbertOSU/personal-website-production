@@ -56,6 +56,15 @@
     width: calc(100% - 5rem);
 }
 
+.navbar__links .orange--text a {
+    cursor: pointer;
+    color: #F94322;
+}
+
+.navbar__links .orange--text :hover::after {
+    background-color: #F94322;
+}
+
 .navbar__menu__toggle {
     background-color: #FFF;
     border: none;

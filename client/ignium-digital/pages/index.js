@@ -4,11 +4,9 @@ import Head from 'next/head';
  * Component Imports
  */
 
-import Navbar from '../components/Navbar';
 import Button from '../components/Button';
-import Content from '../components/Content';
 import Container from '../components/Container';
-import Footer from '../components/Footer';
+import Contact from '../components/Container/Contact'
 
 /*
  * image imports
@@ -52,7 +50,7 @@ const App = (props) => {
             <img alt="Ignium Digital teamwork who we are" src={WhoWeAreImage} />
           </div>
         </Container>
-        <Container tabTitle="Services" variant="two--column blue--background">
+        <Container tabTitle="Services" variant="two--column" backgroundColor="blue--background">
           <div style={{ padding: '5rem 0' }}>
             <h2>We offer a wide range of Sitecore tailored solutions, to help your organization to get the most of your Sitecore investment.</h2>
           </div>
@@ -60,6 +58,10 @@ const App = (props) => {
             <Button ariaLabel="view all sources" variant="secondary">View All Services</Button>
           </div>
         </Container>
+        <Container tabTitle="Insights">
+          <h2>Everything you need to know about sitecore technology, customer experience, and beyond</h2>
+        </Container>
+        <Contact />
       </Layout>
     </div>
   );

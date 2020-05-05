@@ -43,7 +43,7 @@ const Navbar = (props) => {
                     </li>
                     <li>
                         <Link href="/letschat">
-                            <a><span className="orange--text">Let's Chat</span></a>
+                        <span className="orange--text"><a>Let's Chat</a></span>
                         </Link>
                     </li>
                 </ul>

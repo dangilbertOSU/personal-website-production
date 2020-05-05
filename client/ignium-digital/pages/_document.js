@@ -13,7 +13,7 @@ class MyDocument extends Document {
                     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
                     { /* Google fonts */}
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"></link>
                     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"></link>
 
                     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
