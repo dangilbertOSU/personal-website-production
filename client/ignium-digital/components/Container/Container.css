@@ -67,9 +67,9 @@
 }
 
 /*
- * Large Mobile
+ * Tablet
  */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
     .container--two--column {
         grid-template-columns: auto;
     }

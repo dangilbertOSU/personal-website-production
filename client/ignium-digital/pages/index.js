@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 import Content from '../components/Content';
 import Container from '../components/Container';
+import Footer from '../components/Footer';
 
 /*
  * image imports
@@ -15,6 +16,7 @@ import Container from '../components/Container';
 
 import JumboLogoImage from '../public/images/home_logo_jumbo.png';
 import WhoWeAreImage from '../public/images/home_who_we_are.png';
+import Layout from '../components/Layout';
 
 const App = (props) => {
 
@@ -24,8 +26,7 @@ const App = (props) => {
         <title>Ignium Digital | Home</title>
         <meta name="description" content="We are a personalized Sitecore focused digital agency. We currently have a small team of Sitecore MVP's and Sitecore specialists to provide personalized assistance to help you with your digital transformation with Sitecore." />
       </Head>
-      <Navbar />
-      <Content>
+      <Layout>
         <Container variant="two--column">
           <div>
             <span className="orange--text"><h2>Purpose. Passion. Profit.</h2></span>
@@ -33,7 +34,7 @@ const App = (props) => {
             <Button ariaLabel="chat">Let's Chat</Button>
           </div>
           <div>
-            <img alt="Ignium Digital Jumobtron Logo" src={JumboLogoImage} style={{ maxWidth: '350px' }}/>
+            <img alt="Ignium Digital Jumobtron Logo" src={JumboLogoImage} style={{ maxWidth: '350px' }} />
           </div>
         </Container>
         <Container tabTitle="Who We Are" variant="two--column">
@@ -59,7 +60,7 @@ const App = (props) => {
             <Button ariaLabel="view all sources" variant="secondary">View All Services</Button>
           </div>
         </Container>
-      </Content>
+      </Layout>
     </div>
   );
 };

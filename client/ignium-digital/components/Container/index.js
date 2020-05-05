@@ -13,8 +13,8 @@ const Container = (props) => {
     } = props;
 
     const stack = utilities.createClassStack([
-      className,
-      `${className}--${variant}`,
+        className,
+        `${className}--${variant}`,
     ]);
 
     return (
@@ -34,14 +34,14 @@ const Container = (props) => {
 };
 
 Container.defaultProps = {
-  className: 'container',
-  variant: 'default'
+    className: 'container',
+    variant: 'default'
 };
 
 Container.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
-  variant: PropTypes.oneOf(['default', 'two--column', 'blue--background']),
+    className: PropTypes.string,
+    children: PropTypes.node,
+    // variant: PropTypes.any(['default', 'two--column', 'blue--background']),
 };
 
 export default Container;

@@ -1,10 +1,4 @@
-const NavbarIcon = (props) => {
-  const {
-    className,
-    children,
-    ...rest
-  } = props;
-
+const NavbarIcon = () => {
   return (
     <svg width="144px" height="37px" viewBox="0 0 144 37" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>logo/ignium_menu</title>
@@ -34,10 +28,6 @@ const NavbarIcon = (props) => {
       </g>
     </svg>
   );
-};
-
-NavbarIcon.defaultProps = {
-  className: 'navbar__icon'
 };
 
 export default NavbarIcon;

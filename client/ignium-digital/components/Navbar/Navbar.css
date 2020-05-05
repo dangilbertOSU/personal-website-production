@@ -106,7 +106,6 @@
     }
 }
 
-
 /*
  *  This is the size that the navbar links begin to compress
  */
@@ -153,6 +152,7 @@
 
     .navbar__links ul li a {
         display: block;
+        font-size: 1rem;
         margin: 1.5rem 0;
         padding: 0;
     }
