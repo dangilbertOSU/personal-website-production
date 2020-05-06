@@ -1,0 +1,58 @@
+.who__we__are {
+     display: grid;
+     grid-template-areas: "text image";
+}
+
+.who__we__are h2 {
+     color: #0E1137;
+     font-size: 1.875rem;
+     font-weight: 600;
+     line-height: 2.875rem;
+     max-width: 512px;
+}
+
+.who__we__are p {
+     font-size: 1rem;
+     font-weight: normal;
+     letter-spacing: -0.070588px;
+     line-height: 175%;
+     max-width: 467px;
+     opacity: 0.6;
+}
+
+.who__we__are img {
+     object-fit: cover;
+     min-width: 100%;
+}
+
+.who__we__are__text {
+     grid-area: text;
+}
+
+.who__we__are__image {
+     grid-area: image;
+}
+
+
+/*
+ * Small Laptop
+ */
+
+@media only screen and (max-width: 1024px) {
+     .who__we__are {
+          grid-template-areas: "image"
+               "text";
+     }
+}
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 425px) {
+     .who__we__are h2 {
+          font-size: 1.25rem;
+          line-height: 150%;
+          margin-top: 19px;
+     }
+}

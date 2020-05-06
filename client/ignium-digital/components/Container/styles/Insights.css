@@ -1,0 +1,144 @@
+/*
+ * CSS for insight container
+ */
+
+.insights__articles {
+     display: grid;
+     grid-template-areas:
+          "A A B D"
+          "A A B D"
+          "A A C D"
+          "A A C D"
+          "A A C E"
+          "A A C E";
+}
+
+.insights__articles>*:not(:first-child) {
+     padding-left: 1rem;
+}
+
+.insights__articles>*:not(:first-child) h3 {
+     font-size: 1rem;
+}
+
+.insights__article__data {
+     align-items: center;
+     display: flex;
+     font-weight: 600;
+     letter-spacing: -0.202941px;
+}
+
+.insights__article__data p {
+     font-size: 0.875rem;
+     text-transform: uppercase;
+     margin: 0 0.2rem;
+}
+
+.insights__articles .article_0 {
+     grid-area: A;
+}
+
+.insights__articles .article_1 {
+     grid-area: B;
+}
+
+.insights__articles .article_2 {
+     grid-area: D;
+}
+
+.insights__articles .article_3 {
+     align-self: end;
+     grid-area: C;
+}
+
+.insights__articles .article_4 {
+     align-self: end;
+     grid-area: E;
+}
+
+.insights__article img {
+     object-fit: cover;
+     min-width: 100%;
+}
+
+.insights__article__image {
+     cursor: pointer;
+     position: relative;
+}
+
+.insights__article__image:hover {
+     box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
+     -webkit-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
+     -moz-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
+}
+
+.insights__article__image:hover::after {
+     align-items: center;
+     background: #0E1137;
+     content: "Read More";
+     color: white;
+     display: flex;
+     height: 100%;
+     justify-content: center;
+     left: 0;
+     opacity: 0.6;
+     position: absolute;
+     text-transform: uppercase;
+     top: 0;
+     width: 100%;
+}
+
+.article_0 img {
+     height: 505px;
+}
+
+.article_1 img,
+.article_4 img {
+     height: 208px;
+}
+
+.article_2 img,
+.article_3 img {
+     height: 320px;
+}
+
+.insights__articles__button {
+     margin-top: 1rem;
+     text-align: center;
+}
+
+.technology {
+     color: #0057CA;
+}
+
+.motivation {
+     color: #00A529
+}
+
+.business {
+     color: #8A008F;
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 768px) {
+     .insights__articles {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .insights__articles .insights__article {
+          padding: 0;
+          width: 100%;
+     }
+
+     .insights__articles .insights__article img {
+          height: 368px;
+     }
+
+     .article_3,
+     .article_4 {
+          display: none;
+     }
+}

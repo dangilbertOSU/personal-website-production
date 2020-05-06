@@ -1,0 +1,75 @@
+/*
+ * CSS for services container
+ */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+}
+
+.services h2 {
+    font-size: 1.875rem;
+    line-height: 2.875rem;
+}
+
+.services ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.services__links ul li {
+    flex: 1 0 50%;
+    /* explanation below */
+}
+
+.services__links {
+    padding-top: 9rem;
+}
+
+.services__header {
+    max-width: 464px;
+    position: relative;
+}
+
+.services .container__tab {
+    left: -6rem;
+    top: 3rem;
+}
+
+.services .container__tab__line {
+    left: -1.5rem;
+    top: 1rem;
+}
+
+/*
+ * large Mobile
+ */
+
+@media only screen and (max-width: 555px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 6rem;
+    }
+
+    .services p {
+        max-width: 331px;
+    }
+
+    .services .container__tab {
+        left: 2rem;
+        top: -3rem;
+    }
+
+    .services__links {
+        padding-bottom: 5.5rem;
+        padding-top: 1rem;
+    }
+
+    .services__links ul {
+        flex-direction: column;
+    }
+}

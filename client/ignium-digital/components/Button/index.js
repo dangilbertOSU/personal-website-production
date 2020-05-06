@@ -20,6 +20,7 @@ const Button = (props) => {
     <button
       aria-label={ariaLabel}
       className={stack}
+      label={children.toString()}
       {...rest}
     >
       {children}

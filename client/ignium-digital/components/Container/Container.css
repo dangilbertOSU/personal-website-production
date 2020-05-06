@@ -1,3 +1,7 @@
+/*
+ * General container styles
+ */
+
 .container {
     box-sizing: border-box;
     padding: 0 15vw;
@@ -23,21 +27,22 @@
 }
 
 .container__tab {
-    position: absolute;
-    transform: rotate(-90deg);
+    color: #0E1137;
     left: 8vw;
+    position: absolute;
     text-transform: uppercase;
     top: 3rem;
-} 
+    transform: rotate(-90deg);
+}
 
 .container__tab__line {
     background-color: #0E1137;
     display: block;
     height: 1.5rem;
-    position: absolute;
-    transform: rotate(-90deg);
     left: -1.5rem;
+    position: absolute;
     top: 1rem;
+    transform: rotate(-90deg);
     width: 1px;
 }
 
@@ -45,218 +50,8 @@
     background-color: #F5F9FF;
 }
 
-/*
- * CSS for services container
- */
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 7.5rem;
-    padding-top: 7.5rem;
-}
-
-.services h2 {
-    font-size: 1.875rem;
-    line-height: 2.875rem;
-}
-
-.services ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.services__links ul li {
-    flex: 1 0 50%; /* explanation below */
-}
-
-.services__links {
-    padding-top: 9rem;
-}
-
-.services__header {
-    max-width: 464px;
-    position: relative;
-}
-
-.services .container__tab {
-    left: -6rem;
-    top: 3rem;
-} 
-
-.services .container__tab__line {
-    left: -1.5rem;
-    top: 1rem;
-}
-
-/*
- * CSS for contact container
- */
-
-.contact {
-    padding: 7.5rem 15vw;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 1.875rem;
-    line-height: 2.875rem;
-}
-
-.contact p {
-    color: #574444;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.375rem;
-    margin: 2rem auto;
-    max-width: calc(158.65px + 22rem)
-}
-
-.contact button {
-    box-shadow: 0px 2px 20px 0px rgba(249,67,34,0.19);
-    -webkit-box-shadow: 0px 2px 20px 0px rgba(249,67,34,0.19);
-    -moz-box-shadow: 0px 2px 20px 0px rgba(249,67,34,0.19);
-}
-
-.contact input {
-    border: none;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 8px 0px rgba(198,212,232,0.38);
-    font-size: 0.875rem;
-    height: 40px;
-    line-height: 0.875rem;
-    margin-right: 1rem;
-    outline: none;
-    padding: 1rem;
-    width: 21rem;
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(198,212,232,0.38);
-    -moz-box-shadow: 0px 4px 8px 0px rgba(198,212,232,0.38);
-}
-
-.contact input::placeholder {
-    color: #574444;
-    font-size: 0.875rem;
-    line-height: 1.75rem;
-    opacity: 0.38;
-}
-
-/*
- * CSS for insight container
- */
-
-.insights__articles {
-    display: grid;
-    grid-template-areas:
-        "A A B D"
-        "A A B D"
-        "A A C D"
-        "A A C D"
-        "A A C E"
-        "A A C E";
-}
-
-.insights__articles > *:not(:first-child) {
-    padding-left: 1rem;
-}
-
-.insights__articles > *:not(:first-child) h3{
-    font-size: 1rem;
-}
-
-.insights__article__data {
-    align-items: center;
-    display: flex;
-    font-weight: 600;
-    letter-spacing: -0.202941px;
-}
-
-.insights__article__data p {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    margin: 0 0.2rem;
-}
-
-.insights__articles .article_0 {
-    grid-area: A;
-}
-
-.insights__articles .article_1 {
-    grid-area: B;
-}
-
-.insights__articles .article_2 {
-    grid-area: D;
-}
-
-.insights__articles .article_3 {
-    align-self: end;
-    grid-area: C;
-}
-
-.insights__articles .article_4 {
-    align-self: end;
-    grid-area: E;
-}
-
-.insights__article img {
-    object-fit: cover;
-    min-width: 100%;
-}
-
-.insights__article__image {
-    cursor: pointer;
-    position: relative;
-}
-
-.insights__article__image:hover::after  {
-    align-items: center;
-    background: #0E1137;
-    content: "Read More";
-    color: white;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    opacity: 0.6;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
-    width: 100%;
-}
-
-.article_0 img {
-    height: 505px;
-}
-
-.article_1 img, .article_4 img {
-    height: 208px;
-}
-
-.article_2 img, .article_3 img {
-    height: 320px;
-}
-
-.insights__articles__button {
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.technology {
-    color: #0057CA;
-}
-
-.motivation {
-    color: #00A529
-}
-
-.business {
-    color: #8A008F;
-}
-
 @media only screen and (max-width: 1150px) {
-    .container--two--column > *:last-child {
+    .container--two--column>*:last-child {
         grid-row: 1;
     }
 }
@@ -275,7 +70,7 @@
 
     .container--two--column div p {
         padding-right: 0rem;
-    }    
+    }
 }
 
 /*
@@ -285,7 +80,7 @@
     .container {
         padding: 0 1rem;
     }
-    
+
     .container--two--column {
         grid-template-columns: auto;
     }
@@ -294,63 +89,5 @@
         left: 4rem;
         transform: rotate(0deg);
         top: -4rem;
-    }
-
-    .contact {
-        padding: 4rem 1rem;
-    }
-
-    .insights__articles {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .insights__articles .insights__article {
-        padding: 0;
-        width: 100%;
-    }
-
-    .insights__articles .insights__article img {
-        height: 368px;
-    }
-
-    .article_3, .article_4 {
-        display: none;
-    }
-}
-
-/*
- * large Mobile
- */
-
- @media only screen and (max-width: 555px){
-    .contact input{
-        font-size: 1rem;
-        height: 4rem;
-        margin-bottom: 1rem;
-        width: 100%;
-    }
-
-    .contact input::placeholder {
-        font-size: 1rem;
-    }
-
-    .services {
-        grid-template-columns: repeat(1, 1fr);
-        padding-top: 6rem;
-    }
-
-    .services .container__tab {
-        left: 2rem;
-        top: -3rem;
-    }
-
-    .services__links {
-        padding-bottom: 5.5rem;
-        padding-top: 1rem;
-    }
-
-    .services__links ul {
-        flex-direction: column;
     }
 }
