@@ -35,7 +35,7 @@ const Services = (props) => {
                         <p>Sitecore Upgrades</p>
                     </li>
                     <li>
-                        <Button ariaLabel="view all sources" variant="secondary">View All Services</Button>
+                        <Button ariaLabel="view all services" variant="secondary">View All Services</Button>
                     </li>
                 </ul>
                 

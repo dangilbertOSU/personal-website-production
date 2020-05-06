@@ -15,6 +15,7 @@ import JumboLogoImage from '../public/images/home_logo_jumbo.png';
 import WhoWeAreImage from '../public/images/home_who_we_are.png';
 import Layout from '../components/Layout';
 import Services from '../components/Container/Services';
+import Insights from '../components/Container/Insights';
 
 const App = (props) => {
 
@@ -51,9 +52,7 @@ const App = (props) => {
           </div>
         </Container>
         <Services />
-        <Container tabTitle="Insights">
-          <h2>Everything you need to know about sitecore technology, customer experience, and beyond</h2>
-        </Container>
+        <Insights />
       </Layout>
     </div>
   );
