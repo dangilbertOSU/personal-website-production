@@ -184,10 +184,15 @@
     }
 }
 
-@media only screen and (max-width: 1150px) {
+/*
+ * Small Laptop
+ */
+
+@media only screen and (max-width: 1024px) {
     .navbar {
         padding-left: 5vw;
         padding-right: 5vw;
+        position: static;
     }
 
     .navbar__menu__toggle {
@@ -195,7 +200,11 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+/*
+ * large Mobile
+ */
+
+@media only screen and (max-width: 555px) {
     .navbar {
         padding-left: 1rem;
         padding-right: 1rem;

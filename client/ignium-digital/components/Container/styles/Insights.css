@@ -2,6 +2,15 @@
  * CSS for insight container
  */
 
+.insights a {
+     color: #0E1137;
+     text-decoration: none;
+}
+
+.insights a:hover {
+     text-decoration: underline;
+}
+
 .insights__articles {
      display: grid;
      grid-template-areas:
@@ -120,12 +129,53 @@
 }
 
 /*
+ * Small Laptop
+ */
+
+@media only screen and (max-width: 1024px) {
+
+     .insights__articles {
+          display: grid;
+          grid-template-areas:
+               "A B"
+               "A C";
+     }
+
+     .insights__articles .article_1 {
+          grid-area: B;
+     }
+
+     .insights__articles .article_2 {
+          grid-area: C;
+     }
+
+     .article_3,
+     .article_4 {
+          display: none;
+     }
+}
+
+/*
  * Tablet
  */
 @media only screen and (max-width: 768px) {
+     .insights__articles .insights__article {
+          margin-bottom: 2.5rem;
+     }
+
      .insights__articles {
           display: flex;
           flex-direction: column;
+     }
+
+
+     .insights__article__data {
+          margin-top: 1.2rem;
+     }
+
+
+     .insights__article__image:hover::after {
+          display: none;
      }
 
      .insights__articles .insights__article {
@@ -135,10 +185,5 @@
 
      .insights__articles .insights__article img {
           height: 368px;
-     }
-
-     .article_3,
-     .article_4 {
-          display: none;
      }
 }

@@ -3,20 +3,25 @@
     padding: 6rem 0;
 }
 
-.content > * {
+.content>* {
     margin-top: 5rem;
 }
 
 /*
- * Large Mobile
+ * Small Laptop
  */
- @media only screen and (max-width: 425px) {
+
+@media only screen and (max-width: 1024px) {
     .content {
-        padding: 3rem 0;
+        padding: 0;
     }
 
-    .content > *:not(:first-child) {
+    .content>*:first-child {
+        margin-top: 2rem;
+    }
+
+    .content>*:not(:first-child) {
         margin-top: 8rem;
     }
-    
+
 }

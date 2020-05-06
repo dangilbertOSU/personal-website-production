@@ -11,7 +11,7 @@ p {
     font-size: 1rem;
     line-height: 28px;
     opacity: 0.6;
-}   
+}
 
 h2 {
     font-size: 1.8vw;
@@ -19,7 +19,7 @@ h2 {
 }
 
 .orange--text {
-    color: #F94322;
+    color: #F94322 !important;
 }
 
 .open--sans {

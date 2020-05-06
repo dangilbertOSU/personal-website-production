@@ -98,7 +98,11 @@ const Insights = (props) => {
                 <TextSeperator />
                 <p>{article.publish_date}</p>
               </div>
-              <h3>{article.title}</h3>
+              <Link href={`/insights/${article.id}`}>
+                <a>
+                  <h3>{article.title}</h3>
+                </a>
+              </Link>
               {index == 0 && <p>{article.content.substring(0, 327) + "..."}</p>}
             </div>
           );

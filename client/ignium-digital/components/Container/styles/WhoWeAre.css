@@ -4,10 +4,6 @@
 }
 
 .who__we__are h2 {
-     color: #0E1137;
-     font-size: 1.875rem;
-     font-weight: 600;
-     line-height: 2.875rem;
      max-width: 512px;
 }
 
@@ -22,7 +18,8 @@
 
 .who__we__are img {
      object-fit: cover;
-     min-width: 100%;
+     height: 550px;
+     width: 100%;
 }
 
 .who__we__are__text {
@@ -42,6 +39,11 @@
      .who__we__are {
           grid-template-areas: "image"
                "text";
+     }
+
+     .who__we__are .who__we__are__text h2,
+     .who__we__are .who__we__are__text p {
+          max-width: 100%;
      }
 }
 
