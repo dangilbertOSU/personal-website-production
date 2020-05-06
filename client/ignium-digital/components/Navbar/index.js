@@ -20,7 +20,9 @@ const Navbar = (props) => {
     return (
         <nav className={className + (mobileNavVisible ? " grow" : "")}>
             <div className={className + "__brand"}>
-                <NavbarIcon />
+                <Link href="/">
+                    <a><NavbarIcon /></a>
+                </Link>
             </div>
             <a className="navbar__menu__toggle" aria-label="navbar open mobile menu" onClick={() => setMobileNavVisible(!mobileNavVisible)}>
                 <span className="bar"></span>

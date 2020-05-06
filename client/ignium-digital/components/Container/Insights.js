@@ -1,5 +1,5 @@
 import './Container.css';
-
+import Link from 'next/link'
 import Button from '../Button'
 
 /*
@@ -73,7 +73,13 @@ const Insights = (props) => {
                 {dummyArticles.map((article, index) => {
                     return (
                         <div className={`insights__article article_${index}`} key={article.id}>
-                            <div className="insights__article__image"><img src={article.image}/></div>
+                            <Link href={`/insights/${article.id}`}>
+                                <a>
+                                    <div className="insights__article__image">
+                                        <img src={article.image}/>
+                                    </div>
+                                </a>
+                            </Link>
                             <div className="insights__article__data">
                                 <p className={`insights__article__category ${article.category}`}>{article.category}</p>
                                 <TextSeperator />
@@ -86,7 +92,9 @@ const Insights = (props) => {
                 })}
             </div>
             <div className="insights__articles__button">
-                <Button ariaLabel="view all articles" variant="secondary">View All Articles</Button>
+                <Link href="/insights">
+                    <a><Button ariaLabel="view all articles" variant="secondary">View All Articles</Button></a>
+                </Link>
             </div>
         </div>
     );
