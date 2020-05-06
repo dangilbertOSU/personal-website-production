@@ -13,8 +13,13 @@ const Contact = (props) => {
         For more information about our services and to find out how Ignium can
         help improve your business.
       </p>
-      <div className={"contact__submit"}>
-        <input type="email" placeholder="Enter your email address"></input>
+      <div className="contact__submit">
+        <input
+          name="contact_email"
+          type="email"
+          placeholder="Enter your email address"
+          aria-label="Email input"
+        ></input>
         <Button ariaLabel="submit email address">Let's Chat</Button>
       </div>
     </div>

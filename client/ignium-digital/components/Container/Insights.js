@@ -85,7 +85,10 @@ const Insights = (props) => {
               <Link href={`/insights/${article.id}`}>
                 <a>
                   <div className="insights__article__image">
-                    <img src={article.image} />
+                    <img
+                      src={article.image}
+                      alt={article.alt || `${article.title}_image`}
+                    />
                   </div>
                 </a>
               </Link>
