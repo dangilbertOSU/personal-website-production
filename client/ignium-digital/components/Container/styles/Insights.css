@@ -159,6 +159,11 @@
  * Tablet
  */
 @media only screen and (max-width: 768px) {
+     .insights__header h2 {
+          font-size: 1.25rem;
+          line-height: 150%;
+     }
+
      .insights__articles .insights__article {
           margin-bottom: 2.5rem;
      }

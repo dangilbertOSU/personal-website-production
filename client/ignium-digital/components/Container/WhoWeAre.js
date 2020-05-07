@@ -10,11 +10,13 @@ const WhoWeAre = (props) => {
   return (
     <div className={className}>
       <div className="who__we__are__text">
-        <h2>We are a personalized Sitecore focused digital agency</h2>
-        <span className="container__tab">
-          <span className="container__tab__line"></span>
-          <p>Who We Are</p>
-        </span>
+        <h2 className="container__header">
+          We are a personalized Sitecore focused digital agency
+          <span className="container__tab">
+            <span className="container__tab__line"></span>
+            <h4>Who We Are</h4>
+          </span>
+        </h2>
         <p>
           We currently have a small team of Sitecore MVP's and Sitecore
           specialists to provide personalized assistance to help you with your

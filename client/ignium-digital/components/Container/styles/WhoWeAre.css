@@ -3,11 +3,11 @@
      grid-template-areas: "text image";
 }
 
-.who__we__are h2 {
+.who__we__are .who__we__are__text h2 {
      max-width: 512px;
 }
 
-.who__we__are p {
+.who__we__are .who__we__are__text p {
      font-size: 1rem;
      font-weight: normal;
      letter-spacing: -0.070588px;
@@ -48,13 +48,31 @@
 }
 
 /*
+ * Tablet
+ */
+@media only screen and (max-width: 768px) {
+     .who__we__are .who__we__are__text .container__tab {
+          margin-top: -36rem;
+     }
+}
+
+
+/*
  * Large Mobile
  */
 
 @media only screen and (max-width: 425px) {
+     .who__we__are .who__we__are__text .container__tab {
+          margin-top: -26rem;
+     }
+
      .who__we__are h2 {
           font-size: 1.25rem;
           line-height: 150%;
           margin-top: 19px;
+     }
+
+     .who__we__are img {
+          height: 393px;
      }
 }

@@ -66,14 +66,14 @@ const Insights = (props) => {
   return (
     <div className={className}>
       <div className="insights__header">
-        <h2>
+        <h2 className="container__header">
           Everything you need to know about sitecore technology, customer
           experience, and beyond
+          <span className="container__tab">
+            <span className="container__tab__line"></span>
+            <h4>Insights</h4>
+          </span>
         </h2>
-        <span className="container__tab">
-          <span className="container__tab__line"></span>
-          <p>Insights</p>
-        </span>
       </div>
       <div className="insights__articles">
         {dummyArticles.map((article, index) => {

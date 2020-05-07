@@ -8,17 +8,14 @@ const Services = (props) => {
 
   return (
     <div className={className + " blue--background"}>
-      <div className="services__header">
-        <h2>
-          We offer a wide range of Sitecore tailored solutions, to help your
-          organization to get the most of your Sitecore investment.
-        </h2>
+      <h2 className="container__header">
+        We offer a wide range of Sitecore tailored solutions, to help your
+        organization to get the most of your Sitecore investment.
         <span className="container__tab">
           <span className="container__tab__line"></span>
-          <p>Services</p>
+          <h4>Services</h4>
         </span>
-      </div>
-
+      </h2>
       <div className="services__links">
         <ul>
           <li>

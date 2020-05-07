@@ -15,10 +15,13 @@
 .contact p {
      color: #574444;
      font-size: 0.875rem;
-     font-weight: 400;
-     line-height: 1.375rem;
+     font-style: normal;
+     font-weight: normal;
+     letter-spacing: -0.411765px;
+     line-height: 157%;
      margin: 2rem auto;
-     max-width: calc(158.65px + 22rem)
+     max-width: calc(158.65px + 22rem);
+     opacity: 1;
 }
 
 .contact button {
@@ -45,7 +48,6 @@
 .contact input::placeholder {
      color: #574444;
      font-size: 0.875rem;
-     line-height: 1.75rem;
      opacity: 0.38;
 }
 
@@ -65,6 +67,16 @@
  */
 
 @media only screen and (max-width: 555px) {
+
+     .contact h2 {
+          font-size: 1.125rem;
+          line-height: 167%;
+     }
+
+     .contact p {
+          color: #0E1137;
+          opacity: 0.6;
+     }
 
      .contact input {
           font-size: 1rem;

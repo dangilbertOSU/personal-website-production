@@ -12,6 +12,8 @@
 .services h2 {
     font-size: 1.875rem;
     line-height: 2.875rem;
+    font-weight: 600;
+    max-width: 20rem;
 }
 
 .services ul {
@@ -28,21 +30,6 @@
 
 .services__links {
     padding-top: 9rem;
-}
-
-.services__header {
-    max-width: 464px;
-    position: relative;
-}
-
-.services .container__tab {
-    left: -6rem;
-    top: 3rem;
-}
-
-.services .container__tab__line {
-    left: -1.5rem;
-    top: 1rem;
 }
 
 /*
@@ -66,13 +53,22 @@
  */
 
 @media only screen and (max-width: 555px) {
+
+    .services {
+        padding-bottom: 5.375rem;
+    }
+
     .services p {
         max-width: 331px;
     }
 
-    .services .container__tab {
-        left: 2rem;
-        top: -3rem;
+    .services h2 {
+        font-size: 1.25rem;
+        line-height: 150%;
+    }
+
+    .services__links {
+        padding-bottom: 0;
     }
 
     .services__links ul {
