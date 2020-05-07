@@ -1,47 +1,50 @@
-import utilities from "../../utilities/utilities";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import utilities from '../../utilities/utilities';
 
-import "./Container.css";
+import './Container.css';
 
 const Container = (props) => {
-  const {
-    className,
-    children,
-    backgroundColor,
-    tabTitle,
-    variant,
-    ...rest
-  } = props;
+	const {
+		className,
+		children,
+		backgroundColor,
+		tabTitle,
+		variant,
+	} = props;
 
-  const stack = utilities.createClassStack([
-    className,
-    `${className}--${variant}`,
-    `${backgroundColor}`,
-  ]);
+	const stack = utilities.createClassStack([
+		className,
+		`${className}--${variant}`,
+		`${backgroundColor}`,
+	]);
 
-  return (
-    <div className={stack} {...rest}>
-      {tabTitle && (
-        <span className="container__tab">
-          <span className="container__tab__line"></span>
-          <p>{tabTitle}</p>
-        </span>
-      )}
-      {children}
-    </div>
-  );
+	return (
+		<div className={stack}>
+			{tabTitle && (
+				<span className="container__tab">
+					<span className="container__tab__line" />
+					<p>{tabTitle}</p>
+				</span>
+			)}
+			{children}
+		</div>
+	);
 };
 
 Container.defaultProps = {
-  className: "container",
-  variant: "default",
+	className: 'container',
+	children: PropTypes.node,
+	backgroundColor: 'default',
+	tabTitle: PropTypes.node,
+	variant: 'default',
 };
 
 Container.propTypes = {
-  backgroundColor: PropTypes.oneOf(["default", "blue--background"]),
-  className: PropTypes.string,
-  children: PropTypes.node,
-  variant: PropTypes.oneOf(["default", "two--column"]),
+	backgroundColor: PropTypes.oneOf(['default', 'blue--background']),
+	className: PropTypes.string,
+	children: PropTypes.node,
+	tabTitle: PropTypes.node,
+	variant: PropTypes.oneOf(['default', 'two--column']),
 };
 
 export default Container;
