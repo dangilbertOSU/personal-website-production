@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: #0E1137;
+    font-size: 1rem;
+    line-height: 28px;
+    opacity: 0.6;
+}
+
+h2 {
+    font-size: 1.8vw;
+    line-height: 3rem;
+}
+
+.orange--text {
+    color: #F94322 !important;
+}

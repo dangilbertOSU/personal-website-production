@@ -1,0 +1,93 @@
+/*
+ * General container styles
+ */
+
+.container {
+    box-sizing: border-box;
+    padding: 0 15vw;
+    position: relative;
+    width: 100%;
+}
+
+.container h2 {
+    color: #0E1137;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 171%;
+}
+
+.container img {
+    display: block;
+    margin: auto;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.container__header {
+    position: relative;
+}
+
+.container__tab {
+    color: #0E1137;
+    left: -7rem;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: right;
+    top: 1rem;
+    transform: rotate(-90deg);
+}
+
+.container__tab h4 {
+    color: #0E1137;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 229%;
+    opacity: 1;
+}
+
+.container__tab__line {
+    background-color: #0E1137;
+    display: block;
+    height: 1rem;
+    left: -1.5rem;
+    position: absolute;
+    top: 1.6rem;
+    transform: rotate(-90deg);
+    width: 1px;
+}
+
+.blue--background {
+    background-color: #F5F9FF;
+}
+
+/*
+ * Tablet
+ */
+
+@media only screen and (max-width: 1150px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .container__tab {
+        left: 2rem;
+        transform: rotate(0deg);
+        top: -4rem;
+    }
+}

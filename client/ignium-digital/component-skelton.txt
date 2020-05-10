@@ -1,0 +1,24 @@
+import './Component.css';
+
+const Component = (props) => {
+  const {
+    className,
+    children,
+    ...rest
+  } = props;
+
+  return (
+    <div
+      className={className}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
+};
+
+Component.defaultProps = {
+  className: 'className'
+};
+
+export default Component;

@@ -1,0 +1,78 @@
+.who__we__are {
+     display: grid;
+     grid-template-areas: "text image";
+}
+
+.who__we__are .who__we__are__text h2 {
+     max-width: 512px;
+}
+
+.who__we__are .who__we__are__text p {
+     font-size: 1rem;
+     font-weight: normal;
+     letter-spacing: -0.070588px;
+     line-height: 175%;
+     max-width: 467px;
+     opacity: 0.6;
+}
+
+.who__we__are img {
+     object-fit: cover;
+     height: 550px;
+     width: 100%;
+}
+
+.who__we__are__text {
+     grid-area: text;
+}
+
+.who__we__are__image {
+     grid-area: image;
+}
+
+
+/*
+ * Small Laptop
+ */
+
+@media only screen and (max-width: 1024px) {
+     .who__we__are {
+          grid-template-areas: "image"
+               "text";
+     }
+
+     .who__we__are .who__we__are__text h2,
+     .who__we__are .who__we__are__text p {
+          max-width: 100%;
+     }
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 768px) {
+     .who__we__are .who__we__are__text .container__tab {
+          margin-top: -36rem;
+     }
+}
+
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 425px) {
+     .who__we__are .who__we__are__text .container__tab {
+          margin-top: -26rem;
+     }
+
+     .who__we__are h2 {
+          font-size: 1.25rem;
+          line-height: 150%;
+          margin-top: 19px;
+     }
+
+     .who__we__are img {
+          height: 393px;
+     }
+}
