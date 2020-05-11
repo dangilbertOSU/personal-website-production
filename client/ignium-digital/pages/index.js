@@ -5,10 +5,10 @@ import Head from "next/head";
  */
 
 import Layout from "../components/Layout";
-import Services from "../components/Container/Services";
-import Insights from "../components/Container/Insights";
-import Welcome from "../components/Container/Welcome";
-import WhoWeAre from "../components/Container/WhoWeAre";
+import Services from "../components/Container/Home/Services";
+import Insights from "../components/Container/Home/Insights";
+import Welcome from "../components/Container/Home/Welcome";
+import WhoWeAre from "../components/Container/Home/WhoWeAre";
 
 const App = (props) => {
   return (

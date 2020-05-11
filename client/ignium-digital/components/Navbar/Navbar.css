@@ -99,6 +99,20 @@
     background-color: black;
 }
 
+.active::after {
+    animation-duration: 0.2s;
+    animation-name: navlink_line;
+    background-color: #0E1137;
+    height: 0.5rem;
+    content: "";
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    position: absolute;
+    top: -2.1rem;
+    width: 100%;
+}
 
 @keyframes navlink_line {
     from {
@@ -182,6 +196,10 @@
         position: absolute;
         top: 1.8rem;
         width: 100%;
+    }
+
+    .active::after {
+        display: none;
     }
 }
 

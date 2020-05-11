@@ -1,0 +1,11 @@
+.grid .grid__items {
+     align-items: flex-start;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+     grid-gap: 7rem;
+     justify-content: space-between;
+}
+
+.grid .grid__items>* {
+     box-sizing: border-box;
+}
