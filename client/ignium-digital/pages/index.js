@@ -7,7 +7,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Services from "../components/Container/Home/Services";
 import Insights from "../components/Container/Home/Insights";
-import Welcome from "../components/Container/Home/Welcome";
+import HomeHeader from "../components/Container/Home/HomeHeader";
 import WhoWeAre from "../components/Container/Home/WhoWeAre";
 
 const App = (props) => {
@@ -21,7 +21,7 @@ const App = (props) => {
         />
       </Head>
       <Layout>
-        <Welcome />
+        <HomeHeader />
         <WhoWeAre />
         <Services />
         <Insights />

@@ -9,3 +9,12 @@
 .grid .grid__items>* {
      box-sizing: border-box;
 }
+
+/*
+ * Large Mobile
+ */
+@media only screen and (max-width: 555px) {
+     .grid .grid__items {
+          grid-gap: 2rem;
+     }
+}

@@ -5,7 +5,7 @@
     justify-content: space-between;
     display: flex;
     height: 6rem;
-    padding: 0 15vw;
+    padding: 0 20vw;
     position: fixed;
     top: 0;
     width: 100%;
@@ -99,6 +99,10 @@
     background-color: black;
 }
 
+.navbar__links li .active {
+    opacity: 1;
+}
+
 .active::after {
     animation-duration: 0.2s;
     animation-name: navlink_line;
@@ -138,7 +142,7 @@
  *  This is the size that the navbar links begin to compress
  */
 
-@media only screen and (max-width: 1273px) {
+@media only screen and (max-width: 1485px) {
 
     .navbar {
         align-items: flex-start;

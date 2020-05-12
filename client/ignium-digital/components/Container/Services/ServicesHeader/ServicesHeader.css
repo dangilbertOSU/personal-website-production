@@ -1,0 +1,51 @@
+.services__header {
+     display: grid;
+     grid-template-areas:
+          "A B B"
+          "C B B";
+}
+
+.services__header__heading {
+     align-items: flex-end;
+     display: flex;
+     grid-area: A;
+}
+
+.services__header__description {
+     grid-area: C;
+}
+
+.services__header__image {
+     align-items: center;
+     grid-area: B;
+     display: flex;
+}
+
+.services__header .services__header__image img {
+     object-fit: cover;
+     margin-right: 0;
+     min-width: 90%;
+}
+
+.services__header .text {
+     max-width: 23rem;
+     padding-right: 2rem;
+}
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 555px) {
+     .services__header {
+          grid-template-areas:
+               "A"
+               "B"
+               "C";
+     }
+
+     .services__header .text {
+          max-width: 100%;
+          padding-right: 0;
+     }
+}

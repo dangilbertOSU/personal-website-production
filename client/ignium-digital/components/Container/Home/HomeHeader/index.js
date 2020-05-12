@@ -1,12 +1,12 @@
 import "../../Container.css";
-import "./Welcome.css";
+import "./HomeHeader.css";
 
 import PropTypes from "prop-types";
 
 import Button from "../../../Button";
 import WelcomeLogo from "../../../../public/images/home_logo_jumbo.png";
 
-const Contact = (props) => {
+const HomeHeader = (props) => {
   const { className } = props;
 
   return (
@@ -23,12 +23,12 @@ const Contact = (props) => {
   );
 };
 
-Contact.defaultProps = {
+HomeHeader.defaultProps = {
   className: "container welcome",
 };
 
-Contact.propTypes = {
+HomeHeader.propTypes = {
   className: PropTypes.string,
 };
 
-export default Contact;
+export default HomeHeader;

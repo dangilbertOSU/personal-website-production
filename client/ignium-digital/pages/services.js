@@ -11,11 +11,15 @@ import GridContainer from "../components/Container/Global/Grid";
  * Import SVGs
  */
 
+import AuditIcon from "../components/SVG/services/AuditIcon";
 import ConversationIcon from "../components/SVG/services/ConversationIcon";
 import CustomDevIcon from "../components/SVG/services/CustomDevIcon";
+import InfanstructureIcon from "../components/SVG/services/InfanstructureIcon";
 import MarketingIcon from "../components/SVG/services/MarketingIcon";
 import TeamAugIcon from "../components/SVG/services/TeamAugIcon";
 import TrainingIcon from "../components/SVG/services/TrainingIcon";
+import UpgradeIcon from "../components/SVG/services/UpgradeIcon";
+import ServicesHeader from "../components/Container/Services/ServicesHeader";
 
 const App = (props) => {
   return (
@@ -28,6 +32,7 @@ const App = (props) => {
         />
       </Head>
       <Layout>
+        <ServicesHeader />
         <GridContainer title="Sitecore Technology">
           <Card title="Training" Icon={() => <TrainingIcon />}>
             Our Founder, Dylan Young, is well known in the Sitecore community,
@@ -61,6 +66,28 @@ const App = (props) => {
             Want to use new channels to reach your customers? Our experts can
             help you to architect and build a conversational dialog application
             that can help your organization reach new customers.
+          </Card>
+        </GridContainer>
+        <GridContainer title="Other services">
+          <Card title="Sitecore Upgrades" Icon={() => <UpgradeIcon />}>
+            Are you running on an older version of Sitecore? Use our experienced
+            team to help you upgrade to the latest stable version of Sitecore.
+          </Card>
+          <Card
+            title="Azure Infrastructure"
+            Icon={() => <InfanstructureIcon />}
+          >
+            We are experienced with Sitecore Azure Infrastructure, including
+            setup using ARM Templates, and continuous deployment using Azure
+            DevOps and Blue/Green Deployments. We can also help you maintain
+            your existing IaaS or PaaS infrastructure.
+          </Card>
+          <Card title="Sitecore Audit" Icon={() => <AuditIcon />}>
+            Not sure where your implementation stands in terms of Best
+            Practices? Allow our multi-faceted inspection of your Sitecore
+            implementation to tell you exactly where your setup falls short and
+            steps that can be taken to get it where it needs to be, for upgrades
+            and better architecture.
           </Card>
         </GridContainer>
       </Layout>
