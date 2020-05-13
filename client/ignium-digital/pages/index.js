@@ -4,10 +4,10 @@
 
 import Head from "next/head";
 import HomeHeader from "../components/Sections/Home/HomeHeader";
-import Insights from "../components/Sections/Home/InsightsSection";
+import InsightsSection from "../components/Sections/Home/InsightsSection";
 import Layout from "../components/Layout";
-import Services from "../components/Sections/Home/ServicesSection";
-import WhoWeAre from "../components/Sections/Home/WhoWeAreSection";
+import ServicesSection from "../components/Sections/Home/ServicesSection";
+import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
 
 const App = (props) => {
   return (
@@ -21,9 +21,9 @@ const App = (props) => {
       </Head>
       <Layout>
         <HomeHeader />
-        <WhoWeAre />
-        <Services />
-        <Insights />
+        <WhoWeAreSection />
+        <ServicesSection />
+        <InsightsSection />
       </Layout>
     </div>
   );
