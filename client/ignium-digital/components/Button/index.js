@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import utilities from '../../utilities/utilities';
-import './Button.css';
+import PropTypes from "prop-types";
+import utilities from "../../utilities/utilities";
+import "./Button.css";
 
 const Button = (props) => {
 	const {
@@ -29,16 +29,16 @@ const Button = (props) => {
 
 Button.defaultProps = {
 	ariaLabel: PropTypes.string,
-	className: 'button',
+	className: "button",
 	children: PropTypes.node,
-	variant: 'default',
+	variant: "default",
 };
 
 Button.propTypes = {
 	ariaLabel: PropTypes.string,
 	className: PropTypes.string,
 	children: PropTypes.node,
-	variant: PropTypes.oneOf(['default', 'secondary']),
+	variant: PropTypes.oneOf(["default", "secondary"]),
 };
 
 export default Button;

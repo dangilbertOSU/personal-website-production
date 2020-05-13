@@ -1,5 +1,5 @@
-import './Content.css';
-import PropTypes from 'prop-types';
+import "./Content.css";
+import PropTypes from "prop-types";
 
 const Content = (props) => {
 	const {
@@ -17,7 +17,7 @@ const Content = (props) => {
 };
 
 Content.defaultProps = {
-	className: 'content',
+	className: "content",
 	children: PropTypes.node,
 };
 

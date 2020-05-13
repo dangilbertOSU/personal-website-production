@@ -1,15 +1,15 @@
-import './Footer.css';
-import Link from 'next/link';
-import PropTypes from 'prop-types';
+import "./Footer.css";
+import Link from "next/link";
+import PropTypes from "prop-types";
 
 /*
  * SVG imports
  */
 
-import FooterLogo from '../SVG/FooterLogo';
-import TwitterLogo from '../SVG/social/TwitterLogo';
-import LinkedInLogo from '../SVG/social/LinkedInLogo';
-import EmailLogo from '../SVG/social/EmailLogo';
+import FooterLogo from "../SVG/FooterLogo";
+import TwitterLogo from "../SVG/social/TwitterLogo";
+import LinkedInLogo from "../SVG/social/LinkedInLogo";
+import EmailLogo from "../SVG/social/EmailLogo";
 
 const Footer = (props) => {
 	const { className } = props;
@@ -77,7 +77,7 @@ const Footer = (props) => {
 };
 
 Footer.defaultProps = {
-	className: 'footer',
+	className: "footer",
 };
 
 Footer.propTypes = {
