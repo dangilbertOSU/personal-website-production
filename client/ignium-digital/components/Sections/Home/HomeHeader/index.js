@@ -1,4 +1,4 @@
-import "../../Container.css";
+import "../../Section.css";
 import "./HomeHeader.css";
 
 import PropTypes from "prop-types";
@@ -24,7 +24,7 @@ const HomeHeader = (props) => {
 };
 
 HomeHeader.defaultProps = {
-  className: "container welcome",
+  className: "section welcome",
 };
 
 HomeHeader.propTypes = {

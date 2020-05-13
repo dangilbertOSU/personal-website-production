@@ -1,5 +1,5 @@
-import "../../Container.css";
-import "./Services.css";
+import "../../Section.css";
+import "./ServicesSection.css";
 
 import PropTypes from "prop-types";
 
@@ -10,11 +10,11 @@ const Services = (props) => {
 
   return (
     <div className={`${className} blue--background`}>
-      <h2 className="container__header">
+      <h2 className="section__header">
         We offer a wide range of Sitecore tailored solutions, to help your
         organization to get the most of your Sitecore investment.
-        <span className="container__tab">
-          <span className="container__tab__line" />
+        <span className="section__tab">
+          <span className="section__tab__line" />
           <h4>Services</h4>
         </span>
       </h2>
@@ -50,7 +50,7 @@ const Services = (props) => {
 };
 
 Services.defaultProps = {
-  className: "container services",
+  className: "section services",
 };
 
 Services.propTypes = {

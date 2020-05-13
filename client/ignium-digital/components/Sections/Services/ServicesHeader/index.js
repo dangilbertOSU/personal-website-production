@@ -1,8 +1,8 @@
-import "../../Container.css";
+import "../../Section.css";
 import "./ServicesHeader.css";
 
 import PropTypes from "prop-types";
-import ServicesHeaderImage from "../../../../public/images/services_container.png";
+import ServicesHeaderImage from "../../../../public/images/services_header.png";
 
 const ServicesHeader = (props) => {
   const { className } = props;
@@ -10,10 +10,10 @@ const ServicesHeader = (props) => {
   return (
     <div className={className}>
       <div className="services__header__heading text">
-        <h2 className="container__header">
+        <h2 className="section__header">
           Let us help steer your organization in the right direction.
-          <span className="container__tab">
-            <span className="container__tab__line" />
+          <span className="section__tab">
+            <span className="section__tab__line" />
             <h4>Services</h4>
           </span>
         </h2>
@@ -35,7 +35,7 @@ const ServicesHeader = (props) => {
 };
 
 ServicesHeader.defaultProps = {
-  className: "container services__header",
+  className: "section services__header",
 };
 
 ServicesHeader.propTypes = {

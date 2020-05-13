@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import "../../Container.css";
-import "./Grid.css";
+import "./GridContainer.css";
+import "../Sections/Section.css";
 
 const GridContainer = (props) => {
   const { className, children, title } = props;
@@ -14,7 +14,7 @@ const GridContainer = (props) => {
 };
 
 GridContainer.defaultProps = {
-  className: "container grid",
+  className: "section grid__container",
   children: PropTypes.node,
 };
 

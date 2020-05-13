@@ -1,14 +1,13 @@
-import Head from "next/head";
-
 /*
  * Component Imports
  */
 
+import Head from "next/head";
+import HomeHeader from "../components/Sections/Home/HomeHeader";
+import Insights from "../components/Sections/Home/InsightsSection";
 import Layout from "../components/Layout";
-import Services from "../components/Container/Home/Services";
-import Insights from "../components/Container/Home/Insights";
-import HomeHeader from "../components/Container/Home/HomeHeader";
-import WhoWeAre from "../components/Container/Home/WhoWeAre";
+import Services from "../components/Sections/Home/ServicesSection";
+import WhoWeAre from "../components/Sections/Home/WhoWeAreSection";
 
 const App = (props) => {
   return (

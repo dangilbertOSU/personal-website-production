@@ -1,11 +1,11 @@
 /*
- * Component Imports
+ * Import Components
  */
 
 import Card from "../components/Card";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import GridContainer from "../components/Container/Global/Grid";
+import GridContainer from "../components/GridContainer";
 
 /*
  * Import SVGs
@@ -19,7 +19,7 @@ import MarketingIcon from "../components/SVG/services/MarketingIcon";
 import TeamAugIcon from "../components/SVG/services/TeamAugIcon";
 import TrainingIcon from "../components/SVG/services/TrainingIcon";
 import UpgradeIcon from "../components/SVG/services/UpgradeIcon";
-import ServicesHeader from "../components/Container/Services/ServicesHeader";
+import ServicesHeader from "../components/Sections/Services/ServicesHeader";
 
 const App = (props) => {
   return (

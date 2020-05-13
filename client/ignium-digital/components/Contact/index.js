@@ -1,8 +1,7 @@
-import "../Container/Container.css";
+import "../Sections/Section.css";
 import "./Contact.css";
 
 import PropTypes from "prop-types";
-
 import Button from "../Button";
 
 const Contact = (props) => {
@@ -29,7 +28,7 @@ const Contact = (props) => {
 };
 
 Contact.defaultProps = {
-  className: "container contact",
+  className: "section contact",
 };
 
 Contact.propTypes = {

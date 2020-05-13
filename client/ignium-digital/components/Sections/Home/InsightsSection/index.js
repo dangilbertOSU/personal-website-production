@@ -1,5 +1,5 @@
-import "../../Container.css";
-import "./Insights.css";
+import "../../Section.css";
+import "./InsightsSection.css";
 
 import PropTypes from "prop-types";
 
@@ -69,11 +69,11 @@ const Insights = (props) => {
   return (
     <div className={className}>
       <div className="insights__header">
-        <h2 className="container__header">
+        <h2 className="section__header">
           Everything you need to know about sitecore technology, customer
           experience, and beyond
-          <span className="container__tab">
-            <span className="container__tab__line" />
+          <span className="section__tab">
+            <span className="section__tab__line" />
             <h4>Insights</h4>
           </span>
         </h2>
@@ -124,7 +124,7 @@ const Insights = (props) => {
 };
 
 Insights.defaultProps = {
-  className: "container insights",
+  className: "section insights",
 };
 
 Insights.propTypes = {
