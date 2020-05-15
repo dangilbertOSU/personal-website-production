@@ -34,7 +34,7 @@
     letter-spacing: -0.42px;
     line-height: 28px;
     opacity: 0.74;
-    margin-left: 5rem;
+    margin-left: 4rem;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
@@ -99,6 +99,24 @@
     background-color: black;
 }
 
+.navbar__links li .active {
+    opacity: 1;
+}
+
+.active::after {
+    animation-duration: 0.2s;
+    animation-name: navlink_line;
+    background-color: #0E1137;
+    height: 0.5rem;
+    content: "";
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    position: absolute;
+    top: -2.1rem;
+    width: 100%;
+}
 
 @keyframes navlink_line {
     from {
@@ -124,7 +142,7 @@
  *  This is the size that the navbar links begin to compress
  */
 
-@media only screen and (max-width: 1273px) {
+@media only screen and (max-width: 1352px) {
 
     .navbar {
         align-items: flex-start;
@@ -182,6 +200,10 @@
         position: absolute;
         top: 1.8rem;
         width: 100%;
+    }
+
+    .active::after {
+        display: none;
     }
 }
 

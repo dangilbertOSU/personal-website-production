@@ -1,14 +1,13 @@
-import Head from "next/head";
-
 /*
  * Component Imports
  */
 
+import Head from "next/head";
+import HomeHeader from "../components/Sections/Home/HomeHeader";
+import InsightsSection from "../components/Sections/Home/InsightsSection";
 import Layout from "../components/Layout";
-import Services from "../components/Container/Services";
-import Insights from "../components/Container/Insights";
-import Welcome from "../components/Container/Welcome";
-import WhoWeAre from "../components/Container/WhoWeAre";
+import ServicesSection from "../components/Sections/Home/ServicesSection";
+import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
 
 const App = (props) => {
   return (
@@ -21,10 +20,10 @@ const App = (props) => {
         />
       </Head>
       <Layout>
-        <Welcome />
-        <WhoWeAre />
-        <Services />
-        <Insights />
+        <HomeHeader />
+        <WhoWeAreSection />
+        <ServicesSection />
+        <InsightsSection />
       </Layout>
     </div>
   );

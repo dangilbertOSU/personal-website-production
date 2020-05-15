@@ -1,20 +1,25 @@
-import PropTypes from 'prop-types';
-import { useState } from 'react';
+import PropTypes from "prop-types";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
-import './Navbar.css';
-import Link from 'next/link';
-import NavbarIcon from '../SVG/NavbarIcon';
+import "./Navbar.css";
+import Link from "next/link";
+import NavbarIcon from "../SVG/NavbarIcon";
 
 const Navbar = (props) => {
 	const { className } = props;
 
 	const [mobileNavVisible, setMobileNavVisible] = useState(false);
 
+	const router = useRouter();
+
 	return (
-		<nav className={className + (mobileNavVisible ? ' grow' : '')}>
+		<nav className={className + (mobileNavVisible ? " grow" : "")}>
 			<div className={`${className}__brand`}>
 				<Link href="/">
-					<a><NavbarIcon /></a>
+					<a>
+						<NavbarIcon />
+					</a>
 				</Link>
 			</div>
 			<span
@@ -31,7 +36,9 @@ const Navbar = (props) => {
 				<span className="bar" />
 				<span className="bar" />
 			</span>
-			<div className={`${className}__links desktop--links${mobileNavVisible ? ' active' : ' inactive'}`}>
+			<div
+				className={`${className}__links desktop--links${mobileNavVisible ? " active" : " inactive"}`}
+			>
 				<ul>
 					<li>
 						<Link href="/whoweare">
@@ -40,7 +47,9 @@ const Navbar = (props) => {
 					</li>
 					<li>
 						<Link href="/services">
-							<a>Services</a>
+							<a className={router.pathname === "/services" ? "active" : ""}>
+								Services
+							</a>
 						</Link>
 					</li>
 					<li>
@@ -55,7 +64,9 @@ const Navbar = (props) => {
 					</li>
 					<li>
 						<Link href="/letschat">
-							<span className="orange--text"><a>Let&apos;s Chat</a></span>
+							<span className="orange--text">
+								<a>Let&apos;s Chat</a>
+							</span>
 						</Link>
 					</li>
 				</ul>
@@ -65,7 +76,7 @@ const Navbar = (props) => {
 };
 
 Navbar.defaultProps = {
-	className: 'navbar',
+	className: "navbar",
 };
 
 Navbar.propTypes = {

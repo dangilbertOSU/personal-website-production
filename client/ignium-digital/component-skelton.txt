@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import './Component.css';
 
 const Component = (props) => {
   const {
     className,
-    children,
-    ...rest
+    children
   } = props;
 
   return (
@@ -18,7 +18,13 @@ const Component = (props) => {
 };
 
 Component.defaultProps = {
-  className: 'className'
+  className: 'className',
+  children: PropTypes.node,
+};
+
+Component.propTypes = {
+  className: 'className',
+  children: PropTypes.node,
 };
 
 export default Component;

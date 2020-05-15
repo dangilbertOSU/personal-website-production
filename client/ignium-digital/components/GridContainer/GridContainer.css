@@ -1,0 +1,20 @@
+.grid__container .grid__items {
+     align-items: flex-start;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+     grid-gap: 7rem;
+     justify-content: space-between;
+}
+
+.grid__container .grid__items>* {
+     box-sizing: border-box;
+}
+
+/*
+ * Large Mobile
+ */
+@media only screen and (max-width: 555px) {
+     .grid__container .grid__items {
+          grid-gap: 2rem;
+     }
+}

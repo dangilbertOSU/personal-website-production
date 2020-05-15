@@ -36,6 +36,7 @@ module.exports = {
       "components": ["Link"],
       "specialLink": ["hrefLeft", "hrefRight"],
       "aspects": ["invalidHref", "preferButton"]
-    }]
+    }],
+    "quotes": [2, "double", { "avoidEscape": true }]
   },
 };
