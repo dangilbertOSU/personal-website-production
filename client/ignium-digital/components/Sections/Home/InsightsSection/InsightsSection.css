@@ -73,6 +73,7 @@
 .insights__article__image {
      cursor: pointer;
      position: relative;
+     transition: all 0.2s;
 }
 
 .insights__article__image:hover {
@@ -82,6 +83,8 @@
 }
 
 .insights__article__image:hover::after {
+     animation-name: fade-in;
+     animation-duration: 0.2s;
      align-items: center;
      background: #0E1137;
      content: "Read More";
@@ -95,6 +98,16 @@
      text-transform: uppercase;
      top: 0;
      width: 100%;
+}
+
+@keyframes fade-in {
+     from {
+          opacity: 0;
+     }
+
+     to {
+          opacity: 0.6;
+     }
 }
 
 .article_0 img {

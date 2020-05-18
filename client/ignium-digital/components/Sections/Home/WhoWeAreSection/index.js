@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Button from "../../../Button";
 import WhoWeAreImage from "../../../../public/images/home_who_we_are.png";
 
-import "../../Section.css";
+import SectionHeader from "../../../SectionHeader";
+
 import "./WhoWeAreSection.css";
 
 const WhoWeAre = (props) => {
@@ -12,13 +13,10 @@ const WhoWeAre = (props) => {
   return (
     <div className={className}>
       <div className="who__we__are__text">
-        <h2 className="section__header">
-          We are a personalized Sitecore focused digital agency
-          <span className="section__tab">
-            <span className="section__tab__line" />
-            <h4>Who We Are</h4>
-          </span>
-        </h2>
+        <SectionHeader
+          header="We are a personalized Sitecore focused digital agency"
+          tab="Who We Are"
+        />
         <p>
           We currently have a small team of Sitecore MVP&apos;s and Sitecore
           specialists to provide personalized assistance to help you with your
@@ -46,7 +44,7 @@ const WhoWeAre = (props) => {
 };
 
 WhoWeAre.defaultProps = {
-  className: "section who__we__are",
+  className: "who__we__are",
 };
 
 WhoWeAre.propTypes = {

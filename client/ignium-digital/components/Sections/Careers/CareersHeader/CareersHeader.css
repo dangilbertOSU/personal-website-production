@@ -1,0 +1,26 @@
+.careers__header {
+     display: grid;
+     grid-template-columns: 45% 55%;
+}
+
+.careers__header .careers__header__text p {
+     max-width: 21rem;
+}
+
+/*
+ * This is the size where the css grid gets too compact
+ */
+@media only screen and (max-width: 1800px) {
+     .careers__header {
+          grid-template-columns: 1fr;
+     }
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 1800px) {
+     .careers__header .careers__header__text p {
+          max-width: 100%;
+     }
+}

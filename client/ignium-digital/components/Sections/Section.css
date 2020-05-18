@@ -30,40 +30,6 @@
     height: auto;
 }
 
-.section__header {
-    position: relative;
-}
-
-.section__tab {
-    color: #0E1137;
-    left: -7rem;
-    position: absolute;
-    text-transform: uppercase;
-    text-align: right;
-    top: 1rem;
-    transform: rotate(-90deg);
-}
-
-.section__tab h4 {
-    color: #0E1137;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 229%;
-    opacity: 1;
-}
-
-.section__tab__line {
-    background-color: #0E1137;
-    display: block;
-    height: 1rem;
-    left: -1.5rem;
-    position: absolute;
-    top: 1.6rem;
-    transform: rotate(-90deg);
-    width: 1px;
-}
-
 .blue--background {
     background-color: #F5F9FF;
 }
@@ -88,11 +54,5 @@
 @media only screen and (max-width: 768px) {
     .section {
         padding: 0 1rem;
-    }
-
-    .section__tab {
-        left: 2rem;
-        transform: rotate(0deg);
-        top: -4rem;
     }
 }

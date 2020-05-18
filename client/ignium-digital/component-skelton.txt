@@ -23,7 +23,7 @@ Component.defaultProps = {
 };
 
 Component.propTypes = {
-  className: 'className',
+  className: PropTypes.string,
   children: PropTypes.node,
 };
 

@@ -1,23 +1,20 @@
-import "../../Section.css";
-import "./ServicesSection.css";
-
 import PropTypes from "prop-types";
 
 import Button from "../../../Button";
+import SectionHeader from "../../../SectionHeader";
+
+import "./ServicesSection.css";
 
 const Services = (props) => {
   const { className } = props;
 
   return (
     <div className={`${className} blue--background`}>
-      <h2 className="section__header">
-        We offer a wide range of Sitecore tailored solutions, to help your
-        organization to get the most of your Sitecore investment.
-        <span className="section__tab">
-          <span className="section__tab__line" />
-          <h4>Services</h4>
-        </span>
-      </h2>
+      <SectionHeader
+        header="We offer a wide range of Sitecore tailored solutions, to help your
+        organization to get the most of your Sitecore investment."
+        tab="Services"
+      />
       <div className="services__links">
         <ul>
           <li>
@@ -50,7 +47,7 @@ const Services = (props) => {
 };
 
 Services.defaultProps = {
-  className: "section services",
+  className: "services",
 };
 
 Services.propTypes = {

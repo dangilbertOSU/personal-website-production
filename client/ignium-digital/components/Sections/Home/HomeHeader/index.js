@@ -1,10 +1,9 @@
-import "../../Section.css";
-import "./HomeHeader.css";
-
 import PropTypes from "prop-types";
 
 import Button from "../../../Button";
 import WelcomeLogo from "../../../../public/images/home_logo_jumbo.png";
+
+import "./HomeHeader.css";
 
 const HomeHeader = (props) => {
   const { className } = props;
@@ -24,7 +23,7 @@ const HomeHeader = (props) => {
 };
 
 HomeHeader.defaultProps = {
-  className: "section welcome",
+  className: "welcome",
 };
 
 HomeHeader.propTypes = {

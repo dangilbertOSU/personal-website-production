@@ -1,31 +1,31 @@
 import PropTypes from "prop-types";
 
-import Contact from "../Contact";
-import Content from "../Content";
-import Footer from "../Footer";
 import Navbar from "../Navbar";
+import Content from "../Content";
+import Contact from "../Contact";
+import Footer from "../Footer";
 
 const Layout = (props) => {
-	const { children } = props;
+  const { children } = props;
 
-	return (
-		<div>
-			<Navbar />
-			<Content>
-				{children}
-				<Contact />
-			</Content>
-			<Footer />
-		</div>
-	);
+  return (
+    <div>
+      <Navbar />
+      <Content>
+        {children}
+        <Contact />
+      </Content>
+      <Footer />
+    </div>
+  );
 };
 
 Layout.defaultProps = {
-	children: PropTypes.node,
+  children: PropTypes.node,
 };
 
 Layout.propTypes = {
-	children: PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default Layout;
