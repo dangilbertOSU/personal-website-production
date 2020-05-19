@@ -1,4 +1,13 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * CSS imports
+ */
+
 import "./SectionHeader.css";
 
 const SectionHeader = (props) => {

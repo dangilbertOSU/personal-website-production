@@ -1,9 +1,25 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 
+/*
+ * Component imports
+ */
+
 import Button from "../../../Button";
+import SectionHeader from "../../../SectionHeader";
+
+/*
+ * Image/SVG imports
+ */
+
 import WhoWeAreImage from "../../../../public/images/home_who_we_are.png";
 
-import SectionHeader from "../../../SectionHeader";
+/*
+ * CSS imports
+ */
 
 import "./WhoWeAreSection.css";
 

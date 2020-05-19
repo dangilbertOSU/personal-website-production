@@ -1,13 +1,29 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
 
 import GridContainer from "../../../GridContainer";
 import SectionHeader from "../../../SectionHeader";
 import Card from "../../../Card";
 
+/*
+ * Image/SVG imports
+ */
+
 import HoursIcon from "../../../SVG/careers/HoursIcon";
 import OngoingIcon from "../../../SVG/careers/OngoingIcon";
 import ProjectsIcon from "../../../SVG/careers/ProjectsIcon";
 import SalaryIcon from "../../../SVG/careers/SalaryIcon";
+
+/*
+ * CSS imports
+ */
 
 import "./CareersHeader.css";
 

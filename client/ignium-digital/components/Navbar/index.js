@@ -1,9 +1,26 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+/*
+ * Component imports
+ */
+
 import Link from "next/link";
+
+/*
+ * Image/SVG imports
+ */
+
 import NavbarIcon from "../SVG/NavbarIcon";
+
+/*
+ * CSS imports
+ */
 
 import "./Navbar.css";
 

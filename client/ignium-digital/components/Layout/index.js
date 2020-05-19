@@ -1,4 +1,12 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
 
 import Navbar from "../Navbar";
 import Content from "../Content";

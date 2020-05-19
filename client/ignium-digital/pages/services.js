@@ -1,5 +1,5 @@
 /*
- * Import Components
+ * Component imports
  */
 
 import Head from "next/head";
@@ -9,7 +9,7 @@ import GridContainer from "../components/GridContainer";
 import Card from "../components/Card";
 
 /*
- * Import SVGs
+ * Image/SVG imports
  */
 
 import AuditIcon from "../components/SVG/services/AuditIcon";

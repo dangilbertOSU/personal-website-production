@@ -1,3 +1,7 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 
 const Card = (props) => {

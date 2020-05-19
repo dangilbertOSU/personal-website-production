@@ -1,0 +1,22 @@
+.job__posting__list {
+     padding: 0 15vw;
+}
+
+.job__posting__list__items>* {
+     padding-bottom: 2.5rem;
+     margin-top: 2.5rem;
+}
+
+.job__posting__list__items>*:not(:last-child) {
+     border-bottom: 1px solid rgba(151, 151, 151, 0.5)
+}
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 555px) {
+     .job__posting__list {
+          padding: 0;
+     }
+}

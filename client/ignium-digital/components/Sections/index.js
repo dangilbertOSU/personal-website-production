@@ -1,4 +1,13 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * CSS imports
+ */
+
 import "./Section.css";
 
 const Section = (props) => {

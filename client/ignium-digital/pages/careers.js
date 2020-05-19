@@ -1,11 +1,20 @@
 /*
- * Import Components
+ * Component imports
  */
 
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
 import CareersHeader from "../components/Sections/Careers/CareersHeader";
+
+/*
+ * Component imports
+ */
+
+import CareersImage from "../public/images/careers.png";
+import Card from "../components/Card";
+import JobPosting from "../components/JobPosting";
+import JobPostingList from "../components/JobPostingList";
 
 const App = () => {
   return (
@@ -20,6 +29,20 @@ const App = () => {
       <Layout>
         <Section>
           <CareersHeader />
+        </Section>
+        <Section>
+          <img
+            alt="Ignium Digital careers meeting"
+            src={CareersImage}
+            style={{
+              objectFit: "cover",
+              height: "19rem",
+              width: "100%",
+            }}
+          />
+        </Section>
+        <Section>
+          <JobPostingList />
         </Section>
       </Layout>
     </div>

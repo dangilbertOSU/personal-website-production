@@ -1,8 +1,17 @@
-import Link from "next/link";
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 
 /*
- * SVG imports
+ * Component imports
+ */
+
+import Link from "next/link";
+
+/*
+ * Image/SVG imports
  */
 
 import FooterLogo from "../SVG/FooterLogo";

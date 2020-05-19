@@ -1,8 +1,24 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
+
+import SectionHeader from "../../../SectionHeader";
+
+/*
+ * Image/SVG imports
+ */
 
 import ServicesHeaderImage from "../../../../public/images/services_header.png";
 
-import SectionHeader from "../../../SectionHeader";
+/*
+ * CSS imports
+ */
 
 import "./ServicesHeader.css";
 

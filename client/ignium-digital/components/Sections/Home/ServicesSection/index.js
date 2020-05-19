@@ -1,7 +1,19 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
 
 import Button from "../../../Button";
 import SectionHeader from "../../../SectionHeader";
+
+/*
+ * CSS imports
+ */
 
 import "./ServicesSection.css";
 
@@ -9,7 +21,7 @@ const Services = (props) => {
   const { className } = props;
 
   return (
-    <div className={`${className} blue--background`}>
+    <div className={className}>
       <SectionHeader
         header="We offer a wide range of Sitecore tailored solutions, to help your
         organization to get the most of your Sitecore investment."

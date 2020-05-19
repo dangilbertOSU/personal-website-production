@@ -27,9 +27,11 @@ const App = (props) => {
         <Section>
           <WhoWeAreSection />
         </Section>
-        <Section>
-          <ServicesSection />
-        </Section>
+        <div className="blue--background">
+          <Section>
+            <ServicesSection />
+          </Section>
+        </div>
         <Section>
           <InsightsSection />
         </Section>

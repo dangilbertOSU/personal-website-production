@@ -1,5 +1,18 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
+
 import Button from "../Button";
+
+/*
+ * CSS imports
+ */
 
 import "./Contact.css";
 

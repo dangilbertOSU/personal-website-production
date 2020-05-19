@@ -1,11 +1,19 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
 
 import Link from "next/link";
 import Button from "../../../Button";
 import SectionHeader from "../../../SectionHeader";
 
 /*
- * Importing pictures for dummy articles
+ * Image/SVG imports
  */
 
 import photo1 from "../../../../public/images/Articles/article1.png";
@@ -14,6 +22,10 @@ import photo3 from "../../../../public/images/Articles/article3.jpg";
 import photo4 from "../../../../public/images/Articles/article4.jpg";
 import photo5 from "../../../../public/images/Articles/article5.jpg";
 import TextSeperator from "../../../SVG/TextSeperator";
+
+/*
+ * CSS imports
+ */
 
 import "./InsightsSection.css";
 
