@@ -35,7 +35,8 @@ const Services = (props) => {
       <Layout>
         <ServicesHeader />
         <Section>
-          <GridContainer title="Sitecore Technology">
+          <h2>Sitecore Technology</h2>
+          <GridContainer>
             <Card title="Training" Icon={() => <TrainingIcon />}>
               Our Founder, Dylan Young, is well known in the Sitecore community,
               for providing high level Sitecore and related training. We can
@@ -70,7 +71,8 @@ const Services = (props) => {
               application that can help your organization reach new customers.
             </Card>
           </GridContainer>
-          <GridContainer title="Other services">
+          <h2>Other services</h2>
+          <GridContainer>
             <Card title="Sitecore Upgrades" Icon={() => <UpgradeIcon />}>
               Are you running on an older version of Sitecore? Use our
               experienced team to help you upgrade to the latest stable version

@@ -12,11 +12,9 @@ import CareersHeader from "../components/Sections/Careers/CareersHeader";
  */
 
 import CareersImage from "../public/images/careers.png";
-import Card from "../components/Card";
-import JobPosting from "../components/JobPosting";
 import JobPostingList from "../components/JobPostingList";
 
-const App = () => {
+const Careers = () => {
   return (
     <div>
       <Head>
@@ -49,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Careers;

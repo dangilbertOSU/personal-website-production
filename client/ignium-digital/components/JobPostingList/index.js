@@ -21,7 +21,7 @@ const dummyJobs = [
     id: 0,
     title: "Senior Sitecore Developer",
     description:
-      "This position is considered a multi-faceted leadership opportunity to support both internal and vendor support teams. This position is considered a multi-faceted lider We’re looking for people to join the team who are as We’re looking for people to join ",
+      "This position is considered a multi-faceted leadership opportunity to support both internal and vendor support teams. This position is considered a multi-faceted lider We’re looking for people to join the team who are as We’re looking for people to join This position is considered a multi-faceted leadership opportunity to support both internal and vendor support teams. This position is considered a multi-faceted lider We’re looking for people to join the team who are as We’re looking for people to join ",
     link: "www.google.com",
     location: "Stefanton",
   },

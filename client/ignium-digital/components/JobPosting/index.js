@@ -27,7 +27,9 @@ const JobPosting = (props) => {
         <p>{location}</p>
       </div>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <div className={className + "__description"}>
+        <p>{description}</p>
+      </div>
       <div className={className + "__linkedin"}>
         <LaunchIcon />
         <a href={link} target="_blank">

@@ -11,11 +11,10 @@ import PropTypes from "prop-types";
 import "./GridContainer.css";
 
 const GridContainer = (props) => {
-  const { className, children, title } = props;
+  const { className, children } = props;
 
   return (
     <div className={className}>
-      <h2>{title}</h2>
       <div className="grid__items">{children}</div>
     </div>
   );
@@ -23,7 +22,6 @@ const GridContainer = (props) => {
 
 GridContainer.defaultProps = {
   className: "grid__container",
-  title: null,
 };
 
 GridContainer.propTypes = {
@@ -32,7 +30,6 @@ GridContainer.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  title: PropTypes.string,
 };
 
 export default GridContainer;
