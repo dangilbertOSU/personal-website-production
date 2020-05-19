@@ -42,7 +42,7 @@ const Navbar = (props) => {
       </div>
       <span
         aria-label="navbar open mobile menu"
-        className="navbar__menu__toggle"
+        className={"navbar__menu__toggle" + (mobileNavVisible ? " opened" : "")}
         href="#"
         onClick={() => setMobileNavVisible(!mobileNavVisible)}
         onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
@@ -50,9 +50,9 @@ const Navbar = (props) => {
         type="button"
         tabIndex="0"
       >
-        <span className="bar" />
-        <span className="bar" />
-        <span className="bar" />
+        <span className="bar bar--1" />
+        <span className="bar bar--2" />
+        <span className="bar bar--3" />
       </span>
       <div
         className={`${className}__links desktop--links${
