@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  */
 
 import Button from "../../../Button";
-import SectionHeader from "../../../SectionHeader";
+import SectionHeading from "../../../SectionHeading";
 
 /*
  * Image/SVG imports
@@ -29,7 +29,7 @@ const WhoWeAre = (props) => {
   return (
     <div className={className}>
       <div className="who__we__are__text">
-        <SectionHeader
+        <SectionHeading
           header="We are a personalized Sitecore focused digital agency"
           tab="Who We Are"
         />

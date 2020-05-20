@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  */
 
 import Button from "../../../Button";
-import SectionHeader from "../../../SectionHeader";
+import SectionHeading from "../../../SectionHeading";
 
 /*
  * CSS imports
@@ -22,7 +22,7 @@ const Services = (props) => {
 
   return (
     <div className={className}>
-      <SectionHeader
+      <SectionHeading
         header="We offer a wide range of Sitecore tailored solutions, to help your
         organization to get the most of your Sitecore investment."
         tab="Services"

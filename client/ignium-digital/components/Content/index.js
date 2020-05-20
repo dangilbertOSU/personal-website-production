@@ -11,19 +11,19 @@ import PropTypes from "prop-types";
 import "./Content.css";
 
 const Content = (props) => {
-  const { className, children } = props;
+	const { className, children } = props;
 
-  return <main className={className}>{children}</main>;
+	return <main className={className}>{children}</main>;
 };
 
 Content.defaultProps = {
-  className: "content",
-  children: PropTypes.node,
+	className: "content",
+	children: PropTypes.node,
 };
 
 Content.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
+	className: PropTypes.string,
+	children: PropTypes.node,
 };
 
 export default Content;

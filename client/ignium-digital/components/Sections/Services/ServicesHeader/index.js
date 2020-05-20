@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  * Component imports
  */
 
-import SectionHeader from "../../../SectionHeader";
+import SectionHeading from "../../../SectionHeading";
 
 /*
  * Image/SVG imports
@@ -28,7 +28,7 @@ const ServicesHeader = (props) => {
   return (
     <div className={className}>
       <div className="services__header__heading text">
-        <SectionHeader
+        <SectionHeading
           header="Let us help steer your organization in the right direction."
           tab="Services"
         />

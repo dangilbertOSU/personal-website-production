@@ -6,13 +6,14 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
 import CareersHeader from "../components/Sections/Careers/CareersHeader";
+import JobPostingList from "../components/JobPostingList";
 
 /*
- * Component imports
+ * Image/SVG imports
  */
 
 import CareersImage from "../public/images/careers.png";
-import JobPostingList from "../components/JobPostingList";
+
 
 const Careers = () => {
   return (

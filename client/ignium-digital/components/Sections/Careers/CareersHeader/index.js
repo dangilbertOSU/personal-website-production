@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
  */
 
 import GridContainer from "../../../GridContainer";
-import SectionHeader from "../../../SectionHeader";
+import SectionHeading from "../../../SectionHeading";
 import Card from "../../../Card";
 
 /*
@@ -33,7 +33,7 @@ const CareersHeader = (props) => {
   return (
     <div className={className}>
       <div className="careers__header__text">
-        <SectionHeader header="Our benefits" tab="Careers" />
+        <SectionHeading header="Our benefits" tab="Careers" />
         <p>
           Join our company to meet people, try something new, or do more of what
           you love.

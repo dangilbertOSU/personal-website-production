@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import Link from "next/link";
 import Button from "../../../Button";
-import SectionHeader from "../../../SectionHeader";
+import SectionHeading from "../../../SectionHeading";
 
 /*
  * Image/SVG imports
@@ -81,11 +81,11 @@ const Insights = (props) => {
   return (
     <div className={className}>
       <div className="insights__header">
-        <SectionHeader
+        <SectionHeading
           header="Everything you need to know about sitecore technology, customer
           experience, and beyond"
           tab="Insights"
-        ></SectionHeader>
+        ></SectionHeading>
       </div>
       <div className="insights__articles">
         {dummyArticles.map((article, index) => (
