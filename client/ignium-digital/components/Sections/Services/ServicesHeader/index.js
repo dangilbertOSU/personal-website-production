@@ -1,8 +1,26 @@
-import "../../Section.css";
-import "./ServicesHeader.css";
+/*
+ * Function imports
+ */
 
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
+
+import SectionHeading from "../../../SectionHeading";
+
+/*
+ * Image/SVG imports
+ */
+
 import ServicesHeaderImage from "../../../../public/images/services_header.png";
+
+/*
+ * CSS imports
+ */
+
+import "./ServicesHeader.css";
 
 const ServicesHeader = (props) => {
   const { className } = props;
@@ -10,13 +28,10 @@ const ServicesHeader = (props) => {
   return (
     <div className={className}>
       <div className="services__header__heading text">
-        <h2 className="section__header">
-          Let us help steer your organization in the right direction.
-          <span className="section__tab">
-            <span className="section__tab__line" />
-            <h4>Services</h4>
-          </span>
-        </h2>
+        <SectionHeading
+          header="Let us help steer your organization in the right direction."
+          tab="Services"
+        />
       </div>
       <div className="services__header__image">
         <img

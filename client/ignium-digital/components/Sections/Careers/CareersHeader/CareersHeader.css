@@ -1,0 +1,59 @@
+.careers__header {
+     display: grid;
+     grid-template-columns: 35% 65%;
+}
+
+.careers__header .careers__header__text p {
+     max-width: 21rem;
+}
+
+.careers__header .grid__container {
+     margin-top: 6rem;
+}
+
+.careers__header .grid__container .grid__items .Card {
+     width: 248px;
+}
+
+.careers__header .grid__container .grid__items {
+     grid-gap: 2rem;
+}
+
+.careers__header .grid__container .grid__items>* {
+     justify-self: end;
+}
+
+/*
+ * This is the size where the css grid gets too compact
+ */
+@media only screen and (max-width: 1536px) {
+     .careers__header .grid__container .grid__items {
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+     }
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 1100px) {
+     .careers__header {
+          grid-template-columns: 1fr;
+     }
+
+     .careers__header .careers__header__text p {
+          max-width: 100%;
+     }
+
+     .careers__header .grid__container {
+          margin-top: 1rem;
+     }
+
+     .careers__header .grid__container .grid__items {
+          grid-template-columns: 1fr;
+     }
+
+     .careers__header .grid__container .grid__items .Card {
+          width: 100%;
+     }
+
+}

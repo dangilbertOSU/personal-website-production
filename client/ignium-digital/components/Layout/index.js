@@ -1,9 +1,17 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 
-import Contact from "../Contact";
-import Content from "../Content";
-import Footer from "../Footer";
+/*
+ * Component imports
+ */
+
 import Navbar from "../Navbar";
+import Content from "../Content";
+import Contact from "../Contact";
+import Footer from "../Footer";
 
 const Layout = (props) => {
 	const { children } = props;

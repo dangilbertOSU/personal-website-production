@@ -8,10 +8,7 @@ const Component = (props) => {
   } = props;
 
   return (
-    <div
-      className={className}
-      {...rest}
-    >
+    <div className={className}>
       {children}
     </div>
   );
@@ -23,7 +20,7 @@ Component.defaultProps = {
 };
 
 Component.propTypes = {
-  className: 'className',
+  className: PropTypes.string,
   children: PropTypes.node,
 };
 

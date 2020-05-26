@@ -19,6 +19,7 @@
 .who__we__are img {
      object-fit: cover;
      height: 550px;
+     max-width: 500px;
      width: 100%;
 }
 
@@ -53,6 +54,14 @@
 @media only screen and (max-width: 768px) {
      .who__we__are .who__we__are__text .container__tab {
           margin-top: -36rem;
+     }
+
+     .who__we__are .who__we__are__text h2 {
+          margin-top: 4rem;
+     }
+
+     .who__we__are img {
+          max-width: 100%;
      }
 }
 

@@ -1,10 +1,28 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-import "./Navbar.css";
+/*
+ * Component imports
+ */
+
 import Link from "next/link";
+
+/*
+ * Image/SVG imports
+ */
+
 import NavbarIcon from "../SVG/NavbarIcon";
+
+/*
+ * CSS imports
+ */
+
+import "./Navbar.css";
 
 const Navbar = (props) => {
 	const { className } = props;
@@ -14,7 +32,7 @@ const Navbar = (props) => {
 	const router = useRouter();
 
 	return (
-		<nav className={className + (mobileNavVisible ? " grow" : "")}>
+		<nav className={mobileNavVisible ? `${className} grow` : className}>
 			<div className={`${className}__brand`}>
 				<Link href="/">
 					<a>
@@ -24,7 +42,7 @@ const Navbar = (props) => {
 			</div>
 			<span
 				aria-label="navbar open mobile menu"
-				className="navbar__menu__toggle"
+				className={mobileNavVisible ? "navbar__menu__toggle opened" : "navbar__menu__toggle"}
 				href="#"
 				onClick={() => setMobileNavVisible(!mobileNavVisible)}
 				onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
@@ -32,12 +50,13 @@ const Navbar = (props) => {
 				type="button"
 				tabIndex="0"
 			>
-				<span className="bar" />
-				<span className="bar" />
-				<span className="bar" />
+				<span className="bar bar--1" />
+				<span className="bar bar--2" />
+				<span className="bar bar--3" />
 			</span>
 			<div
-				className={`${className}__links desktop--links${mobileNavVisible ? " active" : " inactive"}`}
+				className={`${className}__links desktop--links${mobileNavVisible
+					? " active" : " inactive"}`}
 			>
 				<ul>
 					<li>
@@ -59,7 +78,9 @@ const Navbar = (props) => {
 					</li>
 					<li>
 						<Link href="/careers">
-							<a>Careers</a>
+							<a className={router.pathname === "/careers" ? "active" : ""}>
+								Careers
+							</a>
 						</Link>
 					</li>
 					<li>

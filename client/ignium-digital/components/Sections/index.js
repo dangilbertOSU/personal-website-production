@@ -8,22 +8,22 @@ import PropTypes from "prop-types";
  * CSS imports
  */
 
-import "./Content.css";
+import "./Section.css";
 
-const Content = (props) => {
+const Section = (props) => {
 	const { className, children } = props;
 
-	return <main className={className}>{children}</main>;
+	return <div className={className}>{children}</div>;
 };
 
-Content.defaultProps = {
-	className: "content",
+Section.defaultProps = {
+	className: "section",
 	children: PropTypes.node,
 };
 
-Content.propTypes = {
+Section.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node,
 };
 
-export default Content;
+export default Section;

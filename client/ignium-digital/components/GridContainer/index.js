@@ -1,21 +1,27 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * CSS imports
+ */
+
 import "./GridContainer.css";
-import "../Sections/Section.css";
 
 const GridContainer = (props) => {
-	const { className, children, title } = props;
+	const { className, children } = props;
 
 	return (
 		<div className={className}>
-			<h2>{title}</h2>
 			<div className="grid__items">{children}</div>
 		</div>
 	);
 };
 
 GridContainer.defaultProps = {
-	className: "section grid__container",
-	title: "title",
+	className: "grid__container",
 };
 
 GridContainer.propTypes = {
@@ -24,7 +30,6 @@ GridContainer.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
 	]).isRequired,
-	title: PropTypes.string,
 };
 
 export default GridContainer;

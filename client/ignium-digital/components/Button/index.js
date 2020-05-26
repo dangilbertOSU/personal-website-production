@@ -1,5 +1,14 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 import utilities from "../../utilities/utilities";
+
+/*
+ * CSS imports
+ */
+
 import "./Button.css";
 
 const Button = (props) => {

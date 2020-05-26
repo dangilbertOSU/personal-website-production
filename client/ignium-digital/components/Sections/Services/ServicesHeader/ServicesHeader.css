@@ -24,6 +24,7 @@
 .services__header .services__header__image img {
      object-fit: cover;
      margin-right: 0;
+     max-width: 500px;
      min-width: 90%;
 }
 

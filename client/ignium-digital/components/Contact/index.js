@@ -1,8 +1,20 @@
-import "../Sections/Section.css";
-import "./Contact.css";
+/*
+ * Function imports
+ */
 
 import PropTypes from "prop-types";
+
+/*
+ * Component imports
+ */
+
 import Button from "../Button";
+
+/*
+ * CSS imports
+ */
+
+import "./Contact.css";
 
 const Contact = (props) => {
 	const { className } = props;
@@ -28,7 +40,7 @@ const Contact = (props) => {
 };
 
 Contact.defaultProps = {
-	className: "section contact",
+	className: "contact",
 };
 
 Contact.propTypes = {

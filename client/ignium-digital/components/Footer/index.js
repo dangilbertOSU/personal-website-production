@@ -1,15 +1,25 @@
-import "./Footer.css";
-import Link from "next/link";
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
 
 /*
- * SVG imports
+ * Component imports
+ */
+
+import Link from "next/link";
+
+/*
+ * Image/SVG imports
  */
 
 import FooterLogo from "../SVG/FooterLogo";
 import TwitterLogo from "../SVG/social/TwitterLogo";
 import LinkedInLogo from "../SVG/social/LinkedInLogo";
 import EmailLogo from "../SVG/social/EmailLogo";
+
+import "./Footer.css";
 
 const Footer = (props) => {
 	const { className } = props;
@@ -66,7 +76,9 @@ const Footer = (props) => {
 					</li>
 					<li>
 						<Link href="/letschat">
-							<a><span className="orange--text">Let&apos;s Chat</span></a>
+							<a>
+								<span className="orange--text">Let&apos;s Chat</span>
+							</a>
 						</Link>
 					</li>
 				</ul>

@@ -1,13 +1,19 @@
-import "../../Section.css";
-import "./InsightsSection.css";
+/*
+ * Function imports
+ */
 
 import PropTypes from "prop-types";
 
+/*
+ * Component imports
+ */
+
 import Link from "next/link";
 import Button from "../../../Button";
+import SectionHeading from "../../../SectionHeading";
 
 /*
- * Importing pictures for dummy articles
+ * Image/SVG imports
  */
 
 import photo1 from "../../../../public/images/Articles/article1.png";
@@ -16,6 +22,12 @@ import photo3 from "../../../../public/images/Articles/article3.jpg";
 import photo4 from "../../../../public/images/Articles/article4.jpg";
 import photo5 from "../../../../public/images/Articles/article5.jpg";
 import TextSeperator from "../../../SVG/TextSeperator";
+
+/*
+ * CSS imports
+ */
+
+import "./InsightsSection.css";
 
 const dummyArticles = [
   {
@@ -69,14 +81,11 @@ const Insights = (props) => {
   return (
     <div className={className}>
       <div className="insights__header">
-        <h2 className="section__header">
-          Everything you need to know about sitecore technology, customer
-          experience, and beyond
-          <span className="section__tab">
-            <span className="section__tab__line" />
-            <h4>Insights</h4>
-          </span>
-        </h2>
+        <SectionHeading
+          header="Everything you need to know about sitecore technology, customer
+          experience, and beyond"
+          tab="Insights"
+        ></SectionHeading>
       </div>
       <div className="insights__articles">
         {dummyArticles.map((article, index) => (
@@ -124,7 +133,7 @@ const Insights = (props) => {
 };
 
 Insights.defaultProps = {
-  className: "section insights",
+  className: "insights",
 };
 
 Insights.propTypes = {

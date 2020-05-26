@@ -3,11 +3,12 @@
  */
 
 import Head from "next/head";
-import HomeHeader from "../components/Sections/Home/HomeHeader";
-import InsightsSection from "../components/Sections/Home/InsightsSection";
 import Layout from "../components/Layout";
-import ServicesSection from "../components/Sections/Home/ServicesSection";
+import Section from "../components/Sections";
+import HomeHeader from "../components/Sections/Home/HomeHeader";
 import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
+import ServicesSection from "../components/Sections/Home/ServicesSection";
+import InsightsSection from "../components/Sections/Home/InsightsSection";
 
 const App = (props) => {
   return (
@@ -20,10 +21,20 @@ const App = (props) => {
         />
       </Head>
       <Layout>
-        <HomeHeader />
-        <WhoWeAreSection />
-        <ServicesSection />
-        <InsightsSection />
+        <Section>
+          <HomeHeader />
+        </Section>
+        <Section>
+          <WhoWeAreSection />
+        </Section>
+        <div className="blue--background">
+          <Section>
+            <ServicesSection />
+          </Section>
+        </div>
+        <Section>
+          <InsightsSection />
+        </Section>
       </Layout>
     </div>
   );

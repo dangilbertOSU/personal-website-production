@@ -97,6 +97,19 @@
     height: 3px;
     width: 100%;
     background-color: black;
+    transition: all 0.2s;
+}
+
+.navbar__menu__toggle {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bar--1 {
+    transform-origin: center left;
+}
+
+.bar--3 {
+    transform-origin: center left;
 }
 
 .navbar__links li .active {
@@ -118,6 +131,8 @@
     width: 100%;
 }
 
+
+
 @keyframes navlink_line {
     from {
         width: 0;
@@ -135,6 +150,36 @@
 
     to {
         height: 27.5rem;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes rotate45 {
+    from {
+        transform: rotate(0deg)
+    }
+
+    from {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes rotate_neg45 {
+    from {
+        transform: rotate(0deg)
+    }
+
+    from {
+        transform: rotate(-45deg)
     }
 }
 
@@ -172,10 +217,24 @@
         display: flex;
     }
 
-    .navbar__links .active>.navbar {
-        animation-name: grow;
+    .opened>.bar--1 {
+        animation-name: rotate45;
         animation-duration: 0.2s;
-        overflow: hidden;
+        transform: rotate(45deg);
+        margin-top: -1.5px;
+    }
+
+    .opened>.bar--3 {
+        animation-name: rotate_neg45;
+        animation-duration: 0.2s;
+        transform: rotate(-45deg);
+        margin-bottom: -1.5px;
+    }
+
+    .opened>.bar--2 {
+        animation-name: fadeout;
+        animation-duration: 0.2s;
+        opacity: 0;
     }
 
     .navbar__links ul {
