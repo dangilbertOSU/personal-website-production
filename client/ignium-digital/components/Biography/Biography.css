@@ -1,10 +1,16 @@
 .biography {
      display: grid;
-     grid-template-columns: repeat(2, 1fr);
+     grid-template-areas: "A B";
+}
+
+.biography h2 {
+     line-height: 100%;
+     margin: 0;
 }
 
 .biography p {
-     max-width: 682px;
+     padding-right: 3rem;
+     max-width: 666px;
 }
 
 .biography img {
@@ -22,4 +28,37 @@
 
 .biography__social-icons>* {
      margin-right: 1.5rem;
+}
+
+.biography__content {
+     grid-area: A;
+}
+
+.biography__image {
+     grid-area: B;
+}
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 768px) {
+     .biography {
+          display: grid;
+          grid-template-areas: "B"
+               "A";
+     }
+
+     .biography h2 {
+          margin-top: 2rem;
+     }
+
+     .biography img {
+          height: auto;
+          margin: auto;
+          width: 100%;
+     }
+
+     .biography__social-icons svg {
+          transform: scale(1.3);
+     }
 }

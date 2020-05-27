@@ -12,6 +12,7 @@ import GitHubLogo from "../SVG/social/GitHubLogo";
 
 const Biography = (props) => {
 	const {
+		alt,
 		className,
 		name,
 		jobTitle,
@@ -25,46 +26,82 @@ const Biography = (props) => {
 
 	return (
 		<div className={className}>
-			<div>
+			<div className={`${className}__content`}>
 				<h2>{name}</h2>
 				<p>{jobTitle}</p>
 				<p>{description}</p>
 				<div className={`${className}__social-icons`}>
 					{twitterLink && (
-						<a href={twitterLink} target="_blank">
+						<a
+							href={twitterLink}
+							target="_blank"
+							aria-label="Twitter"
+						>
 							<TwitterLogo />
 						</a>
 					)}
 					{linkedInLink && (
-						<a href={twitterLink} target="_blank">
+						<a
+							href={linkedInLink}
+							target="_blank"
+							aria-label="LinkedIn"
+						>
 							<LinkedInLogo />
 						</a>
 					)}
 					{youtubeLink && (
-						<a href={youtubeLink} target="_blank">
+						<a
+							href={youtubeLink}
+							target="_blank"
+							aria-label="YouTube"
+						>
 							<YouTubeLogo />
 						</a>
 					)}
 					{githubLink && (
-						<a href={githubLink} target="_blank">
+						<a
+							href={githubLink}
+							target="_blank"
+							aria-label="GitHub"
+						>
 							<GitHubLogo />
 						</a>
 					)}
 				</div>
 			</div>
-			<div>
-				<img src={biographyPicture} />
+			<div className={`${className}__image`}>
+				{biographyPicture && (
+					<img src={biographyPicture} alt={alt} />
+				)}
 			</div>
 		</div>
 	);
 };
 
 Biography.defaultProps = {
+	alt: "",
 	className: "biography",
+	name: "",
+	jobTitle: "",
+	description: "",
+	twitterLink: null,
+	linkedInLink: null,
+	youtubeLink: null,
+	githubLink: null,
+	biographyPicture: null,
 };
 
 Biography.propTypes = {
+	alt: PropTypes.string,
 	className: PropTypes.string,
+	name: PropTypes.string,
+	jobTitle: PropTypes.string,
+	description: PropTypes.string,
+	twitterLink: PropTypes.string,
+	linkedInLink: PropTypes.string,
+	youtubeLink: PropTypes.string,
+	githubLink: PropTypes.string,
+	biographyPicture: PropTypes.string,
 };
 
 export default Biography;

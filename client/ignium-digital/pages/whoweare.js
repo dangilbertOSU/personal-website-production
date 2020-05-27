@@ -23,8 +23,11 @@ const WhoWeAre = (props) => {
 	return (
 		<div>
 			<Head>
-				<title>Ignium Digital | Insights</title>
-				<meta name="description" content="" />
+				<title>Ignium Digital | Who We Are</title>
+				<meta
+					name="description"
+					content="We will help you to apply easily the latest technologies in your business. With 10 years’ background of practice that combines consulting, strategy, design and engineering at scale."
+				/>
 			</Head>
 			<Layout>
 				<Section>
@@ -44,16 +47,19 @@ const WhoWeAre = (props) => {
 						<br />
 						<GridContainer>
 							<ImageCard
+								alt="temporary case photo 1"
 								title="Use case number one"
 								content="Caribtrans"
 								image={CompanyImage1}
 							/>
 							<ImageCard
+								alt="temporary case photo 2"
 								title="Use case number two"
 								content="Microsoft"
 								image={CompanyImage2}
 							/>
 							<ImageCard
+								alt="temporary case photo 3"
 								title="Use case number three"
 								content="Caribtrans"
 								image={CompanyImage3}
@@ -69,7 +75,9 @@ const WhoWeAre = (props) => {
 						twitterLink="https://twitter.com/sitecore_master?s=20"
 						githubLink="https://github.com/sitecoremaster"
 						youtubeLink="https://www.youtube.com/channel/UC5krmrALirwZibfW9-c2JXw"
+						linkedInLink="https://www.linkedin.com/in/dylanyoung"
 						biographyPicture={DylanBiographyPhoto}
+						alt="Dylan Young biography picture"
 					/>
 				</Section>
 			</Layout>

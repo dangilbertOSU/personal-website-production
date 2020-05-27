@@ -11,11 +11,11 @@ import PropTypes from "prop-types";
 import "./ImageCard.css";
 
 const Card = (props) => {
-	const { className, content, image, title } = props;
+	const { alt, className, content, image, title } = props;
 
 	return (
 		<div className={className}>
-			<img src={image} />
+			<img src={image} alt={alt} />
 			<h3>{title}</h3>
 			<p>{content}</p>
 		</div>
@@ -23,16 +23,18 @@ const Card = (props) => {
 };
 
 Card.defaultProps = {
+	alt: null,
 	className: "ImageCard",
 	content: "",
-	Image: null,
+	image: null,
 	title: "",
 };
 
 Card.propTypes = {
+	alt: PropTypes.string,
 	className: PropTypes.string,
 	content: PropTypes.string,
-	Image: PropTypes.func,
+	image: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 };
 
