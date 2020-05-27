@@ -15,7 +15,9 @@ const Card = (props) => {
 
 	return (
 		<div className={className}>
-			<img src={image} alt={alt} />
+			<div className={`${className}__image`}>
+				<img src={image} alt={alt} />
+			</div>
 			<h3>{title}</h3>
 			<p>{content}</p>
 		</div>
@@ -27,14 +29,13 @@ Card.defaultProps = {
 	className: "ImageCard",
 	content: "",
 	image: null,
-	title: "",
 };
 
 Card.propTypes = {
 	alt: PropTypes.string,
 	className: PropTypes.string,
 	content: PropTypes.string,
-	image: PropTypes.string.isRequired,
+	image: PropTypes.string,
 	title: PropTypes.string.isRequired,
 };
 

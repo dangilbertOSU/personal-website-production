@@ -19,7 +19,7 @@ import CompanyImage3 from "../public/images/services_header.png";
 import DylanBiographyPhoto from "../public/images/dylan_biography.jpg";
 import Biography from "../components/Biography";
 
-const WhoWeAre = (props) => {
+const WhoWeAre = () => {
 	return (
 		<div>
 			<Head>

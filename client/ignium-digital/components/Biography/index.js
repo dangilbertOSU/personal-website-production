@@ -36,6 +36,7 @@ const Biography = (props) => {
 							href={twitterLink}
 							target="_blank"
 							aria-label="Twitter"
+							rel="noopener noreferrer"
 						>
 							<TwitterLogo />
 						</a>
@@ -45,6 +46,7 @@ const Biography = (props) => {
 							href={linkedInLink}
 							target="_blank"
 							aria-label="LinkedIn"
+							rel="noopener noreferrer"
 						>
 							<LinkedInLogo />
 						</a>
@@ -54,6 +56,7 @@ const Biography = (props) => {
 							href={youtubeLink}
 							target="_blank"
 							aria-label="YouTube"
+							rel="noopener noreferrer"
 						>
 							<YouTubeLogo />
 						</a>
@@ -63,6 +66,7 @@ const Biography = (props) => {
 							href={githubLink}
 							target="_blank"
 							aria-label="GitHub"
+							rel="noopener noreferrer"
 						>
 							<GitHubLogo />
 						</a>

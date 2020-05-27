@@ -48,6 +48,11 @@
                "A";
      }
 
+     .biography p {
+          padding-right: 0;
+          max-width: 100%;
+     }
+
      .biography h2 {
           margin-top: 2rem;
      }
