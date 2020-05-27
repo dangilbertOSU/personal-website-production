@@ -1,0 +1,4 @@
+.ImageCard img {
+     max-height: 232px;
+     object-fit: cover;
+}

@@ -1,0 +1,25 @@
+.biography {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+}
+
+.biography p {
+     max-width: 682px;
+}
+
+.biography img {
+     margin: 0;
+     margin-left: auto;
+     object-fit: cover;
+     height: 381px;
+     width: 336px;
+}
+
+.biography__social-icons {
+     align-items: center;
+     display: flex;
+}
+
+.biography__social-icons>* {
+     margin-right: 1.5rem;
+}
