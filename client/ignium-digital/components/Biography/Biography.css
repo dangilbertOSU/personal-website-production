@@ -10,7 +10,7 @@
 
 .biography p {
      padding-right: 3rem;
-     max-width: 666px;
+     max-width: 55.5rem;
 }
 
 .biography img {
@@ -18,7 +18,7 @@
      margin-left: auto;
      object-fit: cover;
      height: 381px;
-     width: 336px;
+     width: 28rem;
 }
 
 .biography__social-icons {
