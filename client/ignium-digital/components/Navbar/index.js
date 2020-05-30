@@ -42,7 +42,11 @@ const Navbar = (props) => {
 			</div>
 			<span
 				aria-label="navbar open mobile menu"
-				className={mobileNavVisible ? "navbar__menu__toggle opened" : "navbar__menu__toggle"}
+				className={
+					mobileNavVisible
+						? "navbar__menu__toggle opened"
+						: "navbar__menu__toggle"
+				}
 				href="#"
 				onClick={() => setMobileNavVisible(!mobileNavVisible)}
 				onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
@@ -55,40 +59,67 @@ const Navbar = (props) => {
 				<span className="bar bar--3" />
 			</span>
 			<div
-				className={`${className}__links desktop--links${mobileNavVisible
-					? " active" : " inactive"}`}
+				className={`${className}__links desktop--links${
+					mobileNavVisible ? " active" : " inactive"
+				}`}
 			>
 				<ul>
 					<li>
 						<Link href="/whoweare">
-							<a>Who We Are</a>
+							<a
+								className={
+									router.pathname === "/whoweare"
+										? "active"
+										: ""
+								}
+							>
+								Who We Are
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/services">
-							<a className={router.pathname === "/services" ? "active" : ""}>
+							<a
+								className={
+									router.pathname === "/services"
+										? "active"
+										: ""
+								}
+							>
 								Services
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/insights">
-							<a>Insights</a>
+							<a
+								className={
+									router.pathname === "/insights"
+										? "active"
+										: ""
+								}
+							>
+								Insights
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/careers">
-							<a className={router.pathname === "/careers" ? "active" : ""}>
+							<a
+								className={
+									router.pathname === "/careers"
+										? "active"
+										: ""
+								}
+							>
 								Careers
 							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/letschat">
-							<span className="orange--text">
-								<a>Let&apos;s Chat</a>
-							</span>
-						</Link>
+						<span className="orange--text">
+							<a>Let&apos;s Chat</a>
+						</span>
 					</li>
 				</ul>
 			</div>

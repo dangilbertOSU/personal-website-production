@@ -1,0 +1,19 @@
+.ImageCard img {
+     max-height: 232px;
+     object-fit: cover;
+}
+
+.ImageCard__image {
+     cursor: pointer;
+     position: relative;
+}
+
+@keyframes fade-in {
+     from {
+          opacity: 0;
+     }
+
+     to {
+          opacity: 0.6;
+     }
+}

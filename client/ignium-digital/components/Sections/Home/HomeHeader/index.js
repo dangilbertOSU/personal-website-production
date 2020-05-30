@@ -23,28 +23,28 @@ import WelcomeLogo from "../../../../public/images/home_logo_jumbo.png";
 import "./HomeHeader.css";
 
 const HomeHeader = (props) => {
-  const { className } = props;
+	const { className } = props;
 
-  return (
-    <div className={className}>
-      <div className="welcome__text">
-        <h2 className="orange--text">Purpose. Passion. Profit.</h2>
-        <h1>Investments driven by innovations</h1>
-        <Button ariaLabel="let's chat">Let&apos;s Chat</Button>
-      </div>
-      <div className="welcome__image">
-        <img alt="Ignium Digital Jumobtron Logo" src={WelcomeLogo} />
-      </div>
-    </div>
-  );
+	return (
+		<div className={className}>
+			<div className="welcome__text">
+				<h2 className="orange--text">Purpose. Passion. Profit.</h2>
+				<h1>Investments driven by innovations</h1>
+				<Button ariaLabel="let's chat">Let&apos;s Chat</Button>
+			</div>
+			<div className="welcome__image">
+				<img alt="Ignium Digital Jumobtron Logo" src={WelcomeLogo} />
+			</div>
+		</div>
+	);
 };
 
 HomeHeader.defaultProps = {
-  className: "welcome",
+	className: "welcome",
 };
 
 HomeHeader.propTypes = {
-  className: PropTypes.string,
+	className: PropTypes.string,
 };
 
 export default HomeHeader;
