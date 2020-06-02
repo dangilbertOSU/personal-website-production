@@ -57,6 +57,19 @@
      width: 100%;
 }
 
+.technology {
+     color: #0057CA;
+}
+
+.motivation {
+     color: #00A529
+}
+
+.business {
+     color: #8A008F;
+}
+
+
 /*
  * Tablet
  */

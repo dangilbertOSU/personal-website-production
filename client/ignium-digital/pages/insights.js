@@ -1,4 +1,10 @@
 /*
+ * Function Imports
+ */
+
+import { useState } from "react";
+
+/*
  * Component Imports
  */
 
@@ -17,6 +23,7 @@ import photo3 from "../public/images/Articles/article3.jpg";
 import photo4 from "../public/images/Articles/article4.jpg";
 import photo5 from "../public/images/Articles/article5.jpg";
 import ArticleGrid from "../components/ArticleGrid";
+import ArticleTab from "../components/ArticleTab";
 
 const dummyArticles = [
 	{
@@ -65,6 +72,8 @@ const dummyArticles = [
 ];
 
 const Insights = () => {
+	const [active, setActive] = useState(0);
+
 	return (
 		<div>
 			<Head>
@@ -77,6 +86,7 @@ const Insights = () => {
 						header="Everything you need to know about sitecore technology, customer experience & beyond"
 						tab="Insights"
 					/>
+					<ArticleTab active={active} setActive={setActive} />
 					<ArticleGrid articles={dummyArticles} />
 				</Section>
 			</Layout>
