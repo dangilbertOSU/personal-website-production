@@ -22,3 +22,22 @@
      border-bottom: 4px solid #0E1137;
      opacity: 1;
 }
+
+/*
+ * Tablet
+ */
+@media only screen and (max-width: 555px) {
+     .article__tab {
+          justify-content: space-around;
+     }
+
+     .article__tab>* {
+          margin: 0;
+     }
+
+     .article__tab p {
+          font-size: 0.75rem;
+          padding: 0.2rem;
+
+     }
+}

@@ -1,0 +1,18 @@
+.article__layout {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.article__layout>* {
+     margin-bottom: 2rem;
+}
+
+.article__layout .article {
+     width: 336px;
+}
+
+.article__layout .article img {
+     height: 184px;
+     width: 336px;
+}

@@ -25,6 +25,7 @@ const ArticleGrid = (props) => {
 				articles.map((article, index) => (
 					<Article
 						article={article}
+						content={index === 0 ? article.content : null}
 						index={index}
 						key={article.id}
 					/>

@@ -12,6 +12,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
 import SectionHeading from "../components/SectionHeading";
+import GridContainer from "../components/GridContainer";
 
 /*
  * Image/SVG imports
@@ -24,55 +25,86 @@ import photo4 from "../public/images/Articles/article4.jpg";
 import photo5 from "../public/images/Articles/article5.jpg";
 import ArticleGrid from "../components/ArticleGrid";
 import ArticleTab from "../components/ArticleTab";
+import Article from "../components/Article";
+import ArticleLayout from "../components/ArticleLayout";
 
-const dummyArticles = [
-	{
-		id: 0,
-		title:
-			"15 Strategies to Improve Your Site Search and Increase your Conversion Rate",
-		content: `Today, Coveo and Sitecore have announced an expanded offering to bring Coveo AI-powered search and recommendations to 
+/*
+ * Temporary function to produce dummy articles
+ * TODO: Delete this function when implementing calls to backend
+ */
+
+const getRandomInt = (max) => {
+	return Math.floor(Math.random() * Math.floor(max));
+};
+
+const createDummyArticles = () => {
+	let id = 0;
+	let objects = [];
+	let titles = [
+		"5 Trends to Include in Your Next Website Redesign",
+		"15 Strategies to Improve Your Site Search and Increase your Conversion Rate",
+		"The Must-Attend Coveo Impact Sessions for Sitecore Users",
+		"Congratulations to the 2019 Sitecore MVPs!",
+		"Choosing The Best Audio Player Software For Your Computer",
+	];
+	let photos = [photo1, photo2, photo3, photo4, photo5];
+	let categories = ["technology", "motivation", "business"];
+	while (id < 100) {
+		let object = {
+			id: id++,
+			title: titles[getRandomInt(5)],
+			content: `Today, Coveo and Sitecore have announced an expanded offering to bring Coveo AI-powered search and recommendations to 
 		mid-market customers. This best-in-class offering, previously only available to enterprise-level customers, will enable Sitecore
 		customers to build powerful, search-driven experiences with rich personalization djsfkljsdlkfjsfsjdsklfsa`,
-		category: "technology",
-		publish_date: "23 Jan 2020",
-		image: photo1,
-	},
-	{
-		id: 1,
-		title: "The Must-Attend Coveo Impact Sessions for Sitecore Users",
-		content: "dummy content",
-		category: "technology",
-		publish_date: "23 Jan 2020",
-		image: photo2,
-	},
-	{
-		id: 2,
-		title: "Congratulations to the 2019 Sitecore MVPs!",
-		content: "dummy content",
-		category: "motivation",
-		publish_date: "23 Jan 2020",
-		image: photo3,
-	},
-	{
-		id: 3,
-		title: "Choosing The Best Audio Player Software For Your Computer",
-		content: "dummy content",
-		category: "business",
-		publish_date: "23 Jan 2020",
-		image: photo4,
-	},
-	{
-		id: 4,
-		title: "5 Trends to Include in Your Next Website Redesign",
-		content: "dummy content",
-		category: "business",
-		publish_date: "23 Jan 2020",
-		image: photo5,
-	},
-];
+			category: categories[getRandomInt(3)],
+			publish_date: "23 Jan 2020",
+			image: photos[getRandomInt(5)],
+		};
+
+		objects.push(object);
+	}
+
+	return objects;
+};
+
+const dummyArticles = createDummyArticles();
+
+const getFilteredArticles = (amount, filter) => {
+	const filtered = dummyArticles.filter(
+		function (article) {
+			if (
+				(this.count < amount && article.category == filter) ||
+				(this.count < amount && !filter)
+			) {
+				this.count++;
+				return true;
+			}
+			return false;
+		},
+		{ count: 0 }
+	);
+
+	return filtered;
+};
+
+const getFeaturedArticles = (tabIndex) => {
+	switch (tabIndex) {
+		case 0:
+			return getFilteredArticles(5);
+		case 1:
+			return getFilteredArticles(5, "technology");
+		case 2:
+			return getFilteredArticles(5, "motivation");
+		case 3:
+			return getFilteredArticles(5, "business");
+	}
+};
 
 const Insights = () => {
 	const [active, setActive] = useState(0);
+
+	const featuredArticles = getFeaturedArticles(active);
+	const latestArticles = getFilteredArticles(9);
 
 	return (
 		<div>
@@ -81,13 +113,31 @@ const Insights = () => {
 				<meta name="description" content="" />
 			</Head>
 			<Layout>
-				<Section>
-					<SectionHeading
-						header="Everything you need to know about sitecore technology, customer experience & beyond"
-						tab="Insights"
-					/>
+				<Section style={{ marginTop: "1rem" }}>
+					<span>
+						<SectionHeading
+							header="Everything you need to know about sitecore technology, customer experience & beyond"
+							tab="Insights"
+						/>
+					</span>
 					<ArticleTab active={active} setActive={setActive} />
-					<ArticleGrid articles={dummyArticles} />
+					<ArticleGrid articles={featuredArticles} />
+				</Section>
+				<Section>
+					<h2>Latest articles</h2>
+					<ArticleLayout>
+						{latestArticles &&
+							latestArticles.map((article, index) => {
+								// delete article.content;
+								return (
+									<Article
+										article={article}
+										index={index}
+										key={article.id}
+									/>
+								);
+							})}
+					</ArticleLayout>
 				</Section>
 			</Layout>
 		</div>

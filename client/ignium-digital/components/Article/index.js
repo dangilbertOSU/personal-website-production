@@ -23,7 +23,7 @@ import TextSeperator from "../SVG/TextSeperator";
 import "./Article.css";
 
 const Article = (props) => {
-	const { article, className, index } = props;
+	const { article, className, index, content } = props;
 
 	return (
 		<div className={`${className} article_${index}`}>
@@ -49,9 +49,7 @@ const Article = (props) => {
 					<h3>{article.title}</h3>
 				</a>
 			</Link>
-			{index === 0 && (
-				<p>{`${article.content.substring(0, 327)}...`}</p>
-			)}
+			{content && <p>{`${content.substring(0, 327)}...`}</p>}
 		</div>
 	);
 };
