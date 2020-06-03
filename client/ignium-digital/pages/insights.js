@@ -12,7 +12,10 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
 import SectionHeading from "../components/SectionHeading";
-import GridContainer from "../components/GridContainer";
+import ArticleTab from "../components/ArticleTab";
+import ArticleGrid from "../components/ArticleGrid";
+import ArticleLayout from "../components/ArticleLayout";
+import Article from "../components/Article";
 
 /*
  * Image/SVG imports
@@ -23,10 +26,6 @@ import photo2 from "../public/images/Articles/article2.jpg";
 import photo3 from "../public/images/Articles/article3.jpg";
 import photo4 from "../public/images/Articles/article4.jpg";
 import photo5 from "../public/images/Articles/article5.jpg";
-import ArticleGrid from "../components/ArticleGrid";
-import ArticleTab from "../components/ArticleTab";
-import Article from "../components/Article";
-import ArticleLayout from "../components/ArticleLayout";
 
 /*
  * Temporary function to produce dummy articles
@@ -110,16 +109,19 @@ const Insights = () => {
 		<div>
 			<Head>
 				<title>Ignium Digital | Insights</title>
-				<meta name="description" content="" />
+				<meta
+					name="description"
+					content="Everything you need to know about sitecore technology, customer experience & beyond. Articles with categories in technology, motivation, and business."
+				/>
 			</Head>
 			<Layout>
-				<Section style={{ marginTop: "1rem" }}>
-					<span>
+				<Section>
+					<div style={{ marginTop: "4rem" }}>
 						<SectionHeading
 							header="Everything you need to know about sitecore technology, customer experience & beyond"
 							tab="Insights"
 						/>
-					</span>
+					</div>
 					<ArticleTab active={active} setActive={setActive} />
 					<ArticleGrid articles={featuredArticles} />
 				</Section>

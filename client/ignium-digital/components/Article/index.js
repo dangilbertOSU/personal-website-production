@@ -23,7 +23,9 @@ import TextSeperator from "../SVG/TextSeperator";
 import "./Article.css";
 
 const Article = (props) => {
-	const { article, className, index, content } = props;
+	const {
+		article, className, content, index,
+	} = props;
 
 	return (
 		<div className={`${className} article_${index}`}>
@@ -56,11 +58,14 @@ const Article = (props) => {
 
 Article.defaultProps = {
 	className: "article",
+	content: null,
 };
 
 Article.propTypes = {
-	article: PropTypes.object.isRequired,
+	article: PropTypes.oneOfType([PropTypes.object]).isRequired,
 	className: PropTypes.string,
+	content: PropTypes.string,
+	index: PropTypes.number.isRequired,
 };
 
 export default Article;

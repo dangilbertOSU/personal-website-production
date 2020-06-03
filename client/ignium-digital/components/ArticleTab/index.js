@@ -1,4 +1,13 @@
+/*
+ * Function imports
+ */
+
 import PropTypes from "prop-types";
+
+/*
+ * CSS imports
+ */
+
 import "./ArticleTab.css";
 
 const ArticleTab = (props) => {
@@ -13,11 +22,12 @@ const ArticleTab = (props) => {
 					return (
 						<p
 							className={
-								active == index
+								active === index
 									? "active__tab"
 									: undefined
 							}
 							onClick={() => setActive(index)}
+							onKeyDown={() => setActive(index)}
 							key={tab}
 						>
 							{tab}
@@ -29,11 +39,15 @@ const ArticleTab = (props) => {
 };
 
 ArticleTab.defaultProps = {
+	active: 0,
 	className: "article__tab",
+	setActive: () => {},
 };
 
 ArticleTab.propTypes = {
+	active: PropTypes.number,
 	className: PropTypes.string,
+	setActive: PropTypes.func,
 };
 
 export default ArticleTab;

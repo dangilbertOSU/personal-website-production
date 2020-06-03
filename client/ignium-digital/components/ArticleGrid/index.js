@@ -40,7 +40,7 @@ ArticleGrid.defaultProps = {
 };
 
 ArticleGrid.propTypes = {
-	articles: PropTypes.array,
+	articles: PropTypes.arrayOf(PropTypes.object),
 	className: PropTypes.string,
 };
 

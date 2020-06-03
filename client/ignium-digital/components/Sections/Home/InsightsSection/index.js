@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
  */
 
 import Link from "next/link";
+import ArticleGrid from "../../../ArticleGrid";
 import Button from "../../../Button";
 import SectionHeading from "../../../SectionHeading";
 
@@ -21,15 +22,12 @@ import photo2 from "../../../../public/images/Articles/article2.jpg";
 import photo3 from "../../../../public/images/Articles/article3.jpg";
 import photo4 from "../../../../public/images/Articles/article4.jpg";
 import photo5 from "../../../../public/images/Articles/article5.jpg";
-import TextSeperator from "../../../SVG/TextSeperator";
 
 /*
  * CSS imports
  */
 
 import "./InsightsSection.css";
-import Article from "../../../Article";
-import ArticleGrid from "../../../ArticleGrid";
 
 const dummyArticles = [
 	{

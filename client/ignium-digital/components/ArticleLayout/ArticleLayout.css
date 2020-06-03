@@ -16,3 +16,12 @@
      height: 184px;
      width: 336px;
 }
+
+/*
+ * Large Mobile
+ */
+@media only screen and (max-width: 555px) {
+     .article__layout .article {
+          width: 100%;
+     }
+}
