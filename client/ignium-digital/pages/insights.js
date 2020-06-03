@@ -130,7 +130,6 @@ const Insights = () => {
 					<ArticleLayout>
 						{latestArticles &&
 							latestArticles.map((article, index) => {
-								// delete article.content;
 								return (
 									<Article
 										article={article}
