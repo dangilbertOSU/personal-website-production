@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
  */
 
 import Link from "next/link";
+import ArticleGrid from "../../../ArticleGrid";
 import Button from "../../../Button";
 import SectionHeading from "../../../SectionHeading";
 
@@ -21,7 +22,6 @@ import photo2 from "../../../../public/images/Articles/article2.jpg";
 import photo3 from "../../../../public/images/Articles/article3.jpg";
 import photo4 from "../../../../public/images/Articles/article4.jpg";
 import photo5 from "../../../../public/images/Articles/article5.jpg";
-import TextSeperator from "../../../SVG/TextSeperator";
 
 /*
  * CSS imports
@@ -33,7 +33,7 @@ const dummyArticles = [
 	{
 		id: 0,
 		title:
-      "15 Strategies to Improve Your Site Search and Increase your Conversion Rate",
+			"15 Strategies to Improve Your Site Search and Increase your Conversion Rate",
 		content: `Today, Coveo and Sitecore have announced an expanded offering to bring Coveo AI-powered search and recommendations to 
 		mid-market customers. This best-in-class offering, previously only available to enterprise-level customers, will enable Sitecore
 		customers to build powerful, search-driven experiences with rich personalization djsfkljsdlkfjsfsjdsklfsa`,
@@ -87,42 +87,14 @@ const Insights = (props) => {
 					tab="Insights"
 				/>
 			</div>
-			<div className="insights__articles">
-				{dummyArticles.map((article, index) => (
-					<div
-						className={`insights__article article_${index}`}
-						key={article.id}
-					>
-						<Link href={`/insights/${article.id}`}>
-							<a>
-								<div className="insights__article__image">
-									<img
-										src={article.image}
-										alt={article.alt || `${article.title}_image`}
-									/>
-								</div>
-							</a>
-						</Link>
-						<div className="insights__article__data">
-							<p className={`insights__article__category ${article.category}`}>
-								{article.category}
-							</p>
-							<TextSeperator />
-							<p>{article.publish_date}</p>
-						</div>
-						<Link href={`/insights/${article.id}`}>
-							<a>
-								<h3>{article.title}</h3>
-							</a>
-						</Link>
-						{index === 0 && <p>{`${article.content.substring(0, 327)}...`}</p>}
-					</div>
-				))}
-			</div>
+			<ArticleGrid articles={dummyArticles} />
 			<div className="insights__articles__button">
 				<Link href="/insights">
 					<a>
-						<Button ariaLabel="view all articles" variant="secondary">
+						<Button
+							ariaLabel="view all articles"
+							variant="secondary"
+						>
 							View All Articles
 						</Button>
 					</a>
