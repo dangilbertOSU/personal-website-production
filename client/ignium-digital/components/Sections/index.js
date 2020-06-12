@@ -13,7 +13,11 @@ import "./Section.css";
 const Section = (props) => {
 	const { className, children } = props;
 
-	return <div className={className}>{children}</div>;
+	return (
+		<div className={className}>
+			<div className="section_content_test">{children}</div>
+		</div>
+	);
 };
 
 Section.defaultProps = {

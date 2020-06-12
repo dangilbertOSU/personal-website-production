@@ -22,14 +22,20 @@ const ArticleGrid = (props) => {
 	return (
 		<div className={className}>
 			{articles &&
-				articles.map((article, index) => (
-					<Article
-						article={article}
-						content={index === 0 ? article.content : null}
-						index={index}
-						key={article.id}
-					/>
-				))}
+				articles.map((article, index) => {
+					console.log("article: ", article);
+					return (
+						<Article
+							article={article}
+							content={
+								index === 0 ? article.content : null
+							}
+							index={index}
+							key={article.id}
+							photoURL={`http://localhost:1337${article.coverPhoto.url}`}
+						/>
+					);
+				})}
 		</div>
 	);
 };

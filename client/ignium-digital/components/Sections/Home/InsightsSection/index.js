@@ -87,7 +87,7 @@ const Insights = (props) => {
 					tab="Insights"
 				/>
 			</div>
-			<ArticleGrid articles={dummyArticles} />
+			{/* <ArticleGrid articles={dummyArticles} /> */}
 			<div className="insights__articles__button">
 				<Link href="/insights">
 					<a>

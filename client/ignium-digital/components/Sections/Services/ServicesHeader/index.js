@@ -41,8 +41,9 @@ const ServicesHeader = (props) => {
 			</div>
 			<div className="services__header__description text">
 				<p>
-					We offer a wide range of Sitecore tailored solutions, to help your
-					organization to get the most of your Sitecore investment.
+					We offer a wide range of Sitecore tailored solutions,
+					to help your organization to get the most of your
+					Sitecore investment.
 				</p>
 			</div>
 		</div>

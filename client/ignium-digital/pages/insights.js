@@ -28,85 +28,42 @@ import photo3 from "../public/images/Articles/article3.jpg";
 import photo4 from "../public/images/Articles/article4.jpg";
 import photo5 from "../public/images/Articles/article5.jpg";
 
-/*
- * Temporary function to produce dummy articles
- * TODO: Delete this function when implementing calls to backend
- */
-
-const getRandomInt = (max) => {
-	return Math.floor(Math.random() * Math.floor(max));
-};
-
-const createDummyArticles = () => {
-	let id = 0;
-	let objects = [];
-	let titles = [
-		"5 Trends to Include in Your Next Website Redesign",
-		"15 Strategies to Improve Your Site Search and Increase your Conversion Rate",
-		"The Must-Attend Coveo Impact Sessions for Sitecore Users",
-		"Congratulations to the 2019 Sitecore MVPs!",
-		"Choosing The Best Audio Player Software For Your Computer",
-	];
-	let photos = [photo1, photo2, photo3, photo4, photo5];
-	let categories = ["technology", "motivation", "business"];
-	while (id < 100) {
-		let object = {
-			id: id++,
-			title: titles[getRandomInt(5)],
-			content: `Today, Coveo and Sitecore have announced an expanded offering to bring Coveo AI-powered search and recommendations to 
-		mid-market customers. This best-in-class offering, previously only available to enterprise-level customers, will enable Sitecore
-		customers to build powerful, search-driven experiences with rich personalization djsfkljsdlkfjsfsjdsklfsa`,
-			category: categories[getRandomInt(3)],
-			publish_date: "23 Jan 2020",
-			image: photos[getRandomInt(5)],
-		};
-
-		objects.push(object);
-	}
-
-	return objects;
-};
-
-const dummyArticles = createDummyArticles();
-
-const getFilteredArticles = (amount, filter) => {
-	const filtered = dummyArticles.filter(
-		function (article) {
-			if (
-				(this.count < amount && article.category == filter) ||
-				(this.count < amount && !filter)
-			) {
-				this.count++;
-				return true;
-			}
-			return false;
-		},
-		{ count: 0 }
-	);
-
-	return filtered;
-};
-
-const getFeaturedArticles = (tabIndex) => {
-	switch (tabIndex) {
-		case 0:
-			return getFilteredArticles(5);
-		case 1:
-			return getFilteredArticles(5, "technology");
-		case 2:
-			return getFilteredArticles(5, "motivation");
-		case 3:
-			return getFilteredArticles(5, "business");
-	}
-};
-
-const Insights = ({ backArticles }) => {
+const Insights = ({ articles, API_URL, API_PORT }) => {
 	const [active, setActive] = useState(0);
+
+	const getFilteredArticles = (amount, filter) => {
+		const filtered = articles.filter(
+			function (article) {
+				if (
+					(this.count < amount && article.category == filter) ||
+					(this.count < amount && !filter)
+				) {
+					this.count++;
+					return true;
+				}
+				return false;
+			},
+			{ count: 0 }
+		);
+
+		return filtered;
+	};
+
+	const getFeaturedArticles = (tabIndex) => {
+		switch (tabIndex) {
+			case 0:
+				return getFilteredArticles(5);
+			case 1:
+				return getFilteredArticles(5, "technology");
+			case 2:
+				return getFilteredArticles(5, "motivation");
+			case 3:
+				return getFilteredArticles(5, "business");
+		}
+	};
 
 	const featuredArticles = getFeaturedArticles(active);
 	const latestArticles = getFilteredArticles(9);
-
-	console.log("backend: ", backArticles);
 
 	return (
 		<div>
@@ -133,11 +90,13 @@ const Insights = ({ backArticles }) => {
 					<ArticleLayout>
 						{latestArticles &&
 							latestArticles.map((article, index) => {
+								console.log("latest", article);
 								return (
 									<Article
 										article={article}
 										index={index}
 										key={article.id}
+										photoURL={`http://localhost:1337${article.coverPhoto.url}`}
 									/>
 								);
 							})}
@@ -150,13 +109,16 @@ const Insights = ({ backArticles }) => {
 
 export async function getServerSideProps() {
 	const { API_URL, API_PORT } = process.env;
-	console.log(`here: ${API_URL}:${API_PORT}/articles`);
-	const result = await fetch(`${API_URL}:${API_PORT}/articles`);
+	const result = await fetch(
+		`${API_URL}:${API_PORT}/articles?_sort=date:DESC`
+	);
 	const data = await result.json();
 
 	return {
 		props: {
-			backArticles: data,
+			articles: data,
+			API_URL,
+			API_PORT,
 		},
 	};
 }

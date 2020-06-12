@@ -23,9 +23,9 @@ import TextSeperator from "../SVG/TextSeperator";
 import "./Article.css";
 
 const Article = (props) => {
-	const {
-		article, className, content, index,
-	} = props;
+	const { article, className, content, index, photoURL } = props;
+
+	console.log("photoURL: ", photoURL);
 
 	return (
 		<div className={`${className} article_${index}`}>
@@ -33,7 +33,7 @@ const Article = (props) => {
 				<a>
 					<div className={`${className}__image`}>
 						<img
-							src={article.image}
+							src={photoURL}
 							alt={article.alt || `${article.title}_image`}
 						/>
 					</div>
@@ -44,7 +44,7 @@ const Article = (props) => {
 					{article.category}
 				</p>
 				<TextSeperator />
-				<p>{article.publish_date}</p>
+				<p>{article.date}</p>
 			</div>
 			<Link href={`/insights/${article.id}`}>
 				<a>
@@ -66,6 +66,7 @@ Article.propTypes = {
 	className: PropTypes.string,
 	content: PropTypes.string,
 	index: PropTypes.number.isRequired,
+	photoURL: PropTypes.string.isRequired,
 };
 
 export default Article;
