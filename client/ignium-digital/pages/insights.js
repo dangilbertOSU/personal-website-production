@@ -3,6 +3,7 @@
  */
 
 import { useState } from "react";
+import fetch from "isomorphic-unfetch";
 
 /*
  * Component Imports
@@ -99,11 +100,13 @@ const getFeaturedArticles = (tabIndex) => {
 	}
 };
 
-const Insights = () => {
+const Insights = ({ backArticles }) => {
 	const [active, setActive] = useState(0);
 
 	const featuredArticles = getFeaturedArticles(active);
 	const latestArticles = getFilteredArticles(9);
+
+	console.log("backend: ", backArticles);
 
 	return (
 		<div>
@@ -144,5 +147,18 @@ const Insights = () => {
 		</div>
 	);
 };
+
+export async function getServerSideProps() {
+	const { API_URL, API_PORT } = process.env;
+	console.log(`here: ${API_URL}:${API_PORT}/articles`);
+	const result = await fetch(`${API_URL}:${API_PORT}/articles`);
+	const data = await result.json();
+
+	return {
+		props: {
+			backArticles: data,
+		},
+	};
+}
 
 export default Insights;
