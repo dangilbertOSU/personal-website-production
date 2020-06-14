@@ -1,4 +1,11 @@
 /*
+ * Function imports
+ */
+
+import fetch from "isomorphic-unfetch";
+import getConfig from "next/config";
+
+/*
  * Component Imports
  */
 
@@ -10,7 +17,7 @@ import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
 import ServicesSection from "../components/Sections/Home/ServicesSection";
 import InsightsSection from "../components/Sections/Home/InsightsSection";
 
-const App = () => {
+const App = ({ featuredArticles }) => {
 	return (
 		<div>
 			<Head>
@@ -33,11 +40,31 @@ const App = () => {
 					</Section>
 				</div>
 				<Section>
-					<InsightsSection />
+					<InsightsSection articles={featuredArticles} />
 				</Section>
 			</Layout>
 		</div>
 	);
 };
+
+const { publicRuntimeConfig } = getConfig();
+
+/*
+ * Getting the latest 5 featured articles
+ */
+
+export async function getServerSideProps() {
+	const { API_URL, API_PORT } = publicRuntimeConfig;
+	const result = await fetch(
+		`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
+	);
+	const data = await result.json();
+
+	return {
+		props: {
+			featuredArticles: data,
+		},
+	};
+}
 
 export default App;

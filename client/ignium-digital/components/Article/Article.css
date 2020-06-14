@@ -25,10 +25,12 @@
 .article__image img {
      object-fit: cover;
      min-width: 100%;
+     transition: all 0.3s;
 }
 
 .article__image {
      cursor: pointer;
+     overflow: hidden;
      position: relative;
      transition: all 0.2s;
 }
@@ -37,6 +39,10 @@
      box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
      -webkit-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
      -moz-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
+}
+
+.article__image:hover img {
+     transform: scale(1.1);
 }
 
 .article__image:hover::after {

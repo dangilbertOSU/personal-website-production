@@ -11,7 +11,7 @@
     z-index: 3;
 }
 
-.content_test {
+.navbar--body {
     align-items: center;
     display: flex;
     box-sizing: border-box;
@@ -193,28 +193,36 @@
     }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (max-width: 1200px) {
     .navbar {
-        padding: 1.5rem 22vw;
+        padding: 0 1rem;
     }
 }
+
 
 /*
  *  This is the size that the navbar links begin to compress
  */
 
-@media only screen and (max-width: 1352px) {
+@media only screen and (max-width: 900px) {
 
     .navbar {
         align-items: flex-start;
         box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
         flex-direction: column;
         height: 5rem;
-        padding-top: 1.5rem;
+        padding: 1.5rem 5vw 0 5vw;
         overflow: hidden;
+        position: static;
         transition: all 0.2s;
         -webkit-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
         -moz-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
+    }
+
+    .navbar--body {
+        display: block;
+        width: 100%;
+        margin: 0;
     }
 
     .grow {
@@ -223,6 +231,7 @@
 
     .navbar__menu__toggle {
         display: flex;
+        right: 5vw;
     }
 
     .inactive {
@@ -261,7 +270,7 @@
     }
 
     .navbar__links ul li a {
-        display: block;
+        display: inline-block;
         font-size: 1rem;
         margin: 1.5rem 0;
         padding: 0;
@@ -281,22 +290,6 @@
 
     .active::after {
         display: none;
-    }
-}
-
-/*
- * Small Laptop
- */
-
-@media only screen and (max-width: 1024px) {
-    .navbar {
-        padding-left: 5vw;
-        padding-right: 5vw;
-        position: static;
-    }
-
-    .navbar__menu__toggle {
-        right: 5vw;
     }
 }
 

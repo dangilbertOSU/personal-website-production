@@ -4,6 +4,11 @@
      justify-content: space-between;
 }
 
+.article__layout::after {
+     content: "";
+     width: 336px;
+}
+
 .article__layout>* {
      margin-bottom: 2rem;
 }

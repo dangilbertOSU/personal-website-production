@@ -1,4 +1,4 @@
-.services__header {
+.services__header .section--body {
      display: grid;
      grid-template-areas:
           "A B B"
@@ -37,8 +37,8 @@
  * Large Mobile
  */
 
-@media only screen and (max-width: 555px) {
-     .services__header {
+@media only screen and (max-width: 700px) {
+     .services__header .section--body {
           grid-template-areas:
                "A"
                "B"

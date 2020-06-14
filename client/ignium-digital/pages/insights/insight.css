@@ -1,0 +1,76 @@
+.insight__body {
+     padding: 0 12rem;
+}
+
+.insight__data {
+     align-items: center;
+     display: flex;
+     font-weight: 600;
+     letter-spacing: -0.202941px;
+     margin-top: 1.2rem;
+}
+
+.insight__data p {
+     font-size: 0.875rem;
+     font-weight: 600;
+     text-transform: uppercase;
+     margin: 0 0.2rem;
+}
+
+.insight__social {
+     align-items: center;
+     display: flex;
+}
+
+.insight__social p {
+     font-size: 14px;
+     font-weight: 600;
+     opacity: 1;
+     white-space: pre-wrap;
+}
+
+.insight__social>*:not(:first-child) {
+     margin-left: 1.5rem;
+}
+
+.insight__cover--photo img {
+     height: 480px;
+     object-fit: cover;
+     width: 100%;
+}
+
+.technology {
+     color: #0057CA;
+}
+
+.motivation {
+     color: #00A529
+}
+
+.business {
+     color: #8A008F;
+}
+
+/*
+ * Tablet
+ */
+
+@media only screen and (max-width: 900px) {
+     .insight__body {
+          padding: 0;
+     }
+}
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 550px) {
+     .insight__body {
+          padding: 0;
+     }
+
+     .insight__title h2 {
+          font-size: 22px;
+     }
+}

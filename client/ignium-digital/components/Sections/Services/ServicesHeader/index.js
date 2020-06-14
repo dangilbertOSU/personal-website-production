@@ -27,24 +27,26 @@ const ServicesHeader = (props) => {
 
 	return (
 		<div className={className}>
-			<div className="services__header__heading text">
-				<SectionHeading
-					header="Let us help steer your organization in the right direction."
-					tab="Services"
-				/>
-			</div>
-			<div className="services__header__image">
-				<img
-					alt="Ignium Digital services group meeting"
-					src={ServicesHeaderImage}
-				/>
-			</div>
-			<div className="services__header__description text">
-				<p>
-					We offer a wide range of Sitecore tailored solutions,
-					to help your organization to get the most of your
-					Sitecore investment.
-				</p>
+			<div className="section--body">
+				<div className="services__header__heading text">
+					<SectionHeading
+						header="Let us help steer your organization in the right direction."
+						tab="Services"
+					/>
+				</div>
+				<div className="services__header__image">
+					<img
+						alt="Ignium Digital services group meeting"
+						src={ServicesHeaderImage}
+					/>
+				</div>
+				<div className="services__header__description text">
+					<p>
+						We offer a wide range of Sitecore tailored
+						solutions, to help your organization to get the
+						most of your Sitecore investment.
+					</p>
+				</div>
 			</div>
 		</div>
 	);

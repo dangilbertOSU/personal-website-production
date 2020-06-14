@@ -15,7 +15,7 @@ const Section = (props) => {
 
 	return (
 		<div className={className}>
-			<div className="section_content_test">{children}</div>
+			<div className={`${className}--body`}>{children}</div>
 		</div>
 	);
 };

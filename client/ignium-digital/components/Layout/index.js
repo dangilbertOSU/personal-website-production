@@ -14,14 +14,14 @@ import Contact from "../Contact";
 import Footer from "../Footer";
 
 const Layout = (props) => {
-	const { children } = props;
+	const { children, contact } = props;
 
 	return (
 		<div>
 			<Navbar />
 			<Content>
 				{children}
-				<Contact />
+				{contact && <Contact />}
 			</Content>
 			<Footer />
 		</div>
@@ -30,10 +30,12 @@ const Layout = (props) => {
 
 Layout.defaultProps = {
 	children: PropTypes.node,
+	contact: true,
 };
 
 Layout.propTypes = {
 	children: PropTypes.node,
+	contact: PropTypes.bool,
 };
 
 export default Layout;

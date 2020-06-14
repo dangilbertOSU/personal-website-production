@@ -11,6 +11,11 @@ module.exports = withCSS(
 			API_PORT: process.env.API_PORT,
 		},
 
+		publicRuntimeConfig: {
+			API_URL: process.env.API_URL,
+			API_PORT: process.env.API_PORT,
+		},
+
 		webpack: (config) => {
 			config.module.rules.push({
 				test: /\.svg$/,

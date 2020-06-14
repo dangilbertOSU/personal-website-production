@@ -23,7 +23,6 @@ const ArticleGrid = (props) => {
 		<div className={className}>
 			{articles &&
 				articles.map((article, index) => {
-					console.log("article: ", article);
 					return (
 						<Article
 							article={article}

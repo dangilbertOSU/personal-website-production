@@ -25,11 +25,9 @@ import "./Article.css";
 const Article = (props) => {
 	const { article, className, content, index, photoURL } = props;
 
-	console.log("photoURL: ", photoURL);
-
 	return (
 		<div className={`${className} article_${index}`}>
-			<Link href={`/insights/${article.id}`}>
+			<Link href="/insights/[id]" as={`/insights/${article.id}`}>
 				<a>
 					<div className={`${className}__image`}>
 						<img

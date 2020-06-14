@@ -10,28 +10,18 @@ import fetch from "isomorphic-unfetch";
  */
 
 import Head from "next/head";
-import Layout from "../components/Layout";
-import Section from "../components/Sections";
-import SectionHeading from "../components/SectionHeading";
-import ArticleTab from "../components/ArticleTab";
-import ArticleGrid from "../components/ArticleGrid";
-import ArticleLayout from "../components/ArticleLayout";
-import Article from "../components/Article";
+import Layout from "../../components/Layout";
+import Section from "../../components/Sections";
+import SectionHeading from "../../components/SectionHeading";
+import ArticleTab from "../../components/ArticleTab";
+import ArticleGrid from "../../components/ArticleGrid";
+import ArticleLayout from "../../components/ArticleLayout";
+import Article from "../../components/Article";
 
-/*
- * Image/SVG imports
- */
-
-import photo1 from "../public/images/Articles/article1.png";
-import photo2 from "../public/images/Articles/article2.jpg";
-import photo3 from "../public/images/Articles/article3.jpg";
-import photo4 from "../public/images/Articles/article4.jpg";
-import photo5 from "../public/images/Articles/article5.jpg";
-
-const Insights = ({ articles, API_URL, API_PORT }) => {
+const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 	const [active, setActive] = useState(0);
 
-	const getFilteredArticles = (amount, filter) => {
+	const getFilteredArticles = (amount, filter, articles) => {
 		const filtered = articles.filter(
 			function (article) {
 				if (
@@ -52,18 +42,25 @@ const Insights = ({ articles, API_URL, API_PORT }) => {
 	const getFeaturedArticles = (tabIndex) => {
 		switch (tabIndex) {
 			case 0:
-				return getFilteredArticles(5);
+				return getFilteredArticles(5, null, featuredArticles);
 			case 1:
-				return getFilteredArticles(5, "technology");
+				return getFilteredArticles(
+					5,
+					"technology",
+					featuredArticles
+				);
 			case 2:
-				return getFilteredArticles(5, "motivation");
+				return getFilteredArticles(
+					5,
+					"motivation",
+					featuredArticles
+				);
 			case 3:
-				return getFilteredArticles(5, "business");
+				return getFilteredArticles(5, "business", featuredArticles);
 		}
 	};
 
-	const featuredArticles = getFeaturedArticles(active);
-	const latestArticles = getFilteredArticles(9);
+	const shownFeaturedArticles = getFeaturedArticles(active);
 
 	return (
 		<div>
@@ -83,14 +80,13 @@ const Insights = ({ articles, API_URL, API_PORT }) => {
 						/>
 					</div>
 					<ArticleTab active={active} setActive={setActive} />
-					<ArticleGrid articles={featuredArticles} />
+					<ArticleGrid articles={shownFeaturedArticles} />
 				</Section>
 				<Section>
 					<h2>Latest articles</h2>
 					<ArticleLayout>
-						{latestArticles &&
-							latestArticles.map((article, index) => {
-								console.log("latest", article);
+						{nonFeaturedArticles &&
+							nonFeaturedArticles.map((article, index) => {
 								return (
 									<Article
 										article={article}
@@ -107,18 +103,32 @@ const Insights = ({ articles, API_URL, API_PORT }) => {
 	);
 };
 
+// get the featured articles
+// get the non-featured
+
 export async function getServerSideProps() {
 	const { API_URL, API_PORT } = process.env;
-	const result = await fetch(
-		`${API_URL}:${API_PORT}/articles?_sort=date:DESC`
+
+	/*
+	 * Fetching 15 featured articles
+	 */
+	const featuredResult = await fetch(
+		`${API_URL}:${API_PORT}/articles?_limit=15&featured=true&_sort=date:DESC`
 	);
-	const data = await result.json();
+	const featuredArticles = await featuredResult.json();
+
+	/*
+	 * Geting the rest of the non-featured articles
+	 */
+	const nonFeaturedResult = await fetch(
+		`${API_URL}:${API_PORT}/articles?_limit=30&featured=false&_sort=date:DESC`
+	);
+	const nonFeaturedArticles = await nonFeaturedResult.json();
 
 	return {
 		props: {
-			articles: data,
-			API_URL,
-			API_PORT,
+			featuredArticles,
+			nonFeaturedArticles,
 		},
 	};
 }

@@ -33,7 +33,7 @@ const Navbar = (props) => {
 
 	return (
 		<nav className={mobileNavVisible ? `${className} grow` : className}>
-			<div className="content_test">
+			<div className={`${className}--body`}>
 				<div className={`${className}__brand`}>
 					<Link href="/">
 						<a>
