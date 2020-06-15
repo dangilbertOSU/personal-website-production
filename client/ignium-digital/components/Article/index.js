@@ -10,6 +10,7 @@ import { dateFormatter } from "../../utilities/utilities";
  * Component imports
  */
 
+import ReactMarkdown from "react-markdown";
 
 /*
  * Image/SVG imports
@@ -24,9 +25,7 @@ import TextSeperator from "../SVG/TextSeperator";
 import "./Article.css";
 
 const Article = (props) => {
-	const {
-		article, className, content, index, photoURL,
-	} = props;
+	const { article, className, content, index, photoURL } = props;
 
 	return (
 		<div className={`${className} article_${index}`}>
@@ -52,7 +51,14 @@ const Article = (props) => {
 					<h3>{article.title}</h3>
 				</a>
 			</Link>
-			{content && <p>{`${content.substring(0, 327)}...`}</p>}
+			<div className={`${className}__content`}>
+				{content && (
+					<ReactMarkdown>{`${content.substring(
+						0,
+						327
+					)}...`}</ReactMarkdown>
+				)}
+			</div>
 		</div>
 	);
 };

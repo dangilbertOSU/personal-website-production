@@ -85,45 +85,58 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 					<ArticleGrid articles={shownFeaturedArticles} />
 				</Section>
 				<Section>
-					<h2>Latest articles</h2>
-					<ArticleLayout>
-						{nonFeaturedArticles &&
-							nonFeaturedArticles
-								.slice(0, shownAmount)
-								.map((article, index) => {
-									return (
-										<Article
-											article={article}
-											index={index}
-											key={article.id}
-											photoURL={`http://localhost:1337${article.coverPhoto.url}`}
-										/>
-									);
-								})}
-					</ArticleLayout>
-					<div className="insights__show--buton--area">
-						{shownAmount < nonFeaturedArticles.length ? (
-							<Button
-								ariaLabel="show more"
-								variant="secondary"
-								onClick={() =>
-									setShownAmount(shownAmount + 3)
-								}
-							>
-								Show More
-							</Button>
-						) : (
-							<Button
-								ariaLabel="show less"
-								variant="secondary"
-								onClick={() =>
-									setShownAmount(shownAmount - 3)
-								}
-							>
-								Show Less
-							</Button>
-						)}
-					</div>
+					{nonFeaturedArticles.length > 0 && (
+						<React.Fragment>
+							<h2>Latest articles</h2>
+							<ArticleLayout>
+								{nonFeaturedArticles &&
+									nonFeaturedArticles
+										.slice(0, shownAmount)
+										.map((article, index) => {
+											return (
+												<Article
+													article={
+														article
+													}
+													index={index}
+													key={
+														article.id
+													}
+													photoURL={`http://localhost:1337${article.coverPhoto.url}`}
+												/>
+											);
+										})}
+							</ArticleLayout>
+							<div className="insights__show--buton--area">
+								{shownAmount <
+								nonFeaturedArticles.length ? (
+									<Button
+										ariaLabel="show more"
+										variant="secondary"
+										onClick={() =>
+											setShownAmount(
+												shownAmount + 3
+											)
+										}
+									>
+										Show More
+									</Button>
+								) : (
+									<Button
+										ariaLabel="show less"
+										variant="secondary"
+										onClick={() =>
+											setShownAmount(
+												shownAmount - 3
+											)
+										}
+									>
+										Show Less
+									</Button>
+								)}
+							</div>
+						</React.Fragment>
+					)}
 				</Section>
 			</Layout>
 		</div>

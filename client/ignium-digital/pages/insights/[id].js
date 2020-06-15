@@ -102,7 +102,7 @@ const Insight = (props) => {
 					</div>
 				</Section>
 				<Section>
-					<h2>Next articles</h2>
+					{nextArticles.length > 0 && <h2>Next articles</h2>}
 					<ArticleLayout>
 						{nextArticles &&
 							nextArticles.map((nextArticle, index) => {

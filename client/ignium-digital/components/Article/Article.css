@@ -63,6 +63,12 @@
      width: 100%;
 }
 
+.article__content h1,
+.article__content h2,
+.article__content h3 {
+     font-size: 1rem;
+}
+
 .technology {
      color: #0057CA;
 }

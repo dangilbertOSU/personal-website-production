@@ -3,6 +3,7 @@
  */
 
 import PropTypes from "prop-types";
+import getConfig from "next/config";
 
 /*
  * Component imports
@@ -18,11 +19,13 @@ import "./ArticleGrid.css";
 
 const ArticleGrid = (props) => {
 	const { articles, className } = props;
+	const { publicRuntimeConfig } = getConfig();
+	const { API_PORT } = publicRuntimeConfig;
 
 	return (
 		<div className={className}>
-			{articles
-				&& articles.map((article, index) => {
+			{articles &&
+				articles.map((article, index) => {
 					return (
 						<Article
 							article={article}
@@ -31,7 +34,7 @@ const ArticleGrid = (props) => {
 							}
 							index={index}
 							key={article.id}
-							photoURL={`http://localhost:1337${article.coverPhoto.url}`}
+							photoURL={`http://localhost:${API_PORT}${article.coverPhoto.url}`}
 						/>
 					);
 				})}
