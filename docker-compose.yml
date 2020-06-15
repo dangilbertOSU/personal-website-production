@@ -26,8 +26,8 @@ services:
           restart: unless-stopped
           env_file: .env
           environment:
-               MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}  
-               MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_PASSWORD}
+               MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+               MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
           networks:
                - strapi-network
           volumes:
