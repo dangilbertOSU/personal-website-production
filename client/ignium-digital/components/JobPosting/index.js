@@ -19,11 +19,7 @@ import "./JobPosting.css";
 
 const JobPosting = (props) => {
 	const {
-		className,
-		title,
-		description,
-		location,
-		link,
+		className, title, description, location, link,
 	} = props;
 
 	return (
@@ -36,12 +32,18 @@ const JobPosting = (props) => {
 			<div className={`${className}__description`}>
 				<p>{description}</p>
 			</div>
-			<div className={`${className}__linkedin`}>
-				<LaunchIcon />
-				<a href={link} target="_blank" rel="noopener noreferrer">
-					VIEW ON LINKEDIN
-				</a>
-			</div>
+			{link && (
+				<div className={`${className}__linkedin`}>
+					<LaunchIcon />
+					<a
+						href={link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						VIEW ON LINKEDIN
+					</a>
+				</div>
+			)}
 		</div>
 	);
 };

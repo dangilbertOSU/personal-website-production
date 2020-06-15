@@ -49,10 +49,12 @@ const Insights = (props) => {
 };
 
 Insights.defaultProps = {
+	articles: [],
 	className: "insights",
 };
 
 Insights.propTypes = {
+	articles: PropTypes.arrayOf(PropTypes.object),
 	className: PropTypes.string,
 };
 

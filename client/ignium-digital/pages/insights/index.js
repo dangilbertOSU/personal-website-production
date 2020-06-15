@@ -17,9 +17,11 @@ import ArticleTab from "../../components/ArticleTab";
 import ArticleGrid from "../../components/ArticleGrid";
 import ArticleLayout from "../../components/ArticleLayout";
 import Article from "../../components/Article";
+import Button from "../../components/Button";
 
 const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 	const [active, setActive] = useState(0);
+	const [shownAmount, setShownAmount] = useState(9);
 
 	const getFilteredArticles = (amount, filter, articles) => {
 		const filtered = articles.filter(
@@ -86,25 +88,51 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 					<h2>Latest articles</h2>
 					<ArticleLayout>
 						{nonFeaturedArticles &&
-							nonFeaturedArticles.map((article, index) => {
-								return (
-									<Article
-										article={article}
-										index={index}
-										key={article.id}
-										photoURL={`http://localhost:1337${article.coverPhoto.url}`}
-									/>
-								);
-							})}
+							nonFeaturedArticles
+								.slice(0, shownAmount)
+								.map((article, index) => {
+									return (
+										<Article
+											article={article}
+											index={index}
+											key={article.id}
+											photoURL={`http://localhost:1337${article.coverPhoto.url}`}
+										/>
+									);
+								})}
 					</ArticleLayout>
+					<div className="insights__show--buton--area">
+						{shownAmount < nonFeaturedArticles.length ? (
+							<Button
+								ariaLabel="show more"
+								variant="secondary"
+								onClick={() =>
+									setShownAmount(shownAmount + 3)
+								}
+							>
+								Show More
+							</Button>
+						) : (
+							<Button
+								ariaLabel="show less"
+								variant="secondary"
+								onClick={() =>
+									setShownAmount(shownAmount - 3)
+								}
+							>
+								Show Less
+							</Button>
+						)}
+					</div>
 				</Section>
 			</Layout>
 		</div>
 	);
 };
 
-// get the featured articles
-// get the non-featured
+/*
+ * get the featured and non-featured articles
+ */
 
 export async function getServerSideProps() {
 	const { API_URL, API_PORT } = process.env;
@@ -112,6 +140,7 @@ export async function getServerSideProps() {
 	/*
 	 * Fetching 15 featured articles
 	 */
+
 	const featuredResult = await fetch(
 		`${API_URL}:${API_PORT}/articles?_limit=15&featured=true&_sort=date:DESC`
 	);
@@ -120,6 +149,7 @@ export async function getServerSideProps() {
 	/*
 	 * Geting the rest of the non-featured articles
 	 */
+
 	const nonFeaturedResult = await fetch(
 		`${API_URL}:${API_PORT}/articles?_limit=30&featured=false&_sort=date:DESC`
 	);

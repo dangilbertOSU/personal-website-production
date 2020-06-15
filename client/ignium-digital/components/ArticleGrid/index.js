@@ -21,8 +21,8 @@ const ArticleGrid = (props) => {
 
 	return (
 		<div className={className}>
-			{articles &&
-				articles.map((article, index) => {
+			{articles
+				&& articles.map((article, index) => {
 					return (
 						<Article
 							article={article}

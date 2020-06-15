@@ -17,8 +17,8 @@ const ArticleTab = (props) => {
 
 	return (
 		<div className={className}>
-			{tabs &&
-				tabs.map((tab, index) => {
+			{tabs
+				&& tabs.map((tab, index) => {
 					return (
 						<p
 							className={

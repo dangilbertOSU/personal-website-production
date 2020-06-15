@@ -39,6 +39,11 @@
      width: 100%;
 }
 
+.insights__show--buton--area {
+     display: flex;
+     justify-content: center;
+}
+
 .technology {
      color: #0057CA;
 }

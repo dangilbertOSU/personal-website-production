@@ -50,9 +50,7 @@ const Navbar = (props) => {
 					}
 					href="#"
 					onClick={() => setMobileNavVisible(!mobileNavVisible)}
-					onKeyDown={() =>
-						setMobileNavVisible(!mobileNavVisible)
-					}
+					onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
 					role="button"
 					type="button"
 					tabIndex="0"
@@ -71,8 +69,8 @@ const Navbar = (props) => {
 							<Link href="/whoweare">
 								<a
 									className={
-										router.pathname ===
-										"/whoweare"
+										router.pathname
+										=== "/whoweare"
 											? "active"
 											: ""
 									}
@@ -85,8 +83,8 @@ const Navbar = (props) => {
 							<Link href="/services">
 								<a
 									className={
-										router.pathname ===
-										"/services"
+										router.pathname
+										=== "/services"
 											? "active"
 											: ""
 									}
@@ -99,8 +97,8 @@ const Navbar = (props) => {
 							<Link href="/insights">
 								<a
 									className={
-										router.pathname ===
-										"/insights"
+										router.pathname
+										=== "/insights"
 											? "active"
 											: ""
 									}

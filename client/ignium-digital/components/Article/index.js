@@ -3,12 +3,13 @@
  */
 
 import PropTypes from "prop-types";
+import Link from "next/link";
+import { dateFormatter } from "../../utilities/utilities";
 
 /*
  * Component imports
  */
 
-import Link from "next/link";
 
 /*
  * Image/SVG imports
@@ -23,7 +24,9 @@ import TextSeperator from "../SVG/TextSeperator";
 import "./Article.css";
 
 const Article = (props) => {
-	const { article, className, content, index, photoURL } = props;
+	const {
+		article, className, content, index, photoURL,
+	} = props;
 
 	return (
 		<div className={`${className} article_${index}`}>
@@ -42,9 +45,9 @@ const Article = (props) => {
 					{article.category}
 				</p>
 				<TextSeperator />
-				<p>{article.date}</p>
+				<p>{dateFormatter(article.date)}</p>
 			</div>
-			<Link href={`/insights/${article.id}`}>
+			<Link href="/insights/[id]" as={`/insights/${article.id}`}>
 				<a>
 					<h3>{article.title}</h3>
 				</a>
