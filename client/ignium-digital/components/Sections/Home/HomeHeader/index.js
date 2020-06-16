@@ -30,10 +30,18 @@ const HomeHeader = (props) => {
 			<div className="welcome__text">
 				<h2 className="orange--text">Purpose. Passion. Profit.</h2>
 				<h1>Investments driven by innovations</h1>
-				<Button ariaLabel="let's chat">Let&apos;s Chat</Button>
+				<a
+					href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
+					target="_blank"
+				>
+					<Button ariaLabel="let's chat">Let&apos;s Chat</Button>
+				</a>
 			</div>
 			<div className="welcome__image">
-				<img alt="Ignium Digital Jumobtron Logo" src={WelcomeLogo} />
+				<img
+					alt="Ignium Digital Jumobtron Logo"
+					src={WelcomeLogo}
+				/>
 			</div>
 		</div>
 	);

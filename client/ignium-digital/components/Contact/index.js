@@ -23,8 +23,8 @@ const Contact = (props) => {
 		<div className={`${className} blue--background`}>
 			<h2>Contact us</h2>
 			<p>
-				For more information about our services and to find out how Ignium can
-				help improve your business.
+				For more information about our services and to find out how
+				Ignium can help improve your business.
 			</p>
 			<div className="contact__submit">
 				<input
@@ -33,7 +33,12 @@ const Contact = (props) => {
 					placeholder="Enter your email address"
 					aria-label="Email input"
 				/>
-				<Button ariaLabel="submit email address">Let&apos;s Chat</Button>
+				<a
+					href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
+					target="_blank"
+				>
+					<Button ariaLabel="let's chat">Let&apos;s Chat</Button>
+				</a>
 			</div>
 		</div>
 	);

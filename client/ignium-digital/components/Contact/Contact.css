@@ -8,6 +8,7 @@
 }
 
 .contact h2 {
+     color: #0D1039;
      font-size: 1.875rem;
      line-height: 2.875rem;
 }
@@ -24,11 +25,11 @@
      opacity: 1;
 }
 
-/* .contact button {
+.contact button {
      box-shadow: 0px 2px 20px 0px rgba(249, 67, 34, 0.19);
      -webkit-box-shadow: 0px 2px 20px 0px rgba(249, 67, 34, 0.19);
      -moz-box-shadow: 0px 2px 20px 0px rgba(249, 67, 34, 0.19);
-} */
+}
 
 .contact input {
      border: none;

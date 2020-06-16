@@ -50,7 +50,9 @@ const Navbar = (props) => {
 					}
 					href="#"
 					onClick={() => setMobileNavVisible(!mobileNavVisible)}
-					onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
+					onKeyDown={() =>
+						setMobileNavVisible(!mobileNavVisible)
+					}
 					role="button"
 					type="button"
 					tabIndex="0"
@@ -69,8 +71,8 @@ const Navbar = (props) => {
 							<Link href="/whoweare">
 								<a
 									className={
-										router.pathname
-										=== "/whoweare"
+										router.pathname ===
+										"/whoweare"
 											? "active"
 											: ""
 									}
@@ -83,8 +85,8 @@ const Navbar = (props) => {
 							<Link href="/services">
 								<a
 									className={
-										router.pathname
-										=== "/services"
+										router.pathname ===
+										"/services"
 											? "active"
 											: ""
 									}
@@ -97,8 +99,8 @@ const Navbar = (props) => {
 							<Link href="/insights">
 								<a
 									className={
-										router.pathname
-										=== "/insights"
+										router.pathname ===
+										"/insights"
 											? "active"
 											: ""
 									}
@@ -122,7 +124,12 @@ const Navbar = (props) => {
 						</li>
 						<li>
 							<span className="orange--text">
-								<a>Let&apos;s Chat</a>
+								<a
+									href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
+									target="_blank"
+								>
+									Let&apos;s Chat
+								</a>
 							</span>
 						</li>
 					</ul>
