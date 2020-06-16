@@ -32,6 +32,7 @@ services:
                - strapi-network
           volumes:
                - strapidata:/data/db
+               - ./db-init/:/docker-entrypoint-initdb.d
           ports:
                - "27017:27017"
 
