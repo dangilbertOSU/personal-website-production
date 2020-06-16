@@ -49,6 +49,19 @@
     transition: all 0.2s;
 }
 
+.footer__footer__logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__footer__line {
+    background-color: #0E1137;
+    height: 1px;
+    opacity: 0.2;
+    width: 25%;
+}
+
 /*
  *  Mobile Large
  */
@@ -70,4 +83,9 @@
         padding: 0.75rem;
         font-size: 1.2rem;
     }
+
+    .footer__footer__line {
+        width: 30%;
+    }
+
 }

@@ -27,7 +27,9 @@ const Footer = (props) => {
 	return (
 		<footer className={className}>
 			<div className={`${className}__footer__logo`}>
+				<span className={`${className}__footer__line`}></span>
 				<FooterLogo />
+				<span className={`${className}__footer__line`}></span>
 			</div>
 			<div className={`${className}__social__icons`}>
 				<a
@@ -77,7 +79,9 @@ const Footer = (props) => {
 					<li>
 						<Link href="/letschat">
 							<a>
-								<span className="orange--text">Let&apos;s Chat</span>
+								<span className="orange--text">
+									Let&apos;s Chat
+								</span>
 							</a>
 						</Link>
 					</li>
