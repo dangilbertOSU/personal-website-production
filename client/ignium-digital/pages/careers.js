@@ -58,18 +58,26 @@ const Careers = ({ careers }) => {
  */
 
 export async function getServerSideProps() {
-	const { API_URL, API_PORT } = process.env;
+	try {
+		const { API_URL, API_PORT } = process.env;
 
-	const result = await fetch(
-		`${API_URL}:${API_PORT}/careers?_sort=updated_at:DESC`
-	);
-	const data = await result.json();
+		const result = await fetch(
+			`${API_URL}:${API_PORT}/careers?_sort=updated_at:DESC`
+		);
+		const data = await result.json();
 
-	return {
-		props: {
-			careers: data,
-		},
-	};
+		return {
+			props: {
+				careers: data,
+			},
+		};
+	} catch (err) {
+		return {
+			props: {
+				careers: [],
+			},
+		};
+	}
 }
 
 export default Careers;

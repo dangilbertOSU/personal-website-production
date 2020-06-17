@@ -54,17 +54,23 @@ const { publicRuntimeConfig } = getConfig();
  */
 
 export async function getServerSideProps() {
-	const { API_URL, API_PORT } = publicRuntimeConfig;
-	const result = await fetch(
-		`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
-	);
-	const data = await result.json();
+	try {
+		const { API_URL, API_PORT } = publicRuntimeConfig;
+		const result = await fetch(
+			`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
+		);
+		const data = await result.json();
 
-	return {
-		props: {
-			featuredArticles: data,
-		},
-	};
+		return {
+			props: {
+				featuredArticles: data,
+			},
+		};
+	} catch (err) {
+		return {
+			props: {},
+		};
+	}
 }
 
 export default App;

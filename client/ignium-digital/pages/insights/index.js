@@ -143,37 +143,48 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 	);
 };
 
+Insights.defaultProps = {
+	featuredArticles: [],
+	nonFeaturedArticles: [],
+};
+
 /*
  * get the featured and non-featured articles
  */
 
 export async function getServerSideProps() {
-	const { API_URL, API_PORT } = process.env;
+	try {
+		const { API_URL, API_PORT } = process.env;
 
-	/*
-	 * Fetching 15 featured articles
-	 */
+		/*
+		 * Fetching 15 featured articles
+		 */
 
-	const featuredResult = await fetch(
-		`${API_URL}:${API_PORT}/articles?_limit=15&featured=true&_sort=date:DESC`
-	);
-	const featuredArticles = await featuredResult.json();
+		const featuredResult = await fetch(
+			`${API_URL}:${API_PORT}/articles?_limit=15&featured=true&_sort=date:DESC`
+		);
+		const featuredArticles = await featuredResult.json();
 
-	/*
-	 * Geting the rest of the non-featured articles
-	 */
+		/*
+		 * Geting the rest of the non-featured articles
+		 */
 
-	const nonFeaturedResult = await fetch(
-		`${API_URL}:${API_PORT}/articles?_limit=30&featured=false&_sort=date:DESC`
-	);
-	const nonFeaturedArticles = await nonFeaturedResult.json();
+		const nonFeaturedResult = await fetch(
+			`${API_URL}:${API_PORT}/articles?_limit=30&featured=false&_sort=date:DESC`
+		);
+		const nonFeaturedArticles = await nonFeaturedResult.json();
 
-	return {
-		props: {
-			featuredArticles,
-			nonFeaturedArticles,
-		},
-	};
+		return {
+			props: {
+				featuredArticles,
+				nonFeaturedArticles,
+			},
+		};
+	} catch (err) {
+		return {
+			props: {},
+		};
+	}
 }
 
 export default Insights;
