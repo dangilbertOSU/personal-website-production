@@ -16,14 +16,16 @@ module.exports = async () => {
     .findOne({ type: "public" });
   authenticated.permissions.forEach((permission) => {
     if (
-      permission.type === "application" &&
-      permission.controller === "article"
+      (permission.type === "application" &&
+        permission.controller === "article") ||
+      (permission.type === "application" && permission.controller === "career")
     ) {
       if (
         permission.action === "count" ||
         permission.action === "findone" ||
         permission.action === "find" ||
-        permission.action === "fivefeatured"
+        (permission.controller === "article" &&
+          permission.action === "fivefeatured")
       ) {
         let newPermission = permission;
         newPermission.enabled = true;

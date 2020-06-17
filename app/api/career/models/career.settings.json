@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "careers",
+  "info": {
+    "name": "career"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

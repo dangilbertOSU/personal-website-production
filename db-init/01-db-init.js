@@ -488,3 +488,12 @@ db.articles.insertMany([
 		featured: false,
 	},
 ]);
+
+db.careers.insertOne({
+	title: "Senior Sitecore Developer",
+	location: "Portland, OR",
+	description:
+		"This position is considered a multi-faceted leadership opportunity to support both internal and vendor support teams. This position is considered a multi-faceted lider." +
+		"We’re looking for people to join the team who are as We’re looking for people to join consequat nisl vel pretium lectus",
+	link: "https://www.linkedin.com",
+});
