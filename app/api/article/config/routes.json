@@ -1,9 +1,16 @@
 {
-  "routes": [
-    {
+  "routes": [{
       "method": "GET",
       "path": "/articles",
       "handler": "article.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/articles/fivefeatured",
+      "handler": "article.fivefeatured",
       "config": {
         "policies": []
       }

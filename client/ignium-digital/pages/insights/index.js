@@ -157,22 +157,18 @@ export async function getServerSideProps() {
 		const { API_URL, API_PORT } = process.env;
 
 		/*
-		 * Fetching 15 featured articles
+		 * Fetching featured articles, five from each category and then
+		 * all of the non featured articles
 		 */
 
-		const featuredResult = await fetch(
-			`${API_URL}:${API_PORT}/articles?_limit=15&featured=true&_sort=date:DESC`
-		);
-		const featuredArticles = await featuredResult.json();
-
-		/*
-		 * Geting the rest of the non-featured articles
-		 */
-
-		const nonFeaturedResult = await fetch(
-			`${API_URL}:${API_PORT}/articles?_limit=30&featured=false&_sort=date:DESC`
-		);
-		const nonFeaturedArticles = await nonFeaturedResult.json();
+		const [featuredArticles, nonFeaturedArticles] = await Promise.all([
+			fetch(
+				`${API_URL}:${API_PORT}/articles/fivefeatured?_sort=date:DESC`
+			).then((r) => r.json()),
+			fetch(
+				`${API_URL}:${API_PORT}/articles?featured=false&_sort=date:DESC`
+			).then((r) => r.json()),
+		]);
 
 		return {
 			props: {

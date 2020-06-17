@@ -80,7 +80,7 @@ db.articles.insertMany([
 			"\n\n# Select the right technologies" +
 			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
 			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
+		date: "2020-02-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: true,
 	},
@@ -197,7 +197,7 @@ db.articles.insertMany([
 			"\n\n# Select the right technologies" +
 			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
 			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
+		date: "2020-03-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: true,
 	},
@@ -249,7 +249,7 @@ db.articles.insertMany([
 			"\n\n# Select the right technologies" +
 			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
 			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
+		date: "2020-04-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: true,
 	},
@@ -278,6 +278,84 @@ db.articles.insertMany([
 		date: "2020-01-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: false,
+	},
+	{
+		category: "motivation",
+		title: "ornare lectus sit amet est placerat in egestas",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2020-01-23",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: false,
+	},
+	{
+		category: "business",
+		title: "eget mauris pharetra et ultrices",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2020-01-23",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: false,
+	},
+	{
+		category: "technology",
+		title: "ornare lectus sit amet est placerat in egestas",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2020-05-01",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: false,
+	},
+	{
+		category: "motivation",
+		title: "ornare lectus sit amet est placerat in egestas",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2020-01-23",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: false,
+	},
+	{
+		category: "business",
+		title: "eget mauris pharetra et ultrices",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2020-05-23",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: true,
+	},
+	{
+		category: "technology",
+		title: "ornare lectus sit amet est placerat in egestas",
+		content:
+			"# Life advice looking through a window" +
+			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
+			"\n\n# Select the right technologies" +
+			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
+			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
+		date: "2019-06-20",
+		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
+		featured: true,
 	},
 	{
 		category: "motivation",
@@ -379,7 +457,7 @@ db.articles.insertMany([
 			"\n\n# Select the right technologies" +
 			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
 			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
+		date: "2020-05-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: false,
 	},
@@ -392,85 +470,7 @@ db.articles.insertMany([
 			"\n\n# Select the right technologies" +
 			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
 			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "motivation",
-		title: "ornare lectus sit amet est placerat in egestas",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "business",
-		title: "eget mauris pharetra et ultrices",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "technology",
-		title: "ornare lectus sit amet est placerat in egestas",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "motivation",
-		title: "ornare lectus sit amet est placerat in egestas",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "business",
-		title: "eget mauris pharetra et ultrices",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
-		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
-		featured: false,
-	},
-	{
-		category: "technology",
-		title: "ornare lectus sit amet est placerat in egestas",
-		content:
-			"# Life advice looking through a window" +
-			"\n\nWith an operating system installed onto a computer’s hard drive, users no longer need to boot a computer with a floppy disk, nor do they need to run programs from a floppy disk. All the drivers of a program are stored onto the computer and used whenever a program is started." +
-			"\n\n# Select the right technologies" +
-			"\n\nApple’s Macintosh computer was among the first of a couple systems to establish a user-to-hardware relationship through a user-friendly interface. Today, we have quite a few operating systems. Some of the more popular ones are Windows Vista, Mac OS X, ZETA, IBM, Unix, and Linux. But even still, operating systems have extended onto to non-computer devices such as game consoles, portable music players, and PDAs. Regardless of the device, the operating system installed onto it serves the same purpose across the board: to enable user-to-hardware communication." +
-			"\n\nWhen you think about upgrading your computer to a new operating system, be careful to make sure that you have the necessary hardware components. We tried to upgrade one of our Windows 98 machines to Windows XP, but we were cautioned that the former may not be hardware compatible with XP technology.",
-		date: "2020-01-23",
+		date: "2020-06-23",
 		coverPhoto: [ObjectId("5ee93b123a1fb1000c1bab65")],
 		featured: false,
 	},

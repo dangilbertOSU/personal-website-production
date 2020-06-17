@@ -30,7 +30,7 @@ const dateFormatter = (date) => {
 	const month = parseInt(dateArray[1]);
 	const day = dateArray[2];
 
-	return `${day} ${months[month + 1]} ${year}`;
+	return `${day} ${months[month - 1]} ${year}`;
 };
 
 module.exports = {
