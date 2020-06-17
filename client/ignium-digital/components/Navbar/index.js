@@ -4,7 +4,7 @@
 
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /*
  * Component imports
@@ -28,11 +28,27 @@ const Navbar = (props) => {
 	const { className } = props;
 
 	const [mobileNavVisible, setMobileNavVisible] = useState(false);
+	const [showShadow, setShowShadow] = useState(false);
 
 	const router = useRouter();
 
+	useEffect(() => {
+		window.onscroll = function () {
+			if (window.pageYOffset > 100) {
+				return setShowShadow(true);
+			} else {
+				return setShowShadow(false);
+			}
+		};
+	}, []);
+
 	return (
-		<nav className={mobileNavVisible ? `${className} grow` : className}>
+		<nav
+			className={
+				(mobileNavVisible ? `${className} grow` : className) +
+				(showShadow ? " shadow" : "")
+			}
+		>
 			<div className={`${className}--body`}>
 				<div className={`${className}__brand`}>
 					<Link href="/">
