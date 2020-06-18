@@ -37,7 +37,6 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
  */
 
 import "./insight.css";
-import SectionHeading from "../../components/SectionHeading";
 
 const Insight = (props) => {
 	const { article, className, nextArticles } = props;
@@ -76,21 +75,22 @@ const Insight = (props) => {
 							<div className={`${className}__social`}>
 								<p>Share with:</p>
 								<TwitterShareButton
-									url={`https://igniumdigital.com${router.asPath}`}
+									url={`https://www.igniumdigital.com${router.asPath}`}
 									title="Check out this article:"
 									via="igniumdigital"
 								>
 									<TwitterLogo />
 								</TwitterShareButton>
 								<LinkedinShareButton
-									url={`https://igniumdigital.com${router.asPath}`}
+									url={`https://www.igniumdigital.com${router.asPath}`}
 									title="Check out this article:"
+									summary="Summary here"
 									source="www.igniumdigital.com"
 								>
 									<LinkedInLogo />
 								</LinkedinShareButton>
 								<EmailShareButton
-									url={`https://igniumdigital.com${router.asPath}`}
+									url={`https://www.igniumdigital.com${router.asPath}`}
 									subject="Look at this Ignium Digital Article"
 									body="Here's a link:"
 								>
