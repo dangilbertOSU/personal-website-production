@@ -1,5 +1,6 @@
 .insight__body {
      padding: 0 11rem;
+     position: relative;
 }
 
 .insight__data {
@@ -44,6 +45,24 @@
      justify-content: center;
 }
 
+.insight__tab {
+     left: -5rem;
+     position: absolute;
+     top: 1rem;
+     transform: rotate(-90deg);
+}
+
+.insight__tab__line {
+     background-color: #0E1137;
+     display: block;
+     height: 1rem;
+     left: -1.5rem;
+     position: absolute;
+     top: 1.6rem;
+     transform: rotate(-90deg);
+     width: 1px;
+}
+
 .technology {
      color: #0057CA;
 }
@@ -56,6 +75,12 @@
      color: #8A008F;
 }
 
+@media only screen and (max-width: 1250px) {
+     .insight__tab {
+          left: -1rem;
+     }
+}
+
 /*
  * Tablet
  */
@@ -63,6 +88,12 @@
 @media only screen and (max-width: 900px) {
      .insight__body {
           padding: 0;
+     }
+
+     .insight__tab {
+          left: 2rem;
+          top: -4rem;
+          transform: rotate(0deg);
      }
 }
 

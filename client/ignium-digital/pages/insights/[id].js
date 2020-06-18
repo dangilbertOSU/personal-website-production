@@ -2,6 +2,7 @@
  * Function Imports
  */
 
+import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { useRouter } from "next/router";
@@ -36,6 +37,7 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
  */
 
 import "./insight.css";
+import SectionHeading from "../../components/SectionHeading";
 
 const Insight = (props) => {
 	const { article, className, nextArticles } = props;
@@ -52,8 +54,12 @@ const Insight = (props) => {
 			</Head>
 			<Layout contact={false}>
 				<Section>
-					<div className={className}>
+					<div className={className} id="capture">
 						<div className={`${className}__body`}>
+							<span className="insight__tab">
+								<span className="insight__tab__line" />
+								<h4>INSIGHTS</h4>
+							</span>
 							<div className={`${className}__data`}>
 								<p
 									className={`${className}__category ${article.category}`}
@@ -63,6 +69,7 @@ const Insight = (props) => {
 								<TextSeperator />
 								<p>{dateFormatter(article.date)}</p>
 							</div>
+
 							<h1 className={`${className}__title`}>
 								{article.title}
 							</h1>

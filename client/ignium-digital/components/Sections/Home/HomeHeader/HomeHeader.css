@@ -1,6 +1,7 @@
 .welcome {
     display: grid;
     grid-template-areas: "text image";
+    margin-top: 4rem;
 }
 
 .welcome h1 {

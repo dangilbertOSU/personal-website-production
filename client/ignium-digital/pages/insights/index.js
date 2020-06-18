@@ -73,7 +73,7 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 					content="Everything you need to know about sitecore technology, customer experience & beyond. Articles with categories in technology, motivation, and business."
 				/>
 			</Head>
-			<Layout>
+			<Layout contact={false}>
 				<Section>
 					<div style={{ marginTop: "4rem" }}>
 						<SectionHeading
@@ -109,7 +109,7 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 							</ArticleLayout>
 							<div className="insights__show--buton--area">
 								{shownAmount <
-								nonFeaturedArticles.length ? (
+									nonFeaturedArticles.length && (
 									<Button
 										ariaLabel="show more"
 										variant="secondary"
@@ -119,19 +119,7 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 											)
 										}
 									>
-										Show More
-									</Button>
-								) : (
-									<Button
-										ariaLabel="show less"
-										variant="secondary"
-										onClick={() =>
-											setShownAmount(
-												shownAmount - 3
-											)
-										}
-									>
-										Show Less
+										Load More
 									</Button>
 								)}
 							</div>

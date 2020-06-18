@@ -2,6 +2,7 @@
     display: grid;
     grid-row: auto;
     text-align: center;
+    padding-bottom: 3rem;
     width: 100%;
 }
 
