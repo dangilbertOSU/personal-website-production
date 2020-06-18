@@ -1,16 +1,16 @@
 /*
+ * Component imports
+ */
+
+import ReactMarkdown from "react-markdown";
+
+/*
  * Function imports
  */
 
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { dateFormatter } from "../../utilities/utilities";
-
-/*
- * Component imports
- */
-
-import ReactMarkdown from "react-markdown";
 
 /*
  * Image/SVG imports

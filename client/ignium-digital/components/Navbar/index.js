@@ -33,12 +33,12 @@ const Navbar = (props) => {
 	const router = useRouter();
 
 	useEffect(() => {
-		window.onscroll = function () {
+		window.onscroll = () => {
 			if (window.pageYOffset > 100) {
 				return setShowShadow(true);
-			} else {
-				return setShowShadow(false);
 			}
+
+			return setShowShadow(false);
 		};
 	}, []);
 
@@ -143,6 +143,7 @@ const Navbar = (props) => {
 								<a
 									href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
 									target="_blank"
+									rel="noopener noreferrer"
 								>
 									Let&apos;s Chat
 								</a>

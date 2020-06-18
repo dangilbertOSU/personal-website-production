@@ -33,6 +33,7 @@ const HomeHeader = (props) => {
 				<a
 					href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<Button ariaLabel="let's chat">Let&apos;s Chat</Button>
 				</a>

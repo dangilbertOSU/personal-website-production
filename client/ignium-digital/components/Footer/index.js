@@ -27,9 +27,9 @@ const Footer = (props) => {
 	return (
 		<footer className={className}>
 			<div className={`${className}__footer__logo`}>
-				<span className={`${className}__footer__line`}></span>
+				<span className={`${className}__footer__line`} />
 				<FooterLogo />
-				<span className={`${className}__footer__line`}></span>
+				<span className={`${className}__footer__line`} />
 			</div>
 			<div className={`${className}__social__icons`}>
 				<a
