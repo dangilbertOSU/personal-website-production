@@ -101,6 +101,11 @@ const Insight = (props) => {
 						<div className={`${className}__cover--photo`}>
 							<img
 								src={`http://localhost:1337${article.coverPhoto.url}`}
+								alt={
+									article.coverPhoto
+										.alternativeText ||
+									`${article.title} cover photo`
+								}
 							/>
 						</div>
 						<div className={`${className}__body`}>

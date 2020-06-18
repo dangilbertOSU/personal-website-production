@@ -34,7 +34,10 @@ const Article = (props) => {
 					<div className={`${className}__image`}>
 						<img
 							src={photoURL}
-							alt={article.alt || `${article.title}_image`}
+							alt={
+								article.coverPhoto.alternativeText ||
+								`${article.title} cover photo`
+							}
 						/>
 					</div>
 				</a>
