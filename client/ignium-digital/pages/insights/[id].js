@@ -2,11 +2,11 @@
  * Function Imports
  */
 
-import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { useRouter } from "next/router";
 import { dateFormatter } from "../../utilities/utilities";
+import Link from "next/link";
 
 /*
  * Component Imports
@@ -111,6 +111,12 @@ const Insight = (props) => {
 						<div className={`${className}__body`}>
 							<ReactMarkdown source={article.content} />
 						</div>
+						<Link
+							href="/insights/download/[id]"
+							as={`/insights/download/${article.id}`}
+						>
+							<button>download</button>
+						</Link>
 					</div>
 				</Section>
 				<Section>
@@ -141,6 +147,7 @@ Insight.defaultProps = {
 const { publicRuntimeConfig } = getConfig();
 
 export async function getServerSideProps(context) {
+	const { req, res } = context;
 	const { id } = context.query;
 	const { API_URL, API_PORT } = publicRuntimeConfig;
 
