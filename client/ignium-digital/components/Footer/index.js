@@ -77,13 +77,15 @@ const Footer = (props) => {
 						</Link>
 					</li>
 					<li>
-						<Link href="/letschat">
-							<a>
-								<span className="orange--text">
-									Let&apos;s Chat
-								</span>
+						<span className="orange--text">
+							<a
+								href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Let&apos;s Chat
 							</a>
-						</Link>
+						</span>
 					</li>
 				</ul>
 			</nav>

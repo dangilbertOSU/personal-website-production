@@ -30,7 +30,7 @@
 	white-space: pre-wrap;
 }
 
-.insight__social > *:not(:first-child) {
+.insight__social>*:not(:first-child) {
 	margin-left: 1.5rem;
 }
 
@@ -61,6 +61,19 @@
 	top: 1.6rem;
 	transform: rotate(-90deg);
 	width: 1px;
+}
+
+.insight__download {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+}
+
+.insight__download p {
+	font-weight: 600;
+	color: #0E1137;
+	margin-left: 1rem;
+	opacity: 0.78;
 }
 
 .technology {

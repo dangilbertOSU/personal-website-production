@@ -5,10 +5,14 @@
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 
+/*
+ * Component Imports
+ */
+
 import pdfHelper from "../../../components/PDF/pdfHelper";
 import ArticlePDF from "../../../components/ArticlePDF";
 
-const Download = (props) => {
+const Download = () => {
 	return (
 		<div>
 			<p>download</p>
@@ -34,15 +38,16 @@ export async function getServerSideProps(context) {
 		<ArticlePDF article={data} />
 	);
 
-	// with this header, your browser will prompt you to download the file
-	// without this header, your browse will open the pdf directly
-	res.setHeader("Content-disposition", 'attachment; filename="article.pdf');
+	const filename = data.title.split(" ").slice(0, 2).join("_");
 
-	// set content type
+	res.setHeader(
+		"Content-disposition",
+		`attachment; filename="${filename}.pdf"`
+	);
 	res.setHeader("Content-Type", "application/pdf");
-
-	// output the pdf buffer. once res.end is triggered, it won't trigger the render method
 	res.end(buffer);
+
+	return {};
 }
 
 export default Download;

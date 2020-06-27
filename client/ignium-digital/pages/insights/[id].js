@@ -23,6 +23,7 @@ import {
 	LinkedinShareButton,
 	EmailShareButton,
 } from "react-share";
+import DownloadIcon from "../../components/SVG/DownloadIcon";
 
 /*
  * Image/SVG Imports
@@ -38,9 +39,12 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
 
 import "./insight.css";
 
+import ArticlePDF from "../../components/ArticlePDF";
+
 const Insight = (props) => {
 	const { article, className, nextArticles } = props;
 	const router = useRouter();
+	const filename = article.title.split(" ").slice(0, 2).join("_") + ".pdf";
 
 	return (
 		<div>
@@ -110,13 +114,18 @@ const Insight = (props) => {
 						</div>
 						<div className={`${className}__body`}>
 							<ReactMarkdown source={article.content} />
+							<Link
+								href="/insights/download/[id]"
+								as={`/insights/download/${article.id}`}
+							>
+								<div
+									className={`${className}__download`}
+								>
+									<DownloadIcon />
+									<p>{filename}</p>
+								</div>
+							</Link>
 						</div>
-						<Link
-							href="/insights/download/[id]"
-							as={`/insights/download/${article.id}`}
-						>
-							<button>download</button>
-						</Link>
 					</div>
 				</Section>
 				<Section>
@@ -147,7 +156,6 @@ Insight.defaultProps = {
 const { publicRuntimeConfig } = getConfig();
 
 export async function getServerSideProps(context) {
-	const { req, res } = context;
 	const { id } = context.query;
 	const { API_URL, API_PORT } = publicRuntimeConfig;
 
