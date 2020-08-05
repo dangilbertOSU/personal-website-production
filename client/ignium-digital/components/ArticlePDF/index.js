@@ -36,7 +36,7 @@ const ArticlePDF = (props) => {
 				<style
 					dangerouslySetInnerHTML={{
 						__html: `
-      .article__pdf p { font-size: 8pt; } .article__pdf h1 { font-size: 11pt; };
+      .article__pdf p { font-size: 8pt; font-family: Montserrat,sans-serif; } .article__pdf h1 { font-size: 11pt; };
     `,
 					}}
 				/>

@@ -151,7 +151,7 @@ export async function getServerSideProps() {
 
 		const [featuredArticles, nonFeaturedArticles] = await Promise.all([
 			fetch(
-				`${API_URL}:${API_PORT}/articles/fivefeatured?_sort=date:DESC`
+				`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
 			).then((r) => r.json()),
 			fetch(
 				`${API_URL}:${API_PORT}/articles?featured=false&_sort=date:DESC`

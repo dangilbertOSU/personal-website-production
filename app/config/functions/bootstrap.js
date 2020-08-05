@@ -23,9 +23,7 @@ module.exports = async () => {
       if (
         permission.action === "count" ||
         permission.action === "findone" ||
-        permission.action === "find" ||
-        (permission.controller === "article" &&
-          permission.action === "fivefeatured")
+        permission.action === "find"
       ) {
         let newPermission = permission;
         newPermission.enabled = true;

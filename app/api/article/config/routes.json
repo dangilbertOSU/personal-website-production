@@ -9,14 +9,6 @@
     },
     {
       "method": "GET",
-      "path": "/articles/fivefeatured",
-      "handler": "article.fivefeatured",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/articles/count",
       "handler": "article.count",
       "config": {
