@@ -17,7 +17,9 @@ import SectionHeading from "../SectionHeading";
 import "./HeaderTextImage.css";
 
 const HeaderTextImage = (props) => {
-	const { alt, className, header, children, image, orientation } = props;
+	const {
+		alt, className, header, children, image, orientation,
+	} = props;
 
 	const component1 = orientation == "regular" ? "left" : "right";
 	const component2 = orientation == "regular" ? "right" : "left";

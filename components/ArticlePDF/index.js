@@ -2,13 +2,13 @@
  * Function Imports
  */
 
+import ReactMarkdown from "react-markdown";
 import { dateFormatter } from "../../utilities/utilities";
 
 /*
  * Component Imports
  */
 
-import ReactMarkdown from "react-markdown";
 
 const ArticlePDF = (props) => {
 	const { article, className } = props;

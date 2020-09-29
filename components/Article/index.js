@@ -19,9 +19,13 @@ import { dateFormatter } from "../../utilities/utilities";
 import "./Article.css";
 
 const Article = (props) => {
-	const { article, className, id, index } = props;
+	const {
+		article, className, id, index,
+	} = props;
 
-	const { coverPhoto, content, publishedDate, title } = article;
+	const {
+		coverPhoto, content, publishedDate, title,
+	} = article;
 
 	const date = new Date(publishedDate);
 	const publishedDateString = date.toDateString();
@@ -32,10 +36,10 @@ const Article = (props) => {
 				<a>
 					<div className={`${className}__image`}>
 						<img
-							src={"https:" + coverPhoto.fields.file.url}
+							src={`https:${coverPhoto.fields.file.url}`}
 							alt={
-								coverPhoto.fields.description ||
-								`${title} cover photo`
+								coverPhoto.fields.description
+								|| `${title} cover photo`
 							}
 						/>
 					</div>
