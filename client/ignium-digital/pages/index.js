@@ -6,6 +6,12 @@ import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 
 /*
+ * Image Imports
+ */
+
+import OfficeStock from "../public/images/Stock/office-stock.jpg";
+
+/*
  * Component Imports
  */
 
@@ -16,6 +22,7 @@ import HomeHeader from "../components/Sections/Home/HomeHeader";
 import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
 import ServicesSection from "../components/Sections/Home/ServicesSection";
 import InsightsSection from "../components/Sections/Home/InsightsSection";
+import SitewideHeroImage from "../components/SitewideHeroImage";
 
 const App = ({ featuredArticles }) => {
 	return (
@@ -28,9 +35,11 @@ const App = ({ featuredArticles }) => {
 				/>
 			</Head>
 			<Layout>
-				<Section>
-					<HomeHeader />
-				</Section>
+				<SitewideHeroImage backgroundImage={OfficeStock}>
+					<Section>
+						<HomeHeader />
+					</Section>
+				</SitewideHeroImage>
 				<Section>
 					<WhoWeAreSection />
 				</Section>

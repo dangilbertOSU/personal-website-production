@@ -84,6 +84,19 @@ const Navbar = (props) => {
 				>
 					<ul>
 						<li>
+							<Link href="/">
+								<a
+									className={
+										router.pathname === "/"
+											? "active"
+											: ""
+									}
+								>
+									Home
+								</a>
+							</Link>
+						</li>
+						<li>
 							<Link href="/whoweare">
 								<a
 									className={
@@ -93,24 +106,11 @@ const Navbar = (props) => {
 											: ""
 									}
 								>
-									Who We Are
+									About
 								</a>
 							</Link>
 						</li>
-						<li>
-							<Link href="/services">
-								<a
-									className={
-										router.pathname ===
-										"/services"
-											? "active"
-											: ""
-									}
-								>
-									Services
-								</a>
-							</Link>
-						</li>
+
 						<li>
 							<Link href="/insights">
 								<a
@@ -121,31 +121,18 @@ const Navbar = (props) => {
 											: ""
 									}
 								>
-									Insights
+									Blogs
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="/careers">
-								<a
-									className={
-										router.pathname === "/careers"
-											? "active"
-											: ""
-									}
-								>
-									Careers
-								</a>
-							</Link>
-						</li>
-						<li>
-							<span className="orange--text">
+							<span className="red--text">
 								<a
 									href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Let&apos;s Chat
+									Contact
 								</a>
 							</span>
 						</li>

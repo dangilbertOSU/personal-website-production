@@ -77,7 +77,7 @@ const Footer = (props) => {
 						</Link>
 					</li>
 					<li>
-						<span className="orange--text">
+						<span className="red--text">
 							<a
 								href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
 								target="_blank"

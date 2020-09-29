@@ -1,6 +1,6 @@
 body {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin: 0;
     padding: 0;
@@ -19,6 +19,6 @@ h2 {
     line-height: 3rem;
 }
 
-.orange--text {
-    color: #F94322 !important;
+.red--text {
+    color: #EB5757 !important;
 }
