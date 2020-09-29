@@ -32,27 +32,23 @@ const Footer = (props) => {
 			<nav className={`${className}__links`}>
 				<ul>
 					<li>
-						<Link href="/whoweare">
+						<Link href="/">
 							<a>Home</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/services">
+						<Link href="/about">
 							<a>About</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/insights">
+						<Link href="/blogs">
 							<a>Blogs</a>
 						</Link>
 					</li>
 					<li>
 						<span className="red--text">
-							<a
-								href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="#">
 								Contact
 							</a>
 						</span>
