@@ -19,7 +19,7 @@ module.exports = {
 	rules: {
 		"react/react-in-jsx-scope": "off",
 		"arrow-body-style": 0,
-		"eslint linebreak-style": ["error", "windows"],
+		"linebreak-style": 0,
 		// Indent with 4 spaces
 		indent: [2, "tab"],
 		"no-tabs": 0,

@@ -5,25 +5,24 @@
 import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import { useRouter } from "next/router";
-import { dateFormatter } from "../../utilities/utilities";
 import Link from "next/link";
-import { fetchEntries } from "../../utilities/utilities";
-
-/*
- * Component Imports
- */
-
 import Head from "next/head";
-import Layout from "../../components/Layout";
-import Section from "../../components/Sections";
 import ReactMarkdown from "react-markdown";
-import ArticleLayout from "../../components/ArticleLayout";
-import Article from "../../components/Article";
 import {
 	TwitterShareButton,
 	LinkedinShareButton,
 	EmailShareButton,
 } from "react-share";
+import { dateFormatter, fetchSpecificBlog } from "../../utilities/utilities";
+
+/*
+ * Component Imports
+ */
+
+import Layout from "../../components/Layout";
+import Section from "../../components/Sections";
+import ArticleLayout from "../../components/ArticleLayout";
+import Article from "../../components/Article";
 import DownloadIcon from "../../components/SVG/DownloadIcon";
 
 /*
@@ -40,63 +39,66 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
 
 import "./insight.css";
 
-import ArticlePDF from "../../components/ArticlePDF";
+// import ArticlePDF from "../../components/ArticlePDF";
 
 const Insight = (props) => {
-	const { article, className, nextArticles } = props;
+	const { article, className } = props;
 	const router = useRouter();
-	const filename = article.title.split(" ").slice(0, 2).join("_") + ".pdf";
+
+
+	const { title, coverPhoto, content, publishedDate, category } = article.fields;
+	const { id } = article.sys;
+
+	const filename = `${title.split(" ").slice(0, 2).join("_")}.pdf`;
+
+	const date = new Date(publishedDate);
+	const publishedDateString = date.toDateString();
+
+	console.log("article here: ", article)
 
 	return (
 		<div>
+			<h2>hey</h2>
 			<Head>
-				<title>Ignium Digital | Insights</title>
-				<meta
-					name="description"
-					content={article.content.substring(0, 25)}
-				/>
+				<title>DG | {title}</title>
 			</Head>
 			<Layout contact={false}>
 				<Section>
 					<div className={className} id="capture">
 						<div className={`${className}__body`}>
-							<span className="insight__tab">
-								<span className="insight__tab__line" />
-								<h4>INSIGHTS</h4>
-							</span>
 							<div className={`${className}__data`}>
-								<p
-									className={`${className}__category ${article.category}`}
+								{/* <p
+									className={`${className}__category ${category}`}
 								>
 									{article.category}
 								</p>
-								<TextSeperator />
-								<p>{dateFormatter(article.date)}</p>
+								<TextSeperator /> */}
+								<p>{dateFormatter(publishedDateString)}</p>
 							</div>
 
 							<h1 className={`${className}__title`}>
-								{article.title}
+								{title}
 							</h1>
 							<div className={`${className}__social`}>
 								<p>Share with:</p>
 								<TwitterShareButton
-									url={`https://www.igniumdigital.com${router.asPath}`}
-									title="Check out this article:"
-									via="igniumdigital"
+									url={`https://www.dannongilbert.com${router.asPath}`}
+									title="Check out this Blog:"
+									via="DannonGilbert"
 								>
 									<TwitterLogo />
 								</TwitterShareButton>
 								<LinkedinShareButton
-									url={`https://www.igniumdigital.com${router.asPath}`}
+									url={`https://www.dannongilbert.com${router.asPath}`}
 									title="Check out this article:"
 									summary="Summary here"
-									source="www.igniumdigital.com"
+									source="www.dannongilbert.com"
 								>
 									<LinkedInLogo />
 								</LinkedinShareButton>
 								<EmailShareButton
-									url={`https://www.igniumdigital.com${router.asPath}`}
-									subject="Look at this Ignium Digital Article"
+									url={`https://www.dannongilbert.com${router.asPath}`}
+									subject="Look at this Blog"
 									body="Here's a link:"
 								>
 									<EmailLogo />
@@ -105,16 +107,15 @@ const Insight = (props) => {
 						</div>
 						<div className={`${className}__cover--photo`}>
 							<img
-								src={`http://localhost:1337${article.coverPhoto.url}`}
+								src={`https:${coverPhoto.fields.file.url}`}
 								alt={
-									article.coverPhoto
-										.alternativeText ||
-									`${article.title} cover photo`
+									coverPhoto.fields.description
+									|| `${title} cover photo`
 								}
 							/>
 						</div>
 						<div className={`${className}__body`}>
-							<ReactMarkdown source={article.content} />
+							{/* <ReactMarkdown source={article.content} />
 							<Link
 								href="/insights/download/[id]"
 								as={`/insights/download/${article.id}`}
@@ -125,11 +126,11 @@ const Insight = (props) => {
 									<DownloadIcon />
 									<p>{filename}</p>
 								</div>
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				</Section>
-				<Section>
+				{/* <Section>
 					{nextArticles.length > 0 && <h2>Next articles</h2>}
 					<ArticleLayout>
 						{nextArticles &&
@@ -144,7 +145,7 @@ const Insight = (props) => {
 								);
 							})}
 					</ArticleLayout>
-				</Section>
+				</Section> */}
 			</Layout>
 		</div>
 	);
@@ -154,37 +155,48 @@ Insight.defaultProps = {
 	className: "insight",
 };
 
-const { publicRuntimeConfig } = getConfig();
+// export async function getStaticPaths() {
+// 	return {
+// 		paths: [
+// 			{ params: { id: "*" } },
+// 		],
+// 		fallback: true,
+// 	};
+// }
 
 export async function getServerSideProps(context) {
-	const { id } = context.query;
-	const { API_URL, API_PORT } = publicRuntimeConfig;
+	const { id } = context.params;
+	try {
+		const blogItem = await fetchSpecificBlog(id);
 
-	const testResult = await fetchEntries();
-	console.log("Test Result", testResult);
+		// console.log("Test Result", testResult);
 
-	/*
-	 * Fetching article data by ID
-	 */
+		// /*
+		//  * Fetching article data by ID
+		//  */
 
-	const result = await fetch(`${API_URL}:${API_PORT}/articles/${id}`);
-	const data = await result.json();
+		// const result = await fetch(`${API_URL}:${API_PORT}/articles/${id}`);
+		// const data = await result.json();
 
-	/*
-	 * Fetching next 3 articles in same category
-	 */
+		// /*
+		//  * Fetching next 3 articles in same category
+		//  */
 
-	const nextArticlesResult = await fetch(
-		`${API_URL}:${API_PORT}/articles?_limit=3&category=${data.category}`
-	);
-	const nextArticles = await nextArticlesResult.json();
+		// const nextArticlesResult = await fetch(
+		// 	`${API_URL}:${API_PORT}/articles?_limit=3&category=${data.category}`,
+		// );
+		// const nextArticles = await nextArticlesResult.json();
 
-	return {
-		props: {
-			article: data,
-			nextArticles,
-		},
-	};
+		return {
+			props: {
+				article: blogItem,
+			},
+		};
+	} catch (err) {
+		return {
+			props: {},
+		};
+	}
 }
 
 export default Insight;

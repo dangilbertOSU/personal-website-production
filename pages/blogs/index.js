@@ -141,14 +141,11 @@ export async function getStaticProps() {
 
 		const featuredArticles = entries.slice(0, 5);
 
-		console.log("featured: \n", featuredArticles.length);
-
 		[1, 2, 3, 4, 5].forEach(() => {
 			entries.shift();
 		});
 
 		const nonFeaturedArticles = entries;
-		console.log("non-featured: \n", nonFeaturedArticles.length);
 
 		// const [featuredArticles, nonFeaturedArticles] = await Promise.all([
 		// 	fetch(
