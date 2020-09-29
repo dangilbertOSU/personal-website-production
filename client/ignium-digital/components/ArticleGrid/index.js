@@ -28,13 +28,10 @@ const ArticleGrid = (props) => {
 				articles.map((article, index) => {
 					return (
 						<Article
-							article={article}
-							content={
-								index === 0 ? article.content : null
-							}
+							article={article.fields}
+							id={article.sys.id}
 							index={index}
-							key={article.id}
-							photoURL={`http://localhost:${API_PORT}${article.coverPhoto.url}`}
+							key={article.sys.id}
 						/>
 					);
 				})}

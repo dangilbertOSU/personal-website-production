@@ -1,0 +1,125 @@
+.insight__body {
+	padding: 0 11rem;
+	position: relative;
+}
+
+.insight__data {
+	align-items: center;
+	display: flex;
+	font-weight: 600;
+	letter-spacing: -0.202941px;
+	margin-top: 1.2rem;
+}
+
+.insight__data p {
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0 0.2rem;
+}
+
+.insight__social {
+	align-items: center;
+	display: flex;
+}
+
+.insight__social p {
+	font-size: 14px;
+	font-weight: 600;
+	opacity: 1;
+	white-space: pre-wrap;
+}
+
+.insight__social>*:not(:first-child) {
+	margin-left: 1.5rem;
+}
+
+.insight__cover--photo img {
+	height: 480px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.insights__show--buton--area {
+	display: flex;
+	justify-content: center;
+}
+
+.insight__tab {
+	left: -5rem;
+	position: absolute;
+	top: 1rem;
+	transform: rotate(-90deg);
+}
+
+.insight__tab__line {
+	background-color: #222222;
+	display: block;
+	height: 1rem;
+	left: -1.5rem;
+	position: absolute;
+	top: 1.6rem;
+	transform: rotate(-90deg);
+	width: 1px;
+}
+
+.insight__download {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+}
+
+.insight__download p {
+	font-weight: 600;
+	color: #222222;
+	margin-left: 1rem;
+	opacity: 0.78;
+}
+
+.technology {
+	color: #0057ca;
+}
+
+.motivation {
+	color: #00a529;
+}
+
+.business {
+	color: #8a008f;
+}
+
+@media only screen and (max-width: 1250px) {
+	.insight__tab {
+		left: -1rem;
+	}
+}
+
+/*
+ * Tablet
+ */
+
+@media only screen and (max-width: 900px) {
+	.insight__body {
+		padding: 0;
+	}
+
+	.insight__tab {
+		left: 2rem;
+		top: -4rem;
+		transform: rotate(0deg);
+	}
+}
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 550px) {
+	.insight__body {
+		padding: 0;
+	}
+
+	.insight__title h2 {
+		font-size: 22px;
+	}
+}

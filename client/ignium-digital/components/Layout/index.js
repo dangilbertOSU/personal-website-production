@@ -14,15 +14,12 @@ import Contact from "../Contact";
 import Footer from "../Footer";
 
 const Layout = (props) => {
-	const { children, contact } = props;
+	const { children } = props;
 
 	return (
 		<div>
 			<Navbar />
-			<Content>
-				{children}
-				{contact && <Contact />}
-			</Content>
+			<Content>{children}</Content>
 			<Footer />
 		</div>
 	);

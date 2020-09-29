@@ -36,14 +36,13 @@
 }
 
 .footer__links li a {
-    color: #0E1137;
+    color: #222222;
     display: block;
     font-family: 'Roboto', sans-serif;
     font-size: 0.875rem;
     letter-spacing: -0.42px;
     line-height: 28px;
     margin: 0 2rem;
-    opacity: 0.74;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
@@ -54,13 +53,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-.footer__footer__line {
-    background-color: #0E1137;
-    height: 1px;
-    opacity: 0.2;
-    width: 25%;
 }
 
 /*

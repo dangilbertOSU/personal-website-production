@@ -2,6 +2,9 @@ const withCSS = require("@zeit/next-css");
 const withImages = require("next-images");
 require("dotenv").config();
 
+const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+
 module.exports = withCSS(
 	withImages({
 		ignoreTypes: ["svg"],

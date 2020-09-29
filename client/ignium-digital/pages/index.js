@@ -1,15 +1,10 @@
 /*
- * Function imports
- */
-
-import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
-
-/*
  * Image Imports
  */
 
 import OfficeStock from "../public/images/Stock/office-stock.jpg";
+import DannonAtBeach from "../public/images/Dannon/DannonAtBeach.jpg";
+import ContentfulCert from "../public/images/Dannon/contentful_cert.png";
 
 /*
  * Component Imports
@@ -21,14 +16,14 @@ import Section from "../components/Sections";
 import HomeHeader from "../components/Sections/Home/HomeHeader";
 import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
 import ServicesSection from "../components/Sections/Home/ServicesSection";
-import InsightsSection from "../components/Sections/Home/InsightsSection";
 import SitewideHeroImage from "../components/SitewideHeroImage";
+import HeaderTextImage from "../components/HeaderTextImage";
 
 const App = ({ featuredArticles }) => {
 	return (
 		<div>
 			<Head>
-				<title>Ignium Digital | Home</title>
+				<title>DG | Home</title>
 				<meta
 					name="description"
 					content="We are a personalized Sitecore focused digital agency. We currently have a small team of Sitecore MVP's and Sitecore specialists to provide personalized assistance to help you with your digital transformation with Sitecore."
@@ -41,45 +36,59 @@ const App = ({ featuredArticles }) => {
 					</Section>
 				</SitewideHeroImage>
 				<Section>
-					<WhoWeAreSection />
+					<HeaderTextImage
+						header="A Focus on Mobile and Web Development"
+						image={DannonAtBeach}
+						orientation="regular"
+					>
+						<p>
+							I have industry experience developing full
+							stack web apps for businesses that have
+							included architecting databases utilizing
+							MongoDB and SQL, designing in Figma, React,
+							Node/Express, and I am absolutely no stranger
+							to just regular Vanilla JS and CSS.
+						</p>
+						<p>
+							My focus at Oregon State University is Web
+							and Mobile Development. I have developed
+							mobile applications with groups in Android
+							Studio. I have since been learning React
+							native.
+						</p>
+					</HeaderTextImage>
 				</Section>
-				<div className="blue--background">
+				<Section>
+					<HeaderTextImage
+						header="A Certified Contentful Professional"
+						image={ContentfulCert}
+						orientation="flipped"
+					>
+						<p>
+							I have industry experience developing full
+							stack web apps for businesses that have
+							included architecting databases utilizing
+							MongoDB and SQL, designing in Figma, React,
+							Node/Express, and I am absolutely no stranger
+							to just regular Vanilla JS and CSS.
+						</p>
+						<p>
+							My focus at Oregon State University is Web
+							and Mobile Development. I have developed
+							mobile applications with groups in Android
+							Studio. I have since been learning React
+							native.
+						</p>
+					</HeaderTextImage>
+				</Section>
+				{/* <div className="blue--background">
 					<Section>
 						<ServicesSection />
 					</Section>
-				</div>
-				<Section>
-					<InsightsSection articles={featuredArticles} />
-				</Section>
+				</div> */}
 			</Layout>
 		</div>
 	);
 };
-
-const { publicRuntimeConfig } = getConfig();
-
-/*
- * Getting the latest 5 featured articles
- */
-
-export async function getServerSideProps() {
-	try {
-		const { API_URL, API_PORT } = publicRuntimeConfig;
-		const result = await fetch(
-			`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
-		);
-		const data = await result.json();
-
-		return {
-			props: {
-				featuredArticles: data,
-			},
-		};
-	} catch (err) {
-		return {
-			props: {},
-		};
-	}
-}
 
 export default App;

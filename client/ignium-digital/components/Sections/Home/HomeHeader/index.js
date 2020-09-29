@@ -30,7 +30,7 @@ const HomeHeader = (props) => {
 			<div className="welcome__text">
 				<h2>Dannon Gilbert</h2>
 				<h1>Software Engineer</h1>
-				<a href="/about" target="_blank" rel="noopener noreferrer">
+				<a href="/about">
 					<Button ariaLabel="About me">About Me</Button>
 				</a>
 			</div>

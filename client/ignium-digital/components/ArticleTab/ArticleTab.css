@@ -5,7 +5,7 @@
 }
 
 .article__tab p {
-     color: #0E1137;
+     color: #222222;
      cursor: pointer;
      font-size: 0.875rem;
      font-weight: 600;
@@ -19,7 +19,7 @@
 }
 
 .active__tab {
-     border-bottom: 4px solid #0E1137;
+     border-bottom: 4px solid #222222;
      opacity: 1;
 }
 

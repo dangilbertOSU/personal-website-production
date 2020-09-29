@@ -97,11 +97,10 @@ const Navbar = (props) => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/whoweare">
+							<Link href="/about">
 								<a
 									className={
-										router.pathname ===
-										"/whoweare"
+										router.pathname === "/about"
 											? "active"
 											: ""
 									}
@@ -112,11 +111,10 @@ const Navbar = (props) => {
 						</li>
 
 						<li>
-							<Link href="/insights">
+							<Link href="/blogs">
 								<a
 									className={
-										router.pathname ===
-										"/insights"
+										router.pathname === "/blogs"
 											? "active"
 											: ""
 									}
@@ -127,13 +125,18 @@ const Navbar = (props) => {
 						</li>
 						<li>
 							<span className="red--text">
-								<a
-									href="https://calendly.com/ignium-digital/1-on-1-consultation-services"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Contact
-								</a>
+								<Link href="/contact">
+									<a
+										className={
+											router.pathname ===
+											"/contact"
+												? "active"
+												: ""
+										}
+									>
+										Contact
+									</a>
+								</Link>
 							</span>
 						</li>
 					</ul>

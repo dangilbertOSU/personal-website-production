@@ -11,12 +11,16 @@ import PropTypes from "prop-types";
 import "./ImageCard.css";
 
 const Card = (props) => {
-	const {
-		alt, className, content, image, title,
-	} = props;
+	const { alt, className, content, image, title, white } = props;
+
+	let modifiedClassName = className;
+
+	if (white == true) {
+		modifiedClassName += " white--text";
+	}
 
 	return (
-		<div className={className}>
+		<div className={modifiedClassName}>
 			<div className={`${className}__image`}>
 				<img src={image} alt={alt} />
 			</div>
@@ -31,6 +35,7 @@ Card.defaultProps = {
 	className: "ImageCard",
 	content: "",
 	image: null,
+	white: false,
 };
 
 Card.propTypes = {
@@ -39,6 +44,7 @@ Card.propTypes = {
 	content: PropTypes.string,
 	image: PropTypes.string,
 	title: PropTypes.string.isRequired,
+	white: PropTypes.bool,
 };
 
 export default Card;

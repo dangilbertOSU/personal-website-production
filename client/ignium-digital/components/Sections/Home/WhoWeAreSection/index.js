@@ -15,7 +15,7 @@ import SectionHeading from "../../../SectionHeading";
  * Image/SVG imports
  */
 
-import WhoWeAreImage from "../../../../public/images/home_who_we_are.png";
+import DannonAtBeach from "../../../../public/images/Dannon/DannonAtBeach.jpg";
 
 /*
  * CSS imports
@@ -29,31 +29,23 @@ const WhoWeAre = (props) => {
 	return (
 		<div className={className}>
 			<div className="who__we__are__text">
-				<SectionHeading
-					header="We are a personalized Sitecore focused digital agency"
-					tab="Who We Are"
-				/>
+				<SectionHeading header="A Student of Web and Mobile Development" />
 				<p>
-					We currently have a small team of Sitecore MVP&apos;s and Sitecore
-					specialists to provide personalized assistance to help you with your
-					digital transformation with Sitecore. We have the experience and
-					expertise to help you with your most technical challenges or helping
-					you with that first step in your Marketing Transformation with
-					Sitecore.
+					I have industry experience developing full stack web
+					apps for businesses that have included architecting
+					databases utilizing MongoDB and SQL, designing in
+					Figma, React, Node/Express, and I am absolutely no
+					stranger to just regular Vanilla JS and CSS.
 				</p>
 				<p>
-					Our focus is on large Enterprises that are simply confused about the
-					best way to get the most out of their Sitecore investment. We can also
-					help as you start to look beyond the capabilities of Sitecore and
-					start to explore your future digital initiaves on the web, mobile or
-					Conversational Interfaces
+					My focus at Oregon State University is Web and Mobile
+					Development. I have developed mobile applications with
+					groups in Android Studio. I have since been learning
+					React native.
 				</p>
-				<Button ariaLabel="read more" variant="secondary">
-					Read More
-				</Button>
 			</div>
 			<div className="image">
-				<img alt="Ignium Digital teamwork who we are" src={WhoWeAreImage} />
+				<img alt="Dannon at the beach" src={DannonAtBeach} />
 			</div>
 		</div>
 	);

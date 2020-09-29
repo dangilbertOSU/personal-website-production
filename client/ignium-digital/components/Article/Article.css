@@ -1,5 +1,5 @@
 .article a {
-     color: #0E1137;
+     color: #222222;
      text-decoration: none;
 }
 
@@ -42,14 +42,14 @@
 }
 
 .article__image:hover img {
-     transform: scale(1.1);
+     transform: scale(1.02);
 }
 
 .article__image:hover::after {
      animation-name: fade-in;
      animation-duration: 0.2s;
      align-items: center;
-     background: #0E1137;
+     background: #222222;
      content: "Read More";
      color: white;
      display: flex;

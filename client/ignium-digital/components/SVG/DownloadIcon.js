@@ -11,7 +11,7 @@ const DownloadIcon = () => (
 			fillRule="evenodd"
 			clipRule="evenodd"
 			d="M10 3C10 2.448 10.448 2 11 2H13C13.552 2 14 2.448 14 3V11H18L12 17L6 11H10V3ZM2 22V20H22V22H2Z"
-			fill="#0E1137"
+			fill="#222222"
 		/>
 	</svg>
 );
