@@ -78,7 +78,7 @@ const About = () => {
 							/>
 							<ImageCard
 								alt="temporary case photo 3"
-								title="IgniumDigital"
+								title="Ignium Digital"
 								content="Junior Software Engineer"
 								image={Ignium}
 								white={true}

@@ -69,10 +69,6 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 		<div>
 			<Head>
 				<title>DG | Blogs</title>
-				<meta
-					name="description"
-					content="Everything you need to know about sitecore technology, customer experience & beyond. Articles with categories in technology, motivation, and business."
-				/>
 			</Head>
 			<Layout contact={false}>
 				<Section>

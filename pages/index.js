@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 /*
  * Image Imports
  */
@@ -10,12 +12,9 @@ import ContentfulCert from "../public/images/Dannon/contentful_cert.png";
  * Component Imports
  */
 
-import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
 import HomeHeader from "../components/Sections/Home/HomeHeader";
-import WhoWeAreSection from "../components/Sections/Home/WhoWeAreSection";
-import ServicesSection from "../components/Sections/Home/ServicesSection";
 import SitewideHeroImage from "../components/SitewideHeroImage";
 import HeaderTextImage from "../components/HeaderTextImage";
 
@@ -25,8 +24,12 @@ const App = ({ featuredArticles }) => {
 			<Head>
 				<title>DG | Home</title>
 				<meta
+					name="keywords"
+					content="resume,react,node,express,javascript,developer,software,engineer"
+				/>
+				<meta
 					name="description"
-					content="We are a personalized Sitecore focused digital agency. We currently have a small team of Sitecore MVP's and Sitecore specialists to provide personalized assistance to help you with your digital transformation with Sitecore."
+					content="I specialize in full stack development with years of experience in React. "
 				/>
 			</Head>
 			<Layout>
