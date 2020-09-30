@@ -1,0 +1,26 @@
+.contact__form {
+     width: 25rem;
+}
+
+.contact__form__input {
+     display: flex;
+     flex-direction: column;
+}
+
+.contact__form__input input {
+     border: none;
+     border-bottom: 2px solid black;
+     height: 2rem;
+     font-size: 1.2rem;
+     outline: none;
+     transition: all 0.2s;
+}
+
+.contact__form__input input:focus {
+     border-bottom: 2px solid #EB5757;;
+}
+
+.contact__form__input textarea {
+     height: 10rem;
+     margin-bottom: 2rem;
+}

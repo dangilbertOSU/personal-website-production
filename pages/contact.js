@@ -3,7 +3,10 @@
  */
 
 import Head from "next/head";
+import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
+import SectionHeading from "../components/SectionHeading";
+import Section from "../components/Sections";
 
 /*
  * Image/SVG imports
@@ -20,7 +23,10 @@ const Contact = () => {
 				/>
 			</Head>
 			<Layout>
-				<h2>Contact</h2>
+				<Section>
+					<SectionHeading header="Contact me" />
+					<ContactForm />
+				</Section>
 			</Layout>
 		</div>
 	);

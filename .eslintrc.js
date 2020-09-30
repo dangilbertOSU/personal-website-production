@@ -20,6 +20,7 @@ module.exports = {
 		"react/react-in-jsx-scope": "off",
 		"arrow-body-style": 0,
 		"linebreak-style": 0,
+		"indent": "off",
 		// Indent with 4 spaces
 		indent: [2, "tab"],
 		"no-tabs": 0,
