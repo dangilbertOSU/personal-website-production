@@ -2,6 +2,15 @@
      width: 25rem;
 }
 
+.contact__form label {
+     opacity: 0.5;
+}
+
+
+.contact__form form > *:not(:last-child) {
+     margin-top: 2rem;
+}
+
 .contact__form__input {
      display: flex;
      flex-direction: column;

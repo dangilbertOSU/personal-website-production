@@ -30,20 +30,20 @@ const ContactForm = (props) => {
                <form name="contact" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={`${className}__input`}>
-                         <p>Name</p>
-                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                         <label htmlFor="name">Name</label>
+                         <input type="text" id="name" name="name" />
                     </div>
                     <div className={`${className}__input`}>
-                         <p>Email</p>
-                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                         <label htmlFor="email">Email</label>
+                         <input type="email" id="email" name="email" />
                     </div>
                     <div className={`${className}__input`}>
-                         <p>Phone Number</p>
-                         <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                         <label htmlFor="tel">Phone Number</label>
+                         <input type="tel" id="tel" name="tel" />
                     </div>
                     <div className={`${className}__input`}>
-                         <p>Message</p>
-                         <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+                         <label htmlFor="message">Message</label>
+                         <textarea type="text" id="message" name="message"  />
                     </div>
                     <div className={`${className}__submit`}>
                          <Button ariaLabel="submit" type="submit">
