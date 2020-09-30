@@ -13,7 +13,7 @@ import "./Button.css";
 
 const Button = (props) => {
 	const {
-		ariaLabel, className, children, onClick, variant,
+		ariaLabel, className, children, onClick, variant, type,
 	} = props;
 
 	const stack = utilities.createClassStack([
@@ -27,7 +27,7 @@ const Button = (props) => {
 			className={stack}
 			label={children.toString()}
 			onClick={() => onClick()}
-			type="button"
+			type={type}
 		>
 			{children}
 		</button>
@@ -39,6 +39,7 @@ Button.defaultProps = {
 	className: "button",
 	children: PropTypes.node,
 	onClick: () => {},
+	type: "button",
 	variant: "default",
 };
 
@@ -47,6 +48,7 @@ Button.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node,
 	onClick: PropTypes.func,
+	type: PropTypes.string,
 	variant: PropTypes.oneOf(["default", "secondary"]),
 };
 

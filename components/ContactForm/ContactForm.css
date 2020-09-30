@@ -21,6 +21,23 @@
 }
 
 .contact__form__input textarea {
+     border: 2px solid black;
      height: 10rem;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.2rem;
      margin-bottom: 2rem;
+     outline: none;
+     padding: 0.5rem;
+     resize: none;
 }
+
+
+.contact__form__input textarea:focus {
+     border: 2px solid #EB5757;
+}
+
+@media only screen and (max-width: 555px) {
+     .contact__form {
+          width: 100%;
+     }     
+ }

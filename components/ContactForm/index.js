@@ -27,27 +27,30 @@ const ContactForm = (props) => {
 
 	return (
 		<div className={className}>
-               <div className={`${className}__input`}>
-                    <p>Name</p>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-               </div>
-               <div className={`${className}__input`}>
-                    <p>Email</p>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-               </div>
-               <div className={`${className}__input`}>
-                    <p>Phone Number</p>
-                    <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
-               </div>
-               <div className={`${className}__input`}>
-                    <p>Message</p>
-                    <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-               </div>
-               <div className={`${className}__submit`}>
-                    <Button ariaLabel="submit">
-                         Submit
-                    </Button>
-			</div>
+               <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div className={`${className}__input`}>
+                         <p>Name</p>
+                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
+                    <div className={`${className}__input`}>
+                         <p>Email</p>
+                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className={`${className}__input`}>
+                         <p>Phone Number</p>
+                         <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                    </div>
+                    <div className={`${className}__input`}>
+                         <p>Message</p>
+                         <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+                    </div>
+                    <div className={`${className}__submit`}>
+                         <Button ariaLabel="submit" type="submit">
+                              Submit
+                         </Button>
+                    </div>
+               </form>
 		</div>
 	);
 };
