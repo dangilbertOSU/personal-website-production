@@ -2,9 +2,7 @@
  * Function Imports
  */
 
-import { useState } from "react";
-import fetch from "isomorphic-unfetch";
-import { fetchEntries } from "../../utilities/utilities";
+import { fetchBlogs } from "../../utilities/utilities";
 
 /*
  * Component Imports
@@ -14,56 +12,9 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import Section from "../../components/Sections";
 import SectionHeading from "../../components/SectionHeading";
-import ArticleTab from "../../components/ArticleTab";
 import ArticleGrid from "../../components/ArticleGrid";
-import ArticleLayout from "../../components/ArticleLayout";
-import Article from "../../components/Article";
-import Button from "../../components/Button";
 
-const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
-	const [active, setActive] = useState(0);
-	const [shownAmount, setShownAmount] = useState(9);
-
-	const getFilteredArticles = (amount, filter, articles) => {
-		const filtered = articles.filter(
-			function (article) {
-				if (
-					(this.count < amount && article.category == filter) ||
-					(this.count < amount && !filter)
-				) {
-					this.count++;
-					return true;
-				}
-				return false;
-			},
-			{ count: 0 }
-		);
-
-		return filtered;
-	};
-
-	// const getFeaturedArticles = (tabIndex) => {
-	// 	switch (tabIndex) {
-	// 		case 0:
-	// 			return getFilteredArticles(5, null, featuredArticles);
-	// 		case 1:
-	// 			return getFilteredArticles(
-	// 				5,
-	// 				"technology",
-	// 				featuredArticles
-	// 			);
-	// 		case 2:
-	// 			return getFilteredArticles(
-	// 				5,
-	// 				"motivation",
-	// 				featuredArticles
-	// 			);
-	// 		case 3:
-	// 			return getFilteredArticles(5, "business", featuredArticles);
-	// 	}
-	// };
-
-	// const shownFeaturedArticles = getFeaturedArticles(active);
+const Blogs = ({ blogs }) => {
 
 	return (
 		<div>
@@ -75,8 +26,7 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 					<div style={{ marginTop: "4rem" }}>
 						<SectionHeading header="Latest Blogs" />
 					</div>
-					{/* <ArticleTab active={active} setActive={setActive} /> */}
-					<ArticleGrid articles={featuredArticles} />
+					<ArticleGrid articles={blogs} />
 				</Section>
 				{/* <Section>
 					{nonFeaturedArticles.length > 0 && (
@@ -115,47 +65,29 @@ const Insights = ({ featuredArticles, nonFeaturedArticles }) => {
 	);
 };
 
-Insights.defaultProps = {
+Blogs.defaultProps = {
 	featuredArticles: [],
 	nonFeaturedArticles: [],
 };
 
 /*
- * get the featured and non-featured articles
+ * Fetch all blogs
  */
 
 export async function getStaticProps() {
 	try {
-		// const { API_URL, API_PORT } = process.env;
-
-		const entries = await fetchEntries();
+		const entries = await fetchBlogs();
 
 		/*
 		 * Fetching featured articles, five from each category and then
 		 * all of the non featured articles
 		 */
 
-		const featuredArticles = entries.slice(0, 5);
-
-		[1, 2, 3, 4, 5].forEach(() => {
-			entries.shift();
-		});
-
-		const nonFeaturedArticles = entries;
-
-		// const [featuredArticles, nonFeaturedArticles] = await Promise.all([
-		// 	fetch(
-		// 		`${API_URL}:${API_PORT}/articles?_limit=5&featured=true&_sort=date:DESC`
-		// 	).then((r) => r.json()),
-		// 	fetch(
-		// 		`${API_URL}:${API_PORT}/articles?featured=false&_sort=date:DESC`
-		// 	).then((r) => r.json()),
-		// ]);
+		const blogs = entries.slice(0, 5);
 
 		return {
 			props: {
-				featuredArticles,
-				nonFeaturedArticles,
+				blogs,
 			},
 		};
 	} catch (err) {
@@ -165,4 +97,4 @@ export async function getStaticProps() {
 	}
 }
 
-export default Insights;
+export default Blogs;

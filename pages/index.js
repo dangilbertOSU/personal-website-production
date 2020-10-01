@@ -84,11 +84,6 @@ const App = ({ featuredArticles }) => {
 						</p>
 					</HeaderTextImage>
 				</Section>
-				{/* <div className="blue--background">
-					<Section>
-						<ServicesSection />
-					</Section>
-				</div> */}
 			</Layout>
 		</div>
 	);

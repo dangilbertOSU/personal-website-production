@@ -42,7 +42,7 @@ const client = require("contentful").createClient({
 	accessToken,
 });
 
-const fetchEntries = async () => {
+const fetchBlogs = async () => {
 	const entries = await client.getEntries({
 		content_type: "blog",
 		select:
@@ -60,7 +60,7 @@ const fetchSpecificBlog = async (id) => {
 }
 
 module.exports = {
-	fetchEntries,
+	fetchBlogs,
 	fetchSpecificBlog,
 	createClassStack,
 	dateFormatter,

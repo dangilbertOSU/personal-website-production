@@ -5,7 +5,7 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Section from "../components/Sections";
-import WhoWeAreHeader from "../components/Sections/WhoWeAre/WhoWeAreHeader";
+import TitleDescriptionAndTiles from "../components/TitleDescriptionAndTiles";
 import GridContainer from "../components/GridContainer";
 import ImageCard from "../components/ImageCard";
 
@@ -13,11 +13,15 @@ import ImageCard from "../components/ImageCard";
  * Image/SVG imports
  */
 
-import Connective from "../public/images/Experiences/connective.png";
-import OSU from "../public/images/Experiences/osu.png";
-import Ignium from "../public/images/Experiences/ignium.png";
-import DannonBiographyPhoto from "../public/images/Dannon/DannonBiography.jpg";
 import Biography from "../components/Biography";
+import Connective from "../public/images/Experiences/connective.png";
+import ContentfulLogo from "../public/images/Technologies/contentful.png";
+import DannonBiographyPhoto from "../public/images/Dannon/DannonBiography.jpg";
+import Ignium from "../public/images/Experiences/ignium.png";
+import NodeLogo from "../public/images/Technologies/node.png";
+import OSU from "../public/images/Experiences/osu.png";
+import ReactLogo from "../public/images/Technologies/react.png";
+import SitecoreLogo from "../public/images/Technologies/sitecore.png";
 
 const About = () => {
 	const description = `I am a student at Oregon State University studying Computer Science, with a focus on Web and Mobile development. 
@@ -47,7 +51,31 @@ const About = () => {
 					/>
 				</Section>
 				<Section>
-					<WhoWeAreHeader />
+					<TitleDescriptionAndTiles
+						title="I use modern web development technologies to help you build your application faster and better"
+						description="I love learning the latest technologies and applying them to fit the needs of businesses."
+					>
+						<ImageCard
+							title="React"
+							image={ReactLogo}
+							content="Whether it be on Mobile or Web, React is an incredible JS library that will speed up your development."
+						/>
+						<ImageCard
+							title="Node"
+							image={NodeLogo}
+							content="Using this backend runtime environment will let you utilize frameworks such as Express.js."
+						/>
+						<ImageCard
+							title="Sitecore"
+							image={SitecoreLogo}
+							content="A dominating CMS platform that can provide your business with the tools needed to enhance your digital reach."
+						/>
+						<ImageCard
+							title="Contentful"
+							image={ContentfulLogo}
+							content="The sweet spot where price meets quality. A CMS with ease of use and a price point that is hard to beat."
+						/>
+					</TitleDescriptionAndTiles>
 				</Section>
 				<div
 					className="blue--background"

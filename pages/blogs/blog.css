@@ -1,9 +1,8 @@
-.insight__body {
-	padding: 0 11rem;
+.blog__body {
 	position: relative;
 }
 
-.insight__data {
+.blog__data {
 	align-items: center;
 	display: flex;
 	font-weight: 600;
@@ -11,48 +10,48 @@
 	margin-top: 1.2rem;
 }
 
-.insight__data p {
+.blog__data p {
 	font-size: 0.75rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin: 0 0.2rem;
 }
 
-.insight__social {
+.blog__social {
 	align-items: center;
 	display: flex;
 }
 
-.insight__social p {
+.blog__social p {
 	font-size: 14px;
 	font-weight: 600;
 	opacity: 1;
 	white-space: pre-wrap;
 }
 
-.insight__social>*:not(:first-child) {
+.blog__social>*:not(:first-child) {
 	margin-left: 1.5rem;
 }
 
-.insight__cover--photo img {
+.blog__cover--photo img {
 	height: 480px;
 	object-fit: cover;
 	width: 100%;
 }
 
-.insights__show--buton--area {
+.blogs__show--buton--area {
 	display: flex;
 	justify-content: center;
 }
 
-.insight__tab {
+.blog__tab {
 	left: -5rem;
 	position: absolute;
 	top: 1rem;
 	transform: rotate(-90deg);
 }
 
-.insight__tab__line {
+.blog__tab__line {
 	background-color: #222222;
 	display: block;
 	height: 1rem;
@@ -63,13 +62,13 @@
 	width: 1px;
 }
 
-.insight__download {
+.blog__download {
 	align-items: center;
 	cursor: pointer;
 	display: flex;
 }
 
-.insight__download p {
+.blog__download p {
 	font-weight: 600;
 	color: #222222;
 	margin-left: 1rem;
@@ -89,7 +88,7 @@
 }
 
 @media only screen and (max-width: 1250px) {
-	.insight__tab {
+	.blog__tab {
 		left: -1rem;
 	}
 }
@@ -99,11 +98,11 @@
  */
 
 @media only screen and (max-width: 900px) {
-	.insight__body {
+	.blog__body {
 		padding: 0;
 	}
 
-	.insight__tab {
+	.blog__tab {
 		left: 2rem;
 		top: -4rem;
 		transform: rotate(0deg);
@@ -115,11 +114,11 @@
  */
 
 @media only screen and (max-width: 550px) {
-	.insight__body {
+	.blog__body {
 		padding: 0;
 	}
 
-	.insight__title h2 {
+	.blog__title h2 {
 		font-size: 22px;
 	}
 }

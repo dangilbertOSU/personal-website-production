@@ -10,7 +10,6 @@ import PropTypes from "prop-types";
 
 import Navbar from "../Navbar";
 import Content from "../Content";
-import Contact from "../Contact";
 import Footer from "../Footer";
 
 const Layout = (props) => {
@@ -19,7 +18,7 @@ const Layout = (props) => {
 	return (
 		<div>
 			<Navbar />
-			<Content>{children}</Content>
+				<Content>{children}</Content>
 			<Footer />
 		</div>
 	);
@@ -27,12 +26,10 @@ const Layout = (props) => {
 
 Layout.defaultProps = {
 	children: PropTypes.node,
-	contact: true,
 };
 
 Layout.propTypes = {
 	children: PropTypes.node,
-	contact: PropTypes.bool,
 };
 
 export default Layout;
