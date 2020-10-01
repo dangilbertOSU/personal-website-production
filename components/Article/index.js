@@ -1,10 +1,4 @@
 /*
- * Component imports
- */
-
-import ReactMarkdown from "react-markdown";
-
-/*
  * Function imports
  */
 
@@ -24,7 +18,7 @@ const Article = (props) => {
 	} = props;
 
 	const {
-		coverPhoto, content, publishedDate, title,
+		coverPhoto, publishedDate, title,
 	} = article;
 
 	const date = new Date(publishedDate);
@@ -54,15 +48,6 @@ const Article = (props) => {
 					<h3>{article.title}</h3>
 				</a>
 			</Link>
-			{/*
-			<div className={`${className}__content`}>
-				{content && (
-					<ReactMarkdown>{`${content.substring(
-						0,
-						327
-					)}...`}</ReactMarkdown>
-				)}
-			</div> */}
 		</div>
 	);
 };

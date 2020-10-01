@@ -2,7 +2,7 @@
  * Function Imports
  */
 
-
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { dateFormatter } from "../../utilities/utilities";
 import { fetchBlogs, fetchSpecificBlog } from "../../utilities/utilities";
 
@@ -34,13 +34,12 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
 
 import "./blog.css";
 
-
 const Blog = (props) => {
      const { className, post } = props;
      const { title, coverPhoto, content, publishedDate } = post.fields;
      const date = new Date(publishedDate);
 	const publishedDateString = dateFormatter(date.toDateString());
-     const { id } = post.sys;
+	const { id } = post.sys;
 
 	return (
 		<div>
@@ -55,10 +54,6 @@ const Blog = (props) => {
 				<Section>
 					<div className={className} id="capture">
 						<div className={`${className}__body`}>
-							<div className={`${className}__data`}>
-								<p>{publishedDateString}</p>
-							</div>
-
 							<h1 className={`${className}__title`}>
 								{title}
 							</h1>
@@ -87,6 +82,7 @@ const Blog = (props) => {
 									<EmailLogo />
 								</EmailShareButton>
 							</div>
+							
 						</div>
 						<div className={`${className}__cover--photo`}>
                                    <img
@@ -97,20 +93,10 @@ const Blog = (props) => {
                                         }
                                    />
 						</div>
-						{/* <div className={`${className}__body`}>
-							<ReactMarkdown source={article.content} />
-							<Link
-								href="/insights/download/[id]"
-								as={`/insights/download/${article.id}`}
-							>
-								<div
-									className={`${className}__download`}
-								>
-									<DownloadIcon />
-									<p>{filename}</p>
-								</div>
-							</Link>
-						</div> */}
+						<div className={`${className}__data`}>
+								<p>{publishedDateString}</p>
+							</div>
+						{documentToReactComponents(content)}
 					</div>
 				</Section>
 			</Layout>
@@ -138,7 +124,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-     const post = await fetchSpecificBlog(params.id);
+	const post = await fetchSpecificBlog(params.id);
 
 	return {
 		props: {
