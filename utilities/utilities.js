@@ -1,5 +1,3 @@
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
 const createClassStack = (classList) =>
 	classList
 		.map((className) => {
