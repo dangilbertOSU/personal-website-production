@@ -11,8 +11,6 @@
 		"lint-fix": "eslint ./components/**/*.js --fix"
 	},
 	"dependencies": {
-		"@contentful/rich-text-from-markdown": "^14.1.1",
-		"@contentful/rich-text-html-renderer": "^14.1.1",
 		"@contentful/rich-text-react-renderer": "^14.1.1",
 		"@svgr/webpack": "^5.4.0",
 		"@zeit/next-workers": "^1.0.1-canary.1",

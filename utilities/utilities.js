@@ -57,10 +57,6 @@ const fetchBlogs = async () => {
 
 const fetchSpecificBlog = async (id) => {
 	const entry = await client.getEntry(id);
-	// const rawRichTextField = entry.fields.content;
-	// const RichTextHTML = documentToHtmlString(rawRichTextField);
-	// entry.fields.content = RichTextHTML;
-	// console.log("RichTextHTML: \n", RichTextHTML);
 	if (entry) return entry;
 
 }
