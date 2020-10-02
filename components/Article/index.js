@@ -14,7 +14,7 @@ import "./Article.css";
 
 const Article = (props) => {
 	const {
-		article, className, id, index,
+		article, className, id,
 	} = props;
 
 	const {
@@ -25,7 +25,7 @@ const Article = (props) => {
 	const publishedDateString = date.toDateString();
 
 	return (
-		<div className={`${className} article_${index}`}>
+		<div className={`${className}`}>
 			<Link href="/blogs/[id]" as={`/blogs/${id}`}>
 				<a>
 					<div className={`${className}__image`}>
@@ -60,7 +60,6 @@ Article.defaultProps = {
 Article.propTypes = {
 	article: PropTypes.oneOfType([PropTypes.object]).isRequired,
 	className: PropTypes.string,
-	index: PropTypes.number.isRequired,
 };
 
 export default Article;

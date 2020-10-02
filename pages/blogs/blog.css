@@ -2,12 +2,21 @@
 	position: relative;
 }
 
+.blog__title {
+	text-align: center;
+}
+
 .blog__data {
 	align-items: center;
+	border: 2px solid #EEE;
 	display: flex;
 	font-weight: 600;
+	justify-content: center;
 	letter-spacing: -0.202941px;
 	margin-top: 1.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 5rem;
 }
 
 .blog__data p {
@@ -75,16 +84,22 @@
 	opacity: 0.78;
 }
 
-.technology {
-	color: #0057ca;
+.blog__content > * {
+	margin: 2rem 0;
 }
 
-.motivation {
-	color: #00a529;
+.blog__content pre {
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
-.business {
-	color: #8a008f;
+.blog__content ol li {
+	color: #222222;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 28px;
+	opacity: 0.6;
 }
 
 @media only screen and (max-width: 1250px) {

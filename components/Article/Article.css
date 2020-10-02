@@ -1,3 +1,7 @@
+.article {
+     max-width: 400px;
+}
+
 .article a {
      color: #222222;
      text-decoration: none;
@@ -29,14 +33,11 @@
 }
 
 .article__image {
+     box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
      cursor: pointer;
      overflow: hidden;
      position: relative;
      transition: all 0.2s;
-}
-
-.article__image:hover {
-     box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
      -webkit-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
      -moz-box-shadow: 0px 3px 5px rgba(33, 47, 60, 0.292532), 0px 2px 12px rgba(75, 113, 189, 0.282315);
 }
@@ -50,7 +51,7 @@
      animation-duration: 0.2s;
      align-items: center;
      background: #222222;
-     content: "Read More";
+     content: "";
      color: white;
      display: flex;
      height: 100%;
@@ -68,19 +69,6 @@
 .article__content h3 {
      font-size: 1rem;
 }
-
-.technology {
-     color: #0057CA;
-}
-
-.motivation {
-     color: #00A529
-}
-
-.business {
-     color: #8A008F;
-}
-
 
 /*
  * Tablet

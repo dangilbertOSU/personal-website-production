@@ -28,38 +28,6 @@ const Blogs = ({ blogs }) => {
 					</div>
 					<ArticleGrid articles={blogs} />
 				</Section>
-				{/* <Section>
-					{nonFeaturedArticles.length > 0 && (
-						<React.Fragment>
-							<h2>Latest articles</h2>
-							<ArticleLayout>
-								{nonFeaturedArticles &&
-									nonFeaturedArticles
-										.slice(0, shownAmount)
-										.map((article, index) => {
-											return (
-												<Article
-													article={
-														article.fields
-													}
-													id={
-														article
-															.sys
-															.id
-													}
-													index={index}
-													key={
-														article
-															.sys
-															.id
-													}
-												/>
-											);
-										})}
-							</ArticleLayout>
-						</React.Fragment>
-					)}
-				</Section> */}
 			</Layout>
 		</div>
 	);
@@ -76,14 +44,7 @@ Blogs.defaultProps = {
 
 export async function getStaticProps() {
 	try {
-		const entries = await fetchBlogs();
-
-		/*
-		 * Fetching featured articles, five from each category and then
-		 * all of the non featured articles
-		 */
-
-		const blogs = entries.slice(0, 5);
+		const blogs = await fetchBlogs();
 
 		return {
 			props: {

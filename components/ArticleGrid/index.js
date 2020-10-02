@@ -19,8 +19,6 @@ import "./ArticleGrid.css";
 
 const ArticleGrid = (props) => {
 	const { articles, className } = props;
-	const { publicRuntimeConfig } = getConfig();
-	const { API_PORT } = publicRuntimeConfig;
 
 	return (
 		<div className={className}>
@@ -30,7 +28,6 @@ const ArticleGrid = (props) => {
 						<Article
 							article={article.fields}
 							id={article.sys.id}
-							index={index}
 							key={article.sys.id}
 						/>
 					);

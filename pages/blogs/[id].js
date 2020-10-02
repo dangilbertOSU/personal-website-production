@@ -2,14 +2,14 @@
  * Function Imports
  */
 
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+const ReactMarkdown = require('react-markdown')
 import { dateFormatter } from "../../utilities/utilities";
 import { fetchBlogs, fetchSpecificBlog } from "../../utilities/utilities";
-
 /*
  * Component Imports
  */
 
+import CodeBlock from "../../components/CodeBlock";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Section from "../../components/Sections";
@@ -47,16 +47,32 @@ const Blog = (props) => {
 				<title>Dannon Gilbert | Blog</title>
 				<meta
 					name="description"
-					// content={article.content.substring(0, 25)}
 				/>
 			</Head>
 			<Layout contact={false}>
 				<Section>
 					<div className={className} id="capture">
+						<div className={`${className}__cover--photo`}>
+                                   <img
+                                        src={`https:${coverPhoto.fields.file.url}`}
+                                        alt={
+                                             coverPhoto.fields.description
+                                             || `${title} cover photo`
+                                        }
+                                   />
+						</div>
+						<div className={`${className}__data`}>
+							<p>{publishedDateString}</p>
+						</div>
 						<div className={`${className}__body`}>
 							<h1 className={`${className}__title`}>
 								{title}
 							</h1>
+						</div>
+						<div className={`${className}__content`}>
+							<ReactMarkdown source={content} renderers={{ code: CodeBlock }}/>  
+						</div>
+						<div className={`${className}__body`}>
 							<div className={`${className}__social`}>
 								<p>Share with:</p>
 								<TwitterShareButton
@@ -82,21 +98,7 @@ const Blog = (props) => {
 									<EmailLogo />
 								</EmailShareButton>
 							</div>
-							
 						</div>
-						<div className={`${className}__cover--photo`}>
-                                   <img
-                                        src={`https:${coverPhoto.fields.file.url}`}
-                                        alt={
-                                             coverPhoto.fields.description
-                                             || `${title} cover photo`
-                                        }
-                                   />
-						</div>
-						<div className={`${className}__data`}>
-								<p>{publishedDateString}</p>
-							</div>
-						{documentToReactComponents(content)}
 					</div>
 				</Section>
 			</Layout>
