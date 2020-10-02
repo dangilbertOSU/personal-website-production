@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     transition: box-shadow 0.2s;
+    transition: height 0.2s;
     width: 100%;
     z-index: 3;
 }
@@ -16,6 +17,7 @@
     -webkit-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+    height: 40px;
 }
 
 .navbar--body {
@@ -74,6 +76,10 @@
     position: absolute;
     top: 3.6rem;
     width: 100%;
+}
+
+.shadow .navbar__links a:hover::after {
+    top: 1.8rem;
 }
 
 .navbar__links .red--text a {
@@ -144,15 +150,18 @@
     margin-right: auto;
     opacity: 1;
     position: absolute;
+    transition: all 0.2s;
     top: 3.6rem;
     width: 100%;
+}
+
+.shadow .active::after {
+    top: 1.8rem;
 }
 
 .red--text .active::after {
     background-color: #EB5757;
 }
-
-
 
 @keyframes navlink_line {
     from {
@@ -228,6 +237,10 @@
         transition: all 0.2s;
         -webkit-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
         -moz-box-shadow: 0px 1px 8px -1px rgba(19, 19, 53, 0.2);
+    }
+
+    .navbar__links {
+        margin-top: 3rem;
     }
 
     .navbar--body {

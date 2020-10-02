@@ -94,12 +94,21 @@
      -moz-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+.blog__content p {
+	opacity: 1;
+}
+
 .blog__content ol li {
 	color: #222222;
 	font-size: 1rem;
 	font-weight: normal;
 	line-height: 28px;
-	opacity: 0.6;
+	opacity: 1;
+}
+
+.blog__content p code {
+	color: #f87c32;
+	font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1250px) {
