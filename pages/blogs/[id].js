@@ -44,7 +44,7 @@ const Blog = (props) => {
 	return (
 		<div>
 			<Head>
-				<title>Dannon Gilbert | Blog</title>
+				<title>DG | {title}</title>
 				<meta
 					name="description"
 				/>
