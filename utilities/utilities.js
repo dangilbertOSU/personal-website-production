@@ -1,5 +1,5 @@
-const space = "31arrc4mvgy8";
-const accessToken = "Yt5YnHNkg6EqtKRwUIJrh3COzjqb1OVoWjjJB7DKpU0";
+const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
 
 const createClassStack = (classList) =>
 	classList
