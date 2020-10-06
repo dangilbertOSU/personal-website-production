@@ -11,9 +11,9 @@
      max-width: 21rem;
 }
 
-.title_desc_tiles__header .grid__container {
+/* .title_desc_tiles__header .grid__container {
      margin-top: 6rem;
-}
+} */
 
 .title_desc_tiles__header .grid__container .grid__items .Card {
      width: 248px;
