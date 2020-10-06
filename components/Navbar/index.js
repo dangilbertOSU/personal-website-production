@@ -45,8 +45,8 @@ const Navbar = (props) => {
 	return (
 		<nav
 			className={
-				(mobileNavVisible ? `${className} grow` : className)
-				+ (showShadow ? " shadow" : "")
+				(mobileNavVisible ? `${className} grow` : className) +
+				(showShadow ? " shadow" : "")
 			}
 		>
 			<div className={`${className}--body`}>
@@ -66,7 +66,9 @@ const Navbar = (props) => {
 					}
 					href="#"
 					onClick={() => setMobileNavVisible(!mobileNavVisible)}
-					onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
+					onKeyDown={() =>
+						setMobileNavVisible(!mobileNavVisible)
+					}
 					role="button"
 					type="button"
 					tabIndex="0"
@@ -122,20 +124,17 @@ const Navbar = (props) => {
 							</Link>
 						</li>
 						<li>
-							<span className="red--text">
-								<Link href="/contact">
-									<a
-										className={
-											router.pathname
-											=== "/contact"
-												? "active"
-												: ""
-										}
-									>
-										Contact
-									</a>
-								</Link>
-							</span>
+							<Link href="/contact">
+								<a
+									className={
+										router.pathname === "/contact"
+											? "active"
+											: ""
+									}
+								>
+									Contact
+								</a>
+							</Link>
 						</li>
 					</ul>
 				</div>
