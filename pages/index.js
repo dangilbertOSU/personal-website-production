@@ -13,10 +13,10 @@ import ContentfulCert from "../public/images/Dannon/contentful_cert.png";
  */
 
 import Layout from "../components/Layout";
-import Section from "../components/Sections";
-import HomeHeader from "../components/Sections/Home/HomeHeader";
+import Section from "../components/Section";
 import SitewideHeroImage from "../components/SitewideHeroImage";
 import HeaderTextImage from "../components/HeaderTextImage";
+import TitleDescriptionCTA from "../components/TitleDescriptionCTA";
 
 const App = ({ featuredArticles }) => {
 	return (
@@ -35,7 +35,13 @@ const App = ({ featuredArticles }) => {
 			<Layout>
 				<SitewideHeroImage backgroundImage={OfficeStock}>
 					<Section>
-						<HomeHeader />
+						<TitleDescriptionCTA
+							title="Dannon Gilbert"
+							description="Software Engineer"
+							buttonAriaLabel="Go to about me page"
+							buttonText="About Me"
+							link="/about"
+						/>
 					</Section>
 				</SitewideHeroImage>
 				<Section>

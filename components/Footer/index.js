@@ -15,9 +15,6 @@ import Link from "next/link";
  */
 
 import FooterLogo from "../SVG/FooterLogo";
-import TwitterLogo from "../SVG/social/TwitterLogo";
-import LinkedInLogo from "../SVG/social/LinkedInLogo";
-import EmailLogo from "../SVG/social/EmailLogo";
 
 import "./Footer.css";
 
@@ -48,9 +45,7 @@ const Footer = (props) => {
 					</li>
 					<li>
 						<span className="red--text">
-							<a href="#">
-								Contact
-							</a>
+							<a href="/contact">Contact</a>
 						</span>
 					</li>
 				</ul>

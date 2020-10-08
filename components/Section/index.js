@@ -14,9 +14,9 @@ const Section = (props) => {
 	const { className, children } = props;
 
 	return (
-		<div className={className}>
+		<section className={className}>
 			<div className={`${className}--body`}>{children}</div>
-		</div>
+		</section>
 	);
 };
 

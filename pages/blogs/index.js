@@ -2,20 +2,19 @@
  * Function Imports
  */
 
+import Head from "next/head";
 import { fetchBlogs } from "../../utilities/utilities";
 
 /*
  * Component Imports
  */
 
-import Head from "next/head";
 import Layout from "../../components/Layout";
-import Section from "../../components/Sections";
+import Section from "../../components/Section";
 import SectionHeading from "../../components/SectionHeading";
 import ArticleGrid from "../../components/ArticleGrid";
 
 const Blogs = ({ blogs }) => {
-
 	return (
 		<div>
 			<Head>
@@ -34,8 +33,7 @@ const Blogs = ({ blogs }) => {
 };
 
 Blogs.defaultProps = {
-	featuredArticles: [],
-	nonFeaturedArticles: [],
+	blogs: [],
 };
 
 /*

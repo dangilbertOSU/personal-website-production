@@ -4,7 +4,7 @@
 
 import Head from "next/head";
 import Layout from "../components/Layout";
-import Section from "../components/Sections";
+import Section from "../components/Section";
 import TitleDescriptionAndTiles from "../components/TitleDescriptionAndTiles";
 import GridContainer from "../components/GridContainer";
 import ImageCard from "../components/ImageCard";
@@ -22,7 +22,6 @@ import NodeLogo from "../public/images/Technologies/node.png";
 import OSU from "../public/images/Experiences/osu.png";
 import ReactLogo from "../public/images/Technologies/react.png";
 import JavascriptLogo from "../public/images/Technologies/javascript.png";
-import Link from "next/link";
 
 const About = () => {
 	const description = `I am a student at Oregon State University studying Computer Science, with a focus on Web and Mobile development. 

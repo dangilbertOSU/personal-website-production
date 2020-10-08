@@ -2,9 +2,12 @@
  * Function Imports
  */
 
-const ReactMarkdown = require('react-markdown')
-import { dateFormatter } from "../../utilities/utilities";
-import { fetchBlogs, fetchSpecificBlog } from "../../utilities/utilities";
+import {
+	dateFormatter,
+	fetchBlogs,
+	fetchSpecificBlog,
+} from "../../utilities/utilities";
+
 /*
  * Component Imports
  */
@@ -12,7 +15,7 @@ import { fetchBlogs, fetchSpecificBlog } from "../../utilities/utilities";
 import CodeBlock from "../../components/CodeBlock";
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import Section from "../../components/Sections";
+import Section from "../../components/Section";
 
 import {
 	TwitterShareButton,
@@ -34,10 +37,12 @@ import EmailLogo from "../../components/SVG/social/EmailLogo";
 
 import "./blog.css";
 
+const ReactMarkdown = require("react-markdown");
+
 const Blog = (props) => {
-     const { className, post } = props;
-     const { title, coverPhoto, content, publishedDate } = post.fields;
-     const date = new Date(publishedDate);
+	const { className, post } = props;
+	const { title, coverPhoto, content, publishedDate } = post.fields;
+	const date = new Date(publishedDate);
 	const publishedDateString = dateFormatter(date.toDateString());
 	const { id } = post.sys;
 
@@ -45,21 +50,19 @@ const Blog = (props) => {
 		<div>
 			<Head>
 				<title>DG | {title}</title>
-				<meta
-					name="description"
-				/>
+				<meta name="description" />
 			</Head>
 			<Layout contact={false}>
 				<Section>
 					<div className={className} id="capture">
 						<div className={`${className}__cover--photo`}>
-                                   <img
-                                        src={`https:${coverPhoto.fields.file.url}`}
-                                        alt={
-                                             coverPhoto.fields.description
-                                             || `${title} cover photo`
-                                        }
-                                   />
+							<img
+								src={`https:${coverPhoto.fields.file.url}`}
+								alt={
+									coverPhoto.fields.description ||
+									`${title} cover photo`
+								}
+							/>
 						</div>
 						<div className={`${className}__data`}>
 							<p>{publishedDateString}</p>
@@ -70,7 +73,10 @@ const Blog = (props) => {
 							</h1>
 						</div>
 						<div className={`${className}__content`}>
-							<ReactMarkdown source={content} renderers={{ code: CodeBlock }}/>  
+							<ReactMarkdown
+								source={content}
+								renderers={{ code: CodeBlock }}
+							/>
 						</div>
 						<div className={`${className}__body`}>
 							<div className={`${className}__social`}>
@@ -111,18 +117,18 @@ Blog.defaultProps = {
 };
 
 export async function getStaticPaths() {
-     const response = await fetchBlogs();
+	const response = await fetchBlogs();
 
-     return {
-          paths: response.map((post) => {
-               return {
-                    params: {
-                    id: `${post.sys.id}`,
-                    },
-               }
-          }),
-          fallback: false,
-     }
+	return {
+		paths: response.map((post) => {
+			return {
+				params: {
+					id: `${post.sys.id}`,
+				},
+			};
+		}),
+		fallback: false,
+	};
 }
 
 export async function getStaticProps({ params }) {
@@ -130,8 +136,8 @@ export async function getStaticProps({ params }) {
 
 	return {
 		props: {
-               post
-          }
+			post,
+		},
 	};
 }
 

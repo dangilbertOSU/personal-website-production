@@ -6,7 +6,7 @@ import Head from "next/head";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 import SectionHeading from "../components/SectionHeading";
-import Section from "../components/Sections";
+import Section from "../components/Section";
 
 /*
  * Image/SVG imports

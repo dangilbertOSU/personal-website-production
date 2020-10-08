@@ -17,7 +17,7 @@ const Card = (props) => {
 
 	let modifiedClassName = className;
 
-	if (white == true) {
+	if (white === true) {
 		modifiedClassName += " white--text";
 	}
 

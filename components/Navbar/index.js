@@ -45,8 +45,8 @@ const Navbar = (props) => {
 	return (
 		<nav
 			className={
-				(mobileNavVisible ? `${className} grow` : className) +
-				(showShadow ? " shadow" : "")
+				(mobileNavVisible ? `${className} grow` : className)
+				+ (showShadow ? " shadow" : "")
 			}
 		>
 			<div className={`${className}--body`}>
@@ -66,9 +66,7 @@ const Navbar = (props) => {
 					}
 					href="#"
 					onClick={() => setMobileNavVisible(!mobileNavVisible)}
-					onKeyDown={() =>
-						setMobileNavVisible(!mobileNavVisible)
-					}
+					onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
 					role="button"
 					type="button"
 					tabIndex="0"

@@ -13,13 +13,9 @@ import { dateFormatter } from "../../utilities/utilities";
 import "./Article.css";
 
 const Article = (props) => {
-	const {
-		article, className, id,
-	} = props;
+	const { article, className, id } = props;
 
-	const {
-		coverPhoto, publishedDate, title,
-	} = article;
+	const { coverPhoto, publishedDate, title } = article;
 
 	const date = new Date(publishedDate);
 	const publishedDateString = date.toDateString();
@@ -54,12 +50,12 @@ const Article = (props) => {
 
 Article.defaultProps = {
 	className: "article",
-	content: null,
 };
 
 Article.propTypes = {
 	article: PropTypes.oneOfType([PropTypes.object]).isRequired,
 	className: PropTypes.string,
+	id: PropTypes.string.isRequired,
 };
 
 export default Article;

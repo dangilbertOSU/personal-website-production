@@ -3,7 +3,6 @@
  */
 
 import PropTypes from "prop-types";
-import getConfig from "next/config";
 
 /*
  * Component imports
@@ -23,7 +22,7 @@ const ArticleGrid = (props) => {
 	return (
 		<div className={className}>
 			{articles
-				&& articles.map((article, index) => {
+				&& articles.map((article) => {
 					return (
 						<Article
 							article={article.fields}

@@ -18,31 +18,31 @@ import SectionHeading from "../SectionHeading";
 import "./index.css";
 
 const TitleDescriptionAndTiles = (props) => {
-	const { className, title, description, children } = props;
+	const {
+		className, title, description, children,
+	} = props;
 
 	return (
 		<div className={className}>
 			<div className="title_desc_tiles__header__text">
 				<SectionHeading header={title} />
-				<p>
-					{description}
-				</p>
+				<p>{description}</p>
 			</div>
-			<GridContainer>
-				{children}
-			</GridContainer>
+			<GridContainer>{children}</GridContainer>
 		</div>
 	);
 };
 
 TitleDescriptionAndTiles.defaultProps = {
-     className: "title_desc_tiles__header",
+	className: "title_desc_tiles__header",
+	children: PropTypes.node,
 };
 
 TitleDescriptionAndTiles.propTypes = {
-     className: PropTypes.string,
-     title: PropTypes.string.isRequired,
-     description: PropTypes.string.isRequired,
+	className: PropTypes.string,
+	children: PropTypes.node,
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
 };
 
 export default TitleDescriptionAndTiles;

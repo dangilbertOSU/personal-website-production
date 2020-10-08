@@ -2,7 +2,7 @@
  * Function imports
  */
 
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 
 /*
  * Component imports
@@ -17,12 +17,10 @@ import SectionHeading from "../SectionHeading";
 import "./HeaderTextImage.css";
 
 const HeaderTextImage = (props) => {
-	const {
-		alt, className, header, children, image, orientation,
-	} = props;
+	const { alt, className, header, children, image, orientation } = props;
 
-	const component1 = orientation == "regular" ? "left" : "right";
-	const component2 = orientation == "regular" ? "right" : "left";
+	const component1 = orientation === "regular" ? "left" : "right";
+	const component2 = orientation === "regular" ? "right" : "left";
 
 	return (
 		<div className={className}>
@@ -43,10 +41,17 @@ const HeaderTextImage = (props) => {
 
 HeaderTextImage.defaultProps = {
 	className: "header__text__image",
+	children: PropTypes.node,
+	orientation: "regular",
 };
 
 HeaderTextImage.propTypes = {
+	alt: PropTypes.string.isRequired,
 	className: PropTypes.string,
+	children: PropTypes.node,
+	header: PropTypes.string.isRequired,
+	image: PropTypes.string.isRequired,
+	orientation: string,
 };
 
 export default HeaderTextImage;
