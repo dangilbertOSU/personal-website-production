@@ -21,12 +21,13 @@ import Ignium from "../public/images/Experiences/ignium.png";
 import NodeLogo from "../public/images/Technologies/node.png";
 import OSU from "../public/images/Experiences/osu.png";
 import ReactLogo from "../public/images/Technologies/react.png";
-import SitecoreLogo from "../public/images/Technologies/sitecore.png";
+import JavascriptLogo from "../public/images/Technologies/javascript.png";
+import Link from "next/link";
 
 const About = () => {
 	const description = `I am a student at Oregon State University studying Computer Science, with a focus on Web and Mobile development. 
-	I have years of experience in developing React and have a strong interest in web development technologies, like bundlers and transpilers. 
-	I am a Contentful Certified Professional and have built numerous REST APIs. Full Stack development is my specialty and I absolutely love the work I do.`;
+	I have years of experience in developing React and have a strong interest in web development in general. 
+	I am a Contentful Certified Professional, have built numerous REST APIs that include Authentication, Authorization, Redis, RabbitMq, and other great features. I absolutely love full stack development but at the moment I would say front end is my specialty.`;
 
 	return (
 		<div>
@@ -53,7 +54,7 @@ const About = () => {
 				<Section>
 					<TitleDescriptionAndTiles
 						title="I use modern web development technologies to help you build your application faster and better"
-						description="I love learning the latest technologies and applying them to fit the needs of businesses."
+						description="I love learning and the fact that web development is constantly advancing, so there is always a need to keep up."
 					>
 						<ImageCard
 							title="React"
@@ -63,17 +64,17 @@ const About = () => {
 						<ImageCard
 							title="Node"
 							image={NodeLogo}
-							content="Using this backend runtime environment will let you utilize frameworks such as Express.js."
-						/>
-						<ImageCard
-							title="Sitecore"
-							image={SitecoreLogo}
-							content="A dominating CMS platform that can provide your business with the tools needed to enhance your digital reach."
+							content="Using this backend runtime environment will let you utilize frameworks such as Express.js to quickly scaffold a server and build a REST API."
 						/>
 						<ImageCard
 							title="Contentful"
 							image={ContentfulLogo}
-							content="The sweet spot where price meets quality. A CMS with ease of use and a price point that is hard to beat."
+							content="The sweet spot where price meets quality. A CMS with ease of use and a price point that is hard to beat. Since most of the time, the free tier is enough."
+						/>
+						<ImageCard
+							title="Javascript"
+							image={JavascriptLogo}
+							content="Yeah, React is a Javascript library but it's nice to have those vanilla JS skills."
 						/>
 					</TitleDescriptionAndTiles>
 				</Section>
@@ -82,30 +83,32 @@ const About = () => {
 					style={{ padding: "5.75rem 0" }}
 				>
 					<Section>
-						<h2 style={{ color: "white" }}>Experience</h2>
-						<p style={{ color: "white", opacity: 1 }}>
+						<h2 style={{ color: "white" }}>
+							Professional Experience
+						</h2>
+						{/* <p style={{ color: "white", opacity: 1 }}>
 							I thrive off providing businesses the
 							products that they need at the highest
 							quality.
-						</p>
+						</p> */}
 						<br />
 						<GridContainer>
 							<ImageCard
-								alt="temporary case photo 1"
+								alt="ConnectiveDX logo"
 								title="ConnectiveDX"
 								content="Software Engineer Intern"
 								image={Connective}
 								white={true}
 							/>
 							<ImageCard
-								alt="temporary case photo 2"
+								alt="Oregon State University logo"
 								title="Oregon State University"
 								content="Student Software Developer"
 								image={OSU}
 								white={true}
 							/>
 							<ImageCard
-								alt="temporary case photo 3"
+								alt="Ignium Digital Logo"
 								title="Ignium Digital"
 								content="Junior Software Engineer"
 								image={Ignium}
