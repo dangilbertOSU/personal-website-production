@@ -31,6 +31,7 @@ const Navbar = (props) => {
 	const [showShadow, setShowShadow] = useState(false);
 
 	const router = useRouter();
+	const links = ["about", "blogs", "contact"];
 
 	useEffect(() => {
 		window.onscroll = () => {
@@ -42,11 +43,25 @@ const Navbar = (props) => {
 		};
 	}, []);
 
+	const link = (linkName) => (
+		<li>
+			<Link href={`/${linkName}`}>
+				<a
+					className={
+						router.pathname === `/${linkName}` ? "active" : ""
+					}
+				>
+					{linkName}
+				</a>
+			</Link>
+		</li>
+	);
+
 	return (
 		<nav
 			className={
-				(mobileNavVisible ? `${className} grow` : className)
-				+ (showShadow ? " shadow" : "")
+				(mobileNavVisible ? `${className} grow` : className) +
+				(showShadow ? " shadow" : "")
 			}
 		>
 			<div className={`${className}--body`}>
@@ -66,7 +81,9 @@ const Navbar = (props) => {
 					}
 					href="#"
 					onClick={() => setMobileNavVisible(!mobileNavVisible)}
-					onKeyDown={() => setMobileNavVisible(!mobileNavVisible)}
+					onKeyDown={() =>
+						setMobileNavVisible(!mobileNavVisible)
+					}
 					role="button"
 					type="button"
 					tabIndex="0"
@@ -94,46 +111,7 @@ const Navbar = (props) => {
 								</a>
 							</Link>
 						</li>
-						<li>
-							<Link href="/about">
-								<a
-									className={
-										router.pathname === "/about"
-											? "active"
-											: ""
-									}
-								>
-									About
-								</a>
-							</Link>
-						</li>
-
-						<li>
-							<Link href="/blogs">
-								<a
-									className={
-										router.pathname === "/blogs"
-											? "active"
-											: ""
-									}
-								>
-									Blogs
-								</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/contact">
-								<a
-									className={
-										router.pathname === "/contact"
-											? "active"
-											: ""
-									}
-								>
-									Contact
-								</a>
-							</Link>
-						</li>
+						{links.map(link)}
 					</ul>
 				</div>
 			</div>
