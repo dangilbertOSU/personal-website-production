@@ -24,7 +24,7 @@ const Button = (props) => {
 			aria-label={ariaLabel}
 			className={stack}
 			label={children.toString()}
-			onClick={() => onClick()}
+			onClick={onClick}
 			type={type}
 		>
 			{children}

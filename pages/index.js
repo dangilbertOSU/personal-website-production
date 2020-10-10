@@ -18,7 +18,7 @@ import SitewideHeroImage from "../components/SitewideHeroImage";
 import HeaderTextImage from "../components/HeaderTextImage";
 import TitleDescriptionCTA from "../components/TitleDescriptionCTA";
 
-const App = ({ featuredArticles }) => {
+const App = () => {
 	return (
 		<div>
 			<Head>
