@@ -29,11 +29,7 @@ const HeaderTextImage = (props) => {
 				{children}
 			</div>
 			<div className={`${className}--${component2}`}>
-				<img
-					className={`${className}--image`}
-					alt={alt}
-					src={image}
-				/>
+				<img className={`${className}--image`} alt={alt} src={image} />
 			</div>
 		</div>
 	);

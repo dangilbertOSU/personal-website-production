@@ -18,9 +18,7 @@ import SectionHeading from "../SectionHeading";
 import "./index.css";
 
 const TitleDescriptionAndTiles = (props) => {
-	const {
-		className, title, description, children,
-	} = props;
+	const { className, title, description, children } = props;
 
 	return (
 		<div className={className}>

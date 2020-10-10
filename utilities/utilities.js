@@ -47,7 +47,7 @@ const fetchBlogs = async () => {
 		content_type: "blog",
 		select:
 			"sys.id,fields.title,fields.category,fields.coverPhoto,fields.content,fields.publishedDate",
-		order:'-fields.publishedDate',
+		order: "-fields.publishedDate",
 	});
 	if (entries.items) {
 		return entries.items;
@@ -57,8 +57,7 @@ const fetchBlogs = async () => {
 const fetchSpecificBlog = async (id) => {
 	const entry = await client.getEntry(id);
 	if (entry) return entry;
-
-}
+};
 
 module.exports = {
 	fetchBlogs,

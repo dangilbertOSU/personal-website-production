@@ -58,25 +58,17 @@ const Blog = (props) => {
 						<div className={`${className}__cover--photo`}>
 							<img
 								src={`https:${coverPhoto.fields.file.url}`}
-								alt={
-									coverPhoto.fields.description ||
-									`${title} cover photo`
-								}
+								alt={coverPhoto.fields.description || `${title} cover photo`}
 							/>
 						</div>
 						<div className={`${className}__data`}>
 							<p>{publishedDateString}</p>
 						</div>
 						<div className={`${className}__body`}>
-							<h1 className={`${className}__title`}>
-								{title}
-							</h1>
+							<h1 className={`${className}__title`}>{title}</h1>
 						</div>
 						<div className={`${className}__content`}>
-							<ReactMarkdown
-								source={content}
-								renderers={{ code: CodeBlock }}
-							/>
+							<ReactMarkdown source={content} renderers={{ code: CodeBlock }} />
 						</div>
 						<div className={`${className}__body`}>
 							<div className={`${className}__social`}>

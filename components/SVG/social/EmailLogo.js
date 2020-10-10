@@ -8,12 +8,7 @@ const EmailLogo = () => {
 						<g transform="translate(460.000000, 104.000000)">
 							<g transform="translate(96.000000, 0.000000)">
 								<g>
-									<rect
-										x="0"
-										y="0"
-										width="24"
-										height="24"
-									/>
+									<rect x="0" y="0" width="24" height="24" />
 									<path
 										d="M2,5 L2,5.02430556 L12,11.1006944 L22,5.02430556 L22,5 L2,5 Z M2,6.84722222 L2,19 L22,19 L22,6.84722222 L12,12.8993056 L2,6.84722222 Z"
 										fill="#222222"

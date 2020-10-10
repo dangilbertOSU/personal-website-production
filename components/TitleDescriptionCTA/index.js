@@ -32,9 +32,7 @@ const TitleDescriptionCTA = (props) => {
 				<h2>{title}</h2>
 				<h1>{description}</h1>
 				<a href={link}>
-					<Button ariaLabel={buttonAriaLabel}>
-						{buttonText}
-					</Button>
+					<Button ariaLabel={buttonAriaLabel}>{buttonText}</Button>
 				</a>
 			</div>
 		</div>

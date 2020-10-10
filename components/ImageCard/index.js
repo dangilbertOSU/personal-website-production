@@ -11,9 +11,7 @@ import PropTypes from "prop-types";
 import "./ImageCard.css";
 
 const Card = (props) => {
-	const {
-		alt, className, content, image, title, white,
-	} = props;
+	const { alt, className, content, image, title, white } = props;
 
 	let modifiedClassName = className;
 

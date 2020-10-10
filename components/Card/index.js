@@ -5,12 +5,7 @@
 import PropTypes from "prop-types";
 
 const Card = (props) => {
-	const {
-		className,
-		children,
-		Icon,
-		title,
-	} = props;
+	const { className, children, Icon, title } = props;
 
 	return (
 		<div className={className}>

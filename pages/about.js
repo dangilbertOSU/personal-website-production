@@ -77,14 +77,9 @@ const About = () => {
 						/>
 					</TitleDescriptionAndTiles>
 				</Section>
-				<div
-					className="blue--background"
-					style={{ padding: "5.75rem 0" }}
-				>
+				<div className="blue--background" style={{ padding: "5.75rem 0" }}>
 					<Section>
-						<h2 style={{ color: "white" }}>
-							Professional Experience
-						</h2>
+						<h2 style={{ color: "white" }}>Professional Experience</h2>
 						{/* <p style={{ color: "white", opacity: 1 }}>
 							I thrive off providing businesses the
 							products that they need at the highest

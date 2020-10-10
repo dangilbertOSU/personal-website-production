@@ -27,10 +27,7 @@ const Article = (props) => {
 					<div className={`${className}__image`}>
 						<img
 							src={`https:${coverPhoto.fields.file.url}`}
-							alt={
-								coverPhoto.fields.description
-								|| `${title} cover photo`
-							}
+							alt={coverPhoto.fields.description || `${title} cover photo`}
 						/>
 					</div>
 				</a>

@@ -10,10 +10,7 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<meta
-						httpEquiv="Content-Type"
-						content="text/html; charset=utf-8"
-					/>
+					<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 
 					{/* Google fonts */}
 					<link
@@ -30,15 +27,9 @@ class MyDocument extends Document {
 						rel="stylesheet"
 					/>
 
-					<link
-						rel="shortcut icon"
-						href="./static/favicon.ico"
-					/>
+					<link rel="shortcut icon" href="./static/favicon.ico" />
 
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1"
-					/>
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
 				</Head>
 				<body>
 					<Main />

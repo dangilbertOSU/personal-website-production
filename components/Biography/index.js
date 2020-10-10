@@ -74,9 +74,7 @@ const Biography = (props) => {
 				</div>
 			</div>
 			<div className={`${className}__image`}>
-				{biographyPicture && (
-					<img src={biographyPicture} alt={alt} />
-				)}
+				{biographyPicture && <img src={biographyPicture} alt={alt} />}
 			</div>
 		</div>
 	);
