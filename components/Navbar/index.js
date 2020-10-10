@@ -44,7 +44,7 @@ const Navbar = (props) => {
 	}, []);
 
 	const link = (linkName) => (
-		<li>
+		<li key={linkName}>
 			<Link href={`/${linkName}`}>
 				<a className={router.pathname === `/${linkName}` ? "active" : ""}>
 					{linkName}
