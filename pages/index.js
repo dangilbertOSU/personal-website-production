@@ -46,6 +46,7 @@ const App = () => {
 				</SitewideHeroImage>
 				<Section>
 					<HeaderTextImage
+						alt="An image of Dannon at the beach"
 						header="A Focus on Mobile and Web Development"
 						image={DannonAtBeach}
 						orientation="regular"
@@ -65,6 +66,7 @@ const App = () => {
 				</Section>
 				<Section>
 					<HeaderTextImage
+						alt="A copy of Dannon's Contentful Professional Certificate"
 						header="A Certified Contentful Professional"
 						image={ContentfulCert}
 						orientation="flipped"
