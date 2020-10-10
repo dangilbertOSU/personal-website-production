@@ -42,25 +42,12 @@ const client = require("contentful").createClient({
 	accessToken,
 });
 
-const fetchBlogs = async () => {
-	const entries = await client.getEntries({
-		content_type: "blog",
-		select:
-			"sys.id,fields.title,fields.category,fields.coverPhoto,fields.content,fields.publishedDate",
-		order: "-fields.publishedDate",
-	});
-	if (entries.items) {
-		return entries.items;
-	}
-};
-
 const fetchSpecificBlog = async (id) => {
 	const entry = await client.getEntry(id);
 	if (entry) return entry;
 };
 
 module.exports = {
-	fetchBlogs,
 	fetchSpecificBlog,
 	createClassStack,
 	dateFormatter,

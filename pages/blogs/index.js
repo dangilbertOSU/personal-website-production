@@ -3,7 +3,7 @@
  */
 
 import Head from "next/head";
-import { fetchBlogs } from "../../utilities/utilities";
+import { useFetchBlogs } from "../../utilities/dataServices";
 
 /*
  * Component Imports
@@ -14,7 +14,9 @@ import Section from "../../components/Section";
 import SectionHeading from "../../components/SectionHeading";
 import ArticleGrid from "../../components/ArticleGrid";
 
-const Blogs = ({ blogs }) => {
+const Blogs = () => {
+	const blogs = useFetchBlogs();
+
 	return (
 		<div>
 			<Head>
@@ -31,29 +33,5 @@ const Blogs = ({ blogs }) => {
 		</div>
 	);
 };
-
-Blogs.defaultProps = {
-	blogs: [],
-};
-
-/*
- * Fetch all blogs
- */
-
-export async function getStaticProps() {
-	try {
-		const blogs = await fetchBlogs();
-
-		return {
-			props: {
-				blogs,
-			},
-		};
-	} catch (err) {
-		return {
-			props: {},
-		};
-	}
-}
 
 export default Blogs;
