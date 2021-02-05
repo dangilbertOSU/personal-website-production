@@ -78,7 +78,6 @@ const Blog = (props) => {
 							</div>
 							<div className={`${className}__body`}>
 								<div className={`${className}__social`}>
-									<p>Share with:</p>
 									<TwitterShareButton
 										url={`https://www.dannongilbert.com/${id}`}
 										title="Check out this blog:"
