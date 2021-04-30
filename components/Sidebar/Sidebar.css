@@ -1,0 +1,36 @@
+.sidebar {
+  align-items: center;
+  display: flex;
+  bottom:0;
+  justify-content: center;
+  margin: auto;
+  position: fixed;
+  top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.sidebar ul li:hover {
+  opacity: 1;
+}
+
+.sidebar .active {
+  color: #b61e60;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 426px) {
+  .sidebar {
+    display: none;
+  }
+}

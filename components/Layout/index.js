@@ -8,28 +8,30 @@ import PropTypes from "prop-types";
  * Component imports
  */
 
-import Navbar from "../Navbar";
 import Content from "../Content";
-import Footer from "../Footer";
+import Sidebar from "../Sidebar";
+
+const tempLinks = ["Bio", "Experience", "Projects", "Skills", "Blogs"];
 
 const Layout = (props) => {
-	const { children } = props;
+	const { children, sections, scrollToSection } = props;
 
 	return (
-		<div>
-			<Navbar />
-			<Content>{children}</Content>
-			<Footer />
-		</div>
+		<>
+			<Sidebar links={sections} scrollToSection={scrollToSection} />
+			{children}
+		</>
 	);
 };
 
 Layout.defaultProps = {
 	children: PropTypes.node,
+	sections: [],
 };
 
 Layout.propTypes = {
 	children: PropTypes.node,
+	sections: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Layout;

@@ -54,14 +54,49 @@ const fetchBlogs = async () => {
 	}
 };
 
+const fetchExperiences = async () => {
+	const entries = await client.getEntries({
+		content_type: "experience",
+		select:
+			"sys.id,fields.jobTitle,fields.location,fields.date,fields.description",
+	});
+	if (entries.items) {
+		return entries.items;
+	} else {
+		return [];
+	}
+}
+
+const fetchProjects = async () => {
+	const entries = await client.getEntries({
+		content_type: "project",
+		select:
+			"sys.id,fields.title,fields.description,fields.skills",
+	});
+	if (entries.items) {
+		return entries.items;
+	} else {
+		return [];
+	}
+}
+
 const fetchSpecificBlog = async (id) => {
 	const entry = await client.getEntry(id);
 	if (entry) return entry;
 };
 
+const fetchBiography = async () => {
+	const entry = await client.getEntry("6seJXwE2FenaLxd0PnOaiL");
+	
+	if (entry) return entry;
+}
+
 module.exports = {
+	fetchBiography,
 	fetchBlogs,
+	fetchExperiences,
 	fetchSpecificBlog,
+	fetchProjects,
 	createClassStack,
 	dateFormatter,
 };

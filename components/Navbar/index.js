@@ -31,7 +31,7 @@ const Navbar = (props) => {
 	const [showShadow, setShowShadow] = useState(false);
 
 	const router = useRouter();
-	const links = ["about", "blogs", "contact"];
+	const links = ["blogs", "contact"];
 
 	useEffect(() => {
 		window.onscroll = () => {
