@@ -111,6 +111,25 @@
 	font-size: 1.2rem;
 }
 
+.go-back-button {
+	background-color: transparent;
+	cursor: pointer;
+	border: 2px solid white;
+	border-radius: 50%;
+	padding: 0.5rem;
+	position: fixed;
+	left: 2rem;
+	transition: all 0.2s;
+}
+
+.go-back-button:hover{
+	border: 2px solid #b61e60;
+}
+
+.go-back-button:hover > svg path {
+	fill: #b61e60;
+}
+
 @media only screen and (max-width: 1250px) {
 	.blog__tab {
 		left: -1rem;

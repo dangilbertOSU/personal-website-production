@@ -19,14 +19,13 @@ import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import ArticleGrid from '../components/ArticleGrid';
 
-const sections = ["Bio", "Experience", "Projects", "Skills", "Blogs"];
+const sections = ["Bio", "Experience", "Projects", "Blogs"];
 
 const App = ({ biography, experiences, projects, blogs }) => {
 
 	const bioRef = useRef();
 	const experienceRef = useRef();
 	const projRef = useRef();
-	const skillRef = useRef();
 	const blogRef = useRef();
 
 	const scrollToSection = (section) => {
@@ -39,9 +38,6 @@ const App = ({ biography, experiences, projects, blogs }) => {
 				break;
 			case "Projects":
 				projRef.current.scrollIntoView({ behavior: 'smooth' });
-				break;
-			case "Skills":
-				skillRef.current.scrollIntoView({ behavior: 'smooth' });
 				break;
 			case "Blogs":
 				blogRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -80,11 +76,6 @@ const App = ({ biography, experiences, projects, blogs }) => {
 						<Projects projects={projects} />
 					</Fragment>
 					</span>
-				<span ref={skillRef}>
-					<Fragment>
-						<h2>Skills</h2>
-					</Fragment>
-				</span>
 				<span ref={blogRef}>
 					<Fragment>
 						<ArticleGrid articles={blogs} />

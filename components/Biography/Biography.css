@@ -33,3 +33,24 @@
     opacity: 0;
   }
 }
+
+/*
+ * Large Mobile
+ */
+
+@media only screen and (max-width: 900px) {
+  .biography h2 {
+    height: 222px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .biography h2 {
+    height: 50px;
+  }
+
+  .biography-description {
+    max-width: 300px;
+  }
+}
