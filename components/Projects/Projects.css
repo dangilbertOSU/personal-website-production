@@ -1,0 +1,23 @@
+.projects-item {
+  font-size: clamp(0.8rem, 2vw, 1.5rem); 
+  max-width: 70%;
+}
+
+.projects-item-skills {
+  display: flex;
+  color: #b61e60;
+  list-style-type: none;
+  margin-bottom: 4rem;
+  padding-left: 0;
+}
+
+.projects-item-skills li {
+  margin-right: 1rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .projects-item {
+    max-width: 100%;
+  }
+}

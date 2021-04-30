@@ -1,28 +1,5 @@
 .content {
-    margin: 0;
-    padding: 1rem 0;
-}
-
-.content>* {
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-}
-
-/*
- * Small Laptop
- */
-
-@media only screen and (max-width: 1024px) {
-    .content {
-        padding: 0;
-    }
-
-    .content>*:first-child {
-        margin-top: 4rem;
-    }
-
-    .content>*:not(:first-child) {
-        margin-top: 8rem;
-    }
-
+  align-items: center;
+  display: flex;
+  margin-left: 2rem;
 }

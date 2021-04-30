@@ -1,28 +1,56 @@
+import { useRef } from 'react';
 import Head from "next/head";
+import Biography from "../components/Biography";
 
-/*
- * Image Imports
- */
-
-import OfficeStock from "../public/images/Stock/office-stock.jpg";
-import DannonAtBeach from "../public/images/Dannon/DannonAtBeach.jpg";
-import ContentfulCert from "../public/images/Dannon/contentful_cert.png";
+import {
+	fetchBiography,
+	fetchExperiences,
+	fetchBlogs,
+	fetchProjects,
+} from "../utilities/utilities";
 
 /*
  * Component Imports
  */
 
+import Fragment from "../components/Fragment";
 import Layout from "../components/Layout";
-import Section from "../components/Section";
-import SitewideHeroImage from "../components/SitewideHeroImage";
-import HeaderTextImage from "../components/HeaderTextImage";
-import TitleDescriptionCTA from "../components/TitleDescriptionCTA";
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
+import ArticleGrid from '../components/ArticleGrid';
 
-const App = () => {
+const sections = ["Bio", "Experience", "Projects", "Blogs"];
+
+const App = ({ biography, experiences, projects, blogs }) => {
+
+	const bioRef = useRef();
+	const experienceRef = useRef();
+	const projRef = useRef();
+	const blogRef = useRef();
+
+	const scrollToSection = (section) => {
+		switch(section) {
+			case "Bio":
+				bioRef.current.scrollIntoView({ behavior: 'smooth' });
+				break;
+			case "Experience":
+				experienceRef.current.scrollIntoView({ behavior: 'smooth' });
+				break;
+			case "Projects":
+				projRef.current.scrollIntoView({ behavior: 'smooth' });
+				break;
+			case "Blogs":
+				blogRef.current.scrollIntoView({ behavior: 'smooth' });
+				break;
+			default:
+				break;
+		}
+	}
+
 	return (
-		<div>
+		<>
 			<Head>
-				<title>DG | Home</title>
+				<title>Dannon Gilbert</title>
 				<meta
 					name="keywords"
 					content="resume,react,node,express,javascript,developer,software,engineer"
@@ -32,55 +60,72 @@ const App = () => {
 					content="I specialize in full stack development with years of experience in React. "
 				/>
 			</Head>
-			<Layout>
-				<SitewideHeroImage backgroundImage={OfficeStock}>
-					<Section>
-						<TitleDescriptionCTA
-							title="Dannon Gilbert"
-							description="Software Engineer"
-							buttonAriaLabel="Go to about me page"
-							buttonText="About Me"
-							link="/about"
-						/>
-					</Section>
-				</SitewideHeroImage>
-				<Section>
-					<HeaderTextImage
-						alt="An image of Dannon at the beach"
-						header="A Focus on Mobile and Web Development"
-						image={DannonAtBeach}
-						orientation="regular"
-					>
-						<p>
-							I have industry experience developing full stack web apps for
-							businesses that have included architecting databases utilizing
-							MongoDB and SQL, designing in Figma, React, Node/Express, and I am
-							absolutely no stranger to just regular Vanilla JS and CSS.
-						</p>
-						<p>
-							My focus at Oregon State University is Web and Mobile Development.
-							I have developed mobile applications with groups in Android
-							Studio. I have since been learning React native.
-						</p>
-					</HeaderTextImage>
-				</Section>
-				<Section>
-					<HeaderTextImage
-						alt="A copy of Dannon's Contentful Professional Certificate"
-						header="A Certified Contentful Professional"
-						image={ContentfulCert}
-						orientation="flipped"
-					>
-						<p>
-							Certifications don't mean much honestly. But it's a nice little
-							thing to show that I have had some experience using a CMS and
-							actually the content on this website is coming from Contentful!
-						</p>
-					</HeaderTextImage>
-				</Section>
+			<Layout sections={sections} scrollToSection={scrollToSection}>
+				<span ref={bioRef}>
+					<Fragment>
+						<Biography biography={biography} />
+					</Fragment>
+				</span>
+				<span ref={experienceRef}>
+					<Fragment >
+						<Experience experiences={experiences} />
+					</Fragment>
+				</span>
+				<span ref={projRef}>
+					<Fragment>
+						<Projects projects={projects} />
+					</Fragment>
+					</span>
+				<span ref={blogRef}>
+					<Fragment>
+						<ArticleGrid articles={blogs} />
+					</Fragment>
+				</span>
 			</Layout>
-		</div>
+		</>
 	);
 };
+
+
+/*
+ * Fetch biography
+ */
+
+export async function getStaticProps() {
+	try {
+		const biography = await fetchBiography();
+
+		const biographyObject = {
+			name: biography.fields.name,
+			description: biography.fields.description,
+			links: biography.fields.socialLinks.map(link => ({
+				website: link.fields.website,
+				image: {
+					url: link.fields.image.fields.file.url,
+				},
+				link: link.fields.link,
+			})),
+		}
+
+		const experiences = await fetchExperiences();
+
+		const projects = await fetchProjects();
+
+		const blogs = await fetchBlogs();
+
+		return {
+			props: {
+				biography: biographyObject,
+				experiences,
+				projects,
+				blogs,
+			},
+		};
+	} catch (err) {
+		return {
+			props: {},
+		};
+	}
+}
 
 export default App;

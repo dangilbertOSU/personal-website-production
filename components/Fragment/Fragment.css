@@ -1,0 +1,24 @@
+.fragment {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 7.5rem;
+  min-height: 100vh;
+  max-width: 1920px;
+}
+
+@media only screen and (max-width: 768px) {
+  .fragment {
+    padding-left: 10rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .fragment {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

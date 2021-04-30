@@ -27,7 +27,8 @@
 		"react-dom": "16.13.1",
 		"react-markdown": "^4.3.1",
 		"react-share": "^4.2.0",
-		"react-syntax-highlighter": "^14.0.0"
+		"react-syntax-highlighter": "^14.0.0",
+		"react-typist": "^2.0.5"
 	},
 	"devDependencies": {
 		"@zeit/next-css": "^0.2.1-canary.4",

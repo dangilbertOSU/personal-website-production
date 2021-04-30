@@ -2,8 +2,8 @@
 
 mkdir -p components/$1
 cd components/$1
-touch index.js
-sed s/Component/$1/g ../../component-skelton.txt > index.js
+touch index.jsx
+sed s/Component/$1/g ../../component-skelton.txt > index.jsx
 touch $1.css
 
 exit 0

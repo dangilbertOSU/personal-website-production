@@ -3,7 +3,7 @@
 }
 
 .article a {
-     color: #222222;
+     color: #FFFFFF;
      text-decoration: none;
 }
 
@@ -27,6 +27,7 @@
 }
 
 .article__image img {
+     height: 200px;
      object-fit: cover;
      min-width: 100%;
      transition: all 0.3s;
